@@ -19,10 +19,32 @@
            ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 
            ㄴ width  : 이미지 표현 너비 (높이도 같이 조정됨)
            ㄴ height : 이미지 표현 높이 (너비도 같이 조정됨)
+
+           *경로
+           xx-front-workspace : 상위 디렉토리(..)
+           01_html            : 하위 디렉토리(.)
+           assets             : 정적 자원ㄷ ㅣ렉토리(../assets/image)
+
    -->
+   <h1>이미지 관련 택으</h1>
+   <img src="../assets/image/river1.jg" alt="강강강강강강"> <br>
+   <img src="../assets/image/river2.jpg" alt="강">
+   <h3>고정크기 px vs 가변크기 %</h3>
+   <h3>고정크기 px: 화면 사이즈가 조정되도 이미지의 크기는 고정, 기본값</h3>
 
+   <img src="../assets/image/flower1.jpg" alt="강" width="200" height="300">
+   <img src="../assets/image/flower2.jpg" alt="강"width="200" height="300">
+   <img src="../assets/image/flower3.jpg" alt="강"width="200" height="300">
+   <img src="../assets/image/flower4.jpg" alt="강"width="200" height="300">
+   <img src="../assets/image/flower5.jpg" alt="강"width="200" height="300">
 
+   <h3>가변크긔%: 화면크기가 조정되면 이미지크기도 자도옹 조조옹</h3>
 
+   <img src="../assets/image/flower1.jpg" alt="강"width="15%" height="300">
+   <img src="../assets/image/flower2.jpg" alt="강"width="15%" height="300">
+   <img src="../assets/image/flower3.jpg" alt="강"width="15%" height="300">
+   <img src="../assets/image/flower4.jpg" alt="강"width="15%" height="300">
+   <img src="../assets/image/flower5.jpg" alt="강"width="15%" height="300">
 
    <!--
       * <audio>
@@ -44,7 +66,10 @@
            ㄴ audio/mp3
            ㄴ audio/ogg
    -->
-
+<br>
+<audio controls autoplay loop>
+   <source type="audio/mp3" src="../assets/audio/major.mp3">
+</audio>
 
 
 
@@ -70,7 +95,18 @@
            ㄴ video/webm
            ㄴ video/ogg
     -->
+<br>
+<video controls   muted width="400" height="300" poster="../assets/image/river1.jpg">
+   <source type="video/mp4" src="../assets/video/video1.mp4"  >
+</video>
+<br>
+<!--iframe
+      웹문서 안에 다른 웹페이지를 추가하는 태그 (인라인요소옹)
+   -->
+<iframe src="https://www.youtube.com/watch?v=j4bpKYaU8eY" frameborder="0" allow=" accelerometer; autoplay; controls;"></iframe>
 
+<br>
 
+<iframe src="03_table.html" width="600" height="800"></iframe>
 </body>
 </html>
