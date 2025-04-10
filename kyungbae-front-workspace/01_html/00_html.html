@@ -14,7 +14,7 @@
     4. 태그로 구성됨 (<태그>)
         1) 각 태그마다 화면에 시각적으로 표현되는 형식이 다름
         2) 대부분 시작 태그와 종료태그로 구성되어있음 (<b></b>)
-           시작태그만 존재하는 경우도 있음 (<input>)
+            시작태그만 존재하는 경우도 있음 (<input>)
         3) 계층 구조를 가지고 있음 (부모태그, 자식태그, 형제태그)
         4) 작성 형식
             <태그명 속성1="속성1값" 속성2="속성2값" attribute="value">화면에 표현할 값</태그명>
@@ -23,14 +23,96 @@
             ㄴ 인라인 요소 : 해당 요소에만 적용됨. 줄바꿈을 강제로 해줘야됨  
 
     5. 문서 기본 구조
-       <!DOCTYPE html>      -- 문서형식 지정 : html5 형식임을 알리는 선언부
-       <html lang="">       -- html 문서의 시작 (문서의 모든 내용을 포함하는 최상위 태그) / lang속성:제작언어(검색엔진에서 활용)
+    <!DOCTYPE html>         -- 문서형식 지정 : html5 형식임을 알리는 선언부
+    <html lang="">          -- html 문서의 시작 (문서의 모든 내용을 포함하는 최상위 태그) / lang속성:제작언어(검색엔진에서 활용)
         <head></head>       -- 해당 문서의 각종 정보, 제목, 설명, 스타일시트 등을 표현
         <body></body>       -- 화면에 표현하고자 하는 정보 및 내용을 표현
-       </html>              -- html 문서의 끝
+    </html>                 -- html 문서의 끝
 
     ## 참조 문서 ##
     https://developer.mozilla.org/ko/
     https://www.w3schools.com/
 
 -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- meta : html문서가 가지고 있는 유용한 정보를 담아두는 곳 -->
+        <meta charset="UTF-8">
+        <meta name="generator" content="문서를 작성하는 프로그램">
+        <meta name="author" content="kyungbae">
+        <meta name="keyword" content="html 기본내용, 기본태그">
+        <meta name="description" content="html의 기본 구조 파악">
+        <title>HTML 시작</title>
+    </head>
+    <body>
+
+        <br>안녕하세요<br>
+        줄바꿈 테스트
+
+        <hr>
+
+        <!-- 
+            엔티티 코드
+            &로 시작하고 ;로 끝남
+        -->
+        작다(less than) : &lt;<br>
+        크다(greater than) : &gt;<br>
+        공백 : 공&nbsp;&nbsp;&nbsp;백 (여러칸 공백을 띄워도 1칸만 띄워짐)<br>
+        엔드 : &amp;
+        <hr>
+
+        <!-- 
+            <p>
+            1. 문단을 나타내는 태그
+            2. 문단 내 공백은 하나만 적용, 줄바꿈 적용X
+            3. 블럭요소 (앞 뒤로 자동 줄바꿈처리, 한줄 전체 영역)
+        -->
+        <p>
+            p테그는 줄바꿈하고자 한다면 별도의 태그를 작성해야됨
+            <br>
+            그리고    공백은 한 개의 공백만을 표시하기 떄문에
+            별도의 &nbsp;&nbsp;&nbsp; 기호문구를 사용해야됨
+        </p>
+
+        <!-- 
+            <pre>
+            1. 형식을 갖춘 문단 태그
+            2. 문단 내 입력한 내용을 화면에 그대로 보여줌
+            3. 블럭요소
+        -->
+        <pre>
+            pre태그는 시작태그에서부터 종료태그까지 입력된
+            내용 그대로 표현하는 태그
+            줄바꿈이라던가
+            여거래의     공백을 인식함
+        </pre>
+        <hr>
+
+        <!-- 
+            <div>
+            1. 영역을 표현하는 태그
+            2. 블럭요소
+        -->
+        div 시작
+        <div>
+            hello html
+        </div>
+        div 끝
+
+        <br><br>
+
+        <!-- 
+            <span>
+            1. 영역을 표현하는 태그
+            2. 인라인 요소
+        -->
+        span 시작
+        <span>
+            hello html
+        </span>
+        span 끝
+    </body>
+</html>
