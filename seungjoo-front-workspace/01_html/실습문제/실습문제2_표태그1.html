@@ -5,9 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<body>  
+    <style>
+        thead{
+            background-color: cyan;
+            font-weight: bold;
+        }
+        tbody{
+            background-color:orange;
+            font-weight: bold;
+        }
+        tfoot {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+
+
+        #total, #code0, #type0, #price0, #count0, #prd-list {
+            background-color: red;
+        }
+        
+    </style>
+
+    
+</head>
 <body>
-    
-    <!-- 실습문제2_표태그1.PNG -->
-    
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="5">하수정 보석 컬렉션</th>
+            </tr>
+ 
+        </thead>
+        <tbody id="product-tbody">
+            <tr>
+                <th id = "prd-list" rowspan="5">제품리스트</th>
+                <th id="code0">코드</th>
+                <th id = "type0">분류</th>
+                <th id = "price0">가격</th>
+                <th id = "count0">구매가능 개수</th>
+            </tr>
+            <tr>
+                <td id="code1">01-468</td>
+                <td id="type1">가을</td>
+                <td id="price1">200,000원</td>
+                <td id="count1">1068</td>
+            </tr>
+            <tr>
+                <td id="code2">01-469</td>
+                <td id="type2">가을</td>
+                <td id="price2">150,000원</td>
+                <td id="count2">1700</td>
+            </tr>
+            <tr>
+                <td id="code3">01-470</td>
+                <td id="type3">여름</td>
+                <td id="price3">950,000원</td>
+                <td id="count3">2500</td>
+            </tr>
+            <tr>
+                <td id="code4">01-471</td>
+                <td id="type4">봄</td>
+                <td id="price4">120,000원</td>
+                <td id="count4">3200</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id = "total" colspan="3">총합</td>
+                <td id="total-price">1,420,000원</td>
+                <td id="total-count">8468</td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
