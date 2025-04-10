@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        /* 
+            * display: flex;
+              1) 부모 컨테이너에 display: flex; 설정시 자식 컨테이너들은 flexable item이 됨 
+              2) 용어
+                 ㄴ 부모 : flex container
+                 ㄴ 자식 : flex item
+              3) 기본 축
+                 ㄴ 메인 축(X축) : 수평 방향, main axis
+                 ㄴ 교차 축(Y축) : 수직 방향, cross axis
+        */
+        
+    </style>
+    
+    
+
+    <style>
+        /*
+            * flex-direction
+              ㄴ item들의 배치 방향을 변경하는 스타일 속성 
+
+              1) flex-direction: row;            수평 방향(기본값)
+              2) flex-direction: row-reverse;    수평 역방향
+              3) flex-direction: column;         수직 방향
+              4) flex-direction: column-reverse; 수직 역방향
+
+              수평방향일 경우 메인축(X축), 교차축(Y축) 으로 지정
+              수직방향일 경우 메인축(Y축), 교차축(X축) 으로 지정
+        */
+        
+    </style>
+
+
+
+
+    <style>
+        /* 
+            * flex-wrap
+              ㄴ flex item들이 컨테이너 범위에 벗어날 경우 처리할 방법 지정
+
+              1) flex-wrap: nowrap; (기본값)
+                 ㄴ flex item들을 single-line으로 배치함 
+                 ㄴ flex container 밖으로 나갈 수 있음 
+                 ㄴ flex item의 크기가 변경될 수 있음
+              2) flex-wrap: wrap;
+                 ㄴ flex item들을 multi-line으로 배치함 
+                 ㄴ flex container 밖으로 나갈 수 없음
+                 ㄴ flex item의 크기가 유지됨
+        */
+        
+    </style>
+    
+
+
+
+    <style>
+        /* 
+            * flex-flow
+              ㄴ flex-direction 과 flex-wrap 속성을 함께 표기할 수 있는 속성
+        */
+
+    </style>
+    
+
+    
+
+    <style>
+        /* 
+            * justify-content
+              ㄴ 메인축(direction이 row일 경우 X축, column일 경우 Y축) 정렬
+             
+              1) justify-content: flex-start;    : item들이 시작 지점에 모임
+              2) justify-content: flex-end;      : item들이 종료 지점에 모임
+              3) justify-content: center;        : item들이 가운데 지점에 모임
+              4) justify-content: space-between; : item들 사이에 공백 추가
+              5) justify-content: space-around;  : item들 마다 앞 뒤에 공백 추가
+              6) justify-content: space-evenly;  : item들 사이에 균일한 공백 추가
+        */
+        
+    </style>
+    
+
+
+
+    <style>
+        /* 
+            * align-items
+              ㄴ 교차축(direction이 row일 경우 Y축, column일 경우 X축) 정렬
+
+              1) align-items: flex-start;   
+              2) align-items: flex-end;
+              3) align-items: center;
+              4) align-items: stretch;      : 교차축 방향으로 item 크기가 늘어남
+              5) align-items: baseline;     : 베이스라인 기준으로 정렬
+        */
+        
+    </style>
+    
+
+
+
+    <style>
+        /* 
+            * flex-basis
+              ㄴ item 요소의 기본길이 
+
+            * flex-grow
+              ㄴ container 사이즈가 커질수록 item의 사이즈도 같이 커지게 할건지 여부
+              1) flex-grow: 0;      : 기본값, flex-basis보다 더이상 커지지 않겠다는걸 의미
+              2) flex-grow: 1;      : container 사이즈가 커질수록 item 사이즈도 같이 커짐
+
+            * flex-shrink
+              ㄴ container 사이즈가 작아질수록 item의 사이즈도 같이 작아지게 할건지 여부
+              1) flex-shrink: 0;    : flex-basis보다 더이상 작아지지 않겠다는걸 의미
+              2) flex-shrink: 1;    : 기본값, container 사이즈가 작아질수록 item 사이즈도 같이 작아짐
+
+            * flex
+              ㄴ flex-grow, flex-shrink, flex-basis를 한번에 지정 가능
+              ㄴ flex: grow shrink basis;
+
+        */
+        
+    </style>
+
+
+
+
+
+
+    
+</body>
+</html>

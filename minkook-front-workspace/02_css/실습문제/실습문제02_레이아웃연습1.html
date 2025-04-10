@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            하단의 html 요소들을 가지고 
+            
+            "실습문제02_레이아웃연습1_문제.jpg" 이미지에 보여지는 형식과 최대한 유사하게 스타일을 부여하시오.  
+            사용할 이미지들은 practice_image 폴더 안에 있습니다.
+
+            Tip.
+            1) header, nav, section, footer 큰 틀 먼저 레이아웃 잡기
+            2) header 안, section 안에 세부 레이아웃 잡기 
+            3) header 먼저 img 적용해가며 세세한 style 부여하기
+            4) footer img 적용하여 세세한 style 부여하기
+            5) section 내에 img 적용해가며 세세한 style 부여하기
+               section 내에 로그인폼 레이아웃 잡고 세세한 style 부여하기
+            6) nav 메뉴바 style 부여하기
+        */
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <!-- header -->
+        <header class="header">
+            <div class="header_logo_mini">
+                <a href="#"><!--img 사용--></a>
+            </div>
+            <div class="header_logo_big">
+                <a href="#"><!--img 사용--></a>
+            </div>
+            <div class="header_etc"></div>
+        </header>
+
+        <!-- navigator -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Board</a></li>
+                <li><a href="#">Contact</a></li> 
+            </ul>
+        </nav>
+
+        <!-- content -->
+        <section class="content">
+            <div class="content_side">
+                <!--img 사용-->
+            </div>
+            <div class="content_img">
+                <div class="content_img_top">
+                    <div>
+                        <!--img 사용-->
+                        <p>나무를 심는 사람들</p>
+                    </div>
+                    <div>
+                        <!--img 사용-->
+                        <p>아이들에게 녹색 미래를..</p>
+                    </div>
+                </div>
+                <div class="content_img_bottom">
+                    <div>
+                        <!--img 사용-->
+                        <p>설악산 살리는 길</p>
+                    </div>
+                    <div>
+                        <!--img 사용-->
+                        <p>사라지는 북극곰들</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content_etc">
+                <div class="content_login">
+                    <form action="" class="login_form">
+                        <div class="login_input_wrap">
+                            <input type="text" name="userId" placeholder="ID를 입력하세요">
+                            <input type="password" name="userPwd" placeholder="PWD를 입력하세요">
+                        </div>
+                        <div class="login_btn">
+                            <button type="submit">로그인</button>
+                        </div>
+                    </form>
+                    <div class="login_etc">
+                        <a href="#">회원가입</a>
+                        <a href="#">ID/PW 찾기</a>
+                    </div>
+                </div>
+                <div class="content_poster">
+                    <!--img 사용-->
+                </div>
+                <div class="content_message">
+                    <!--img 사용-->
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer">
+            <!--img 사용-->
+        </footer>
+
+    </div>
+    
+</body>
+</html>

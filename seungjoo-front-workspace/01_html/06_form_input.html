@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 
+      * <input>
+        1) 입력란 태그
+        2) 사용자에게 값을 입력받을 수 있는 텍스트 상자 또는 체크 박스 등을 만들 수 있는 태그
+        3) 인라인 요소
+        4) 형식
+           <input type="" type별속성>
+        5) type 종류
+           ㄴ 텍스트 관련 : text(기본값), password, search, url, email, tel
+           ㄴ 숫자 관련   : number, range
+           ㄴ 날짜 관련   : date, month, week, time, datetime-local
+           ㄴ 선택 관련   : radio, checkbox
+           ㄴ 버튼 관련   : button, submit, reset
+           ㄴ 기타        : file, color, hidden
+        6) 주요 속성
+           ㄴ placeholder : 안내 메세지
+           ㄴ size        : 입력란의 크기
+           ㄴ value       : 입력란에 표현할 값 / 사용자가 입력한 값
+           ㄴ readonly    : 입력란에 입력된 내용 수정 불가
+           ㄴ maxlength   : 입력란에 입력가능한 최대 글자 수
+           ㄴ required    : 입력란에 필수로 값이 입력되어야됨을 의미
+           ㄴ disabled    : 입력란을 사용안함을 의미 
+               ...
+            
+   -->
+
+
+
+
+   <!-- 
+      * <label>
+        1) 레이블 태그
+        2) 텍스트 클릭시 입력란 요소에 포커싱이 되도록 도와주는태그
+        3) 인라인 요소
+        4) 형식
+           <label for="아이디">텍스트</label>
+           <input id="아이디">
+   -->
+
+
+
+
+   <!--
+      * <form>
+        1) 입력양식 태그 (다수의 입력값을 제출할 수 있는 태그)
+        2) 하나의 요청을 처리하는 단위로
+           사용자가 입력한 값들을 서버측으로 보낼때(요청) 사용되는 태그
+        3) form 태그 내에 input 과 같은 태그들로 구성함
+        4) submit(제출) : 폼 내의 입력값들을 모두 서버측으로 전송해줌
+        5) 형식
+           <form action="" method="">
+              xx : <input> 
+              xx : <input>
+              ...
+              <submit>
+           </form>
+        6) 주요 속성
+           ㄴ action : 요청할 서버의 경로 
+           ㄴ method : 요청 전송 방식 
+                       ㄴ get 방식  : 요청시 사용자가 입력한 값들이 url에 노출됨, 전달값 크기 제한 있음 (기본값)
+                       ㄴ post 방식 : 요청시 사용자가 입력한 값들이 url에 노출되지 않음, 전달값 크기 제한 없음
+            [참고] target : action속성의 프로그램(페이지)을 어떻게 열것인지 지정
+            [참고] autocomplete : 이전 입력내용 출력하는 기능. 생략하면 자동으로 출력(default : on)
+        7) 유의사항
+           form 내의 input 태그들마다 name 속성값을 부여해야만 값이 넘어가게되어있음 (각 값들을 식별해주는 식별자의 역할)
+   -->
+
+
+   
+
+
+   <!--
+      * <fieldset>
+        1) 그룹으로 묶어 표현하는 태그 (기본적으로 테두리로 묶어서 표현해줌)
+        2) <legend> : 해당 그룹의 제목을 표현할 수 있는 태그 
+   -->
+
+
+
+
+   <!--
+      * <textarea>
+        1) 다중행 입력란 태그
+        2) 여러줄 텍스트 입력을 위한 상자
+        3) 인라인 요소
+        4) 형식
+           <textarea cols="" rows=""></textarea>
+        5) 주요 속성
+           ㄴ cols : 입력 가능 행 수
+           ㄴ rows : 입력 가능 열 수 
+   -->
+
+
+
+
+   <!--
+      * type="radio"
+        1) 라디오버튼
+        2) 제시된 여러개의 값들 중 오로지 한개만을 선택할 수 있게 할때 사용
+        3) name 속성값이 동일한 것들끼리 하나의 그룹으로 묶임
+           그룹 내에 한가지만 선택 가능 
+        4) 제출(submit)시 checked(선택된) value값이 넘어감
+      
+      * type="checkbox"
+        1) 체크박스
+        2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
+        3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
+   -->
+
+
+
+
+
+   <!--
+      * <select>, <option>
+        1) 목록 상자 태그
+        2) 여러 목록을 제시해서 그 중 선택 할 수 있도록 표현 가능 
+        3) 인라인 요소
+        4) 형식
+           <select>
+              <option value="">목록1</option>
+              <option value="">목록2</option>
+              <option value="">목록3</option>
+           </select>
+        5) 주요 속성
+           1) selected : option 요소에 선택 효과를 주는 속성
+           2) value
+              ㄴ option요소에 value 속성이 없을 경우 텍스트가 value값임
+              ㄴ value속성이 있을 경우 value 속성값이 value값임
+
+      * <datalist>
+        1) 콤보 상자 태그 (입력란 + 목록 상자)
+        2) 사용자가 직접 입력도 할 수 있고 목록 중 선택도 가능하게 표현 가능
+        3) 인라인 요소
+        4) HTML5부터 사용 가능
+        5) 형식
+           <input type="" list="datalist아이디">
+           <datalist id="아이디">
+              <option></option>
+              <option></option>
+              <option></option>
+           </datalist>
+   -->
+
+
+
+</body>
+</html>

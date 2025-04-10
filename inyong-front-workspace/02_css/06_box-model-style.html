@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        * 요소 구조 
+
+                     외부여백(margin)
+                ┌-----테두리(border)------┐ 
+           외부 | ###내부여백(padding)### | 외부
+           여백 | ### 내용물(content) ### | 여백
+        (margin)| ####################### | (margin)
+                └-------------------------┘
+                    외부여백(margin)
+
+        한 요소의 전체 크기는 
+        border + padding + content 를 합산한 사이즈이다.
+
+    -->
+
+    <style>
+        
+        
+        /* 
+            * 테두리 관련 스타일 : border
+              1) 테두리 두께는 기본적으로 box 크기에 영향을 미침
+              2) 주요 스타일 속성
+                 ㄴ border[-위치]-width  : 테두리 두께 
+                 ㄴ border[-위치]-style  : 테두리 종류 
+                 ㄴ border[-위치]-color  : 테두리 색상 
+                 ㄴ border[-상하위치][-좌우위치]-radius : 테두리 모서리
+              3) 단축 스타일 속성
+                 ㄴ border[-위치] : 테두리 두께, 종류, 색상을 한꺼번에 지정
+        */
+
+
+
+        /* 
+            * box에 그림자효과 스타일 : box-shadow
+              ㄴ 가로거리(x) 세로거리(y) 흐림정도 번짐정도 색상 지정
+        */
+
+    </style>
+
+
+
+
+
+
+    <style>
+        /* 
+            * 내부 여백 관련 스타일 : padding
+              1) 요소 내부 여백은 기본적으로 box 크기에 영향을 미침
+              2) 주요 스타일 속성
+                 ㄴ padding[-위치] : 안쪽 여백으로 지정할 값
+        */
+    </style>
+
+
+
+
+
+    <style>
+        /* 
+            * box-sizing 속성
+              ㄴ width, height 값이 어느범위까지의 값인지를 지정하는 스타일 속성
+            
+              1. box-sizing:content-box;
+                 1) 기본값
+                 2) width와 height는 내용물(content)까지의 범위를 의미 
+                 3) box 크기 = border + padding + width/height
+  
+              2. box-sizing:padding-box;
+                 1) width와 height가 내부여백(padding)까지의 범위를 의미
+                 2) box 크기 = border + width/height
+  
+              3. box-sizing:border-box;  ***> 계산이 단순해져서 자주 사용
+                 1) width와 height가 테두리(border)까지의 범위를 의미
+                 2) box 크기 = width/height
+        */
+
+    </style>
+
+    
+
+
+    <style>
+        /* 
+            * 외부 여백 관련 스타일 : margin
+              1) 테두리 바깥쪽 공간을 의미하며 box 사이즈와는 상관없음
+              2) 타 요소간의 간격을 띄우고자할 때 주로 사용
+              3) 주요 스타일 속성 
+                 ㄴ margin[-위치] : 외부 여백으로 지정할 값
+        */
+
+    </style>
+
+
+
+</body>
+</html>
