@@ -5,16 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*
+        선택자{
+            스타일속성: 값;
+            스타일속성: 값;
+            ..
+        }
+        */
+
         /* * : 모든 요소가 다 선택됨 */
-        
+        *{
+           /* color: rgb(109, 69, 62); */
+        }
 
         /* 태그명 : 해당 태그의 요소들 다수가 선택됨 */
-
+        div{
+            color: palegoldenrod;
+        }
+        h1,div{
+            background-color: sandybrown;
+        }
 
         /* #아이디명 : 해당 아이디의 요소가 선택됨 */
-
+        #p1{
+            color: aquamarine;
+        }
+        #p2{
+            color: brown;
+        }
+        #p1, #p2 {
+            background-color: thistle;
+        }
 
         /* .클래스명 : 해당 클래스의 요소들 다수가 선택됨 */
+        .group1{
+            color: slategray;
+        }
+        .group2{
+            color: sienna;
+        }
+        .group3{
+            background-color: rosybrown;
+        }
+        li.group3{ /* 태그선택자와 클래스선택자 조합 */
+            color: magenta;
+            font-size: 30px;
+        }
+
 
     </style>
 </head>
@@ -26,7 +63,23 @@
           2) 선택자를 통해 요소를 선택하여 "스타일(css)"과 "기능(script)"을 적용시킬 수 있음
     -->
 
+    <h1>선택자</h1>
     
-    
+    <div>태그 선택자 테스트1</div>
+    <div>태그 선택자 테스트2</div>
+
+    <!-- id 속성 : 특정 요소 하나만을 선택하기 위해 부여하는 속성 (고유한 값으로 설정) -->
+    <p id="p1">id 선택자 테스트1</p>
+    <p id="p2">id 선택자 테스트2</p>
+
+
+    <!-- class 속성 : 여러 요소를 한번에 선택하기 위해 부여하는 속성 (중복작성 가능, 여러개 설정) -->
+    <ul>
+        <li class="group1">클래스 선택자 테스트1</li>
+        <li class="group1 group3">클래스 선택자 테스트2</li>
+        <li class="group2 group3">클래스 선택자 테스트3</li>
+        <li class="group2">클래스 선택자 테스트4</li>
+    </ul>
+    <pre class="group3">클래스 선택자 테스트5</pre>
 </body>
 </html>
