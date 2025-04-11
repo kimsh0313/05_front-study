@@ -6,7 +6,9 @@
     <title>Document</title>
     <style>
         /* * : 모든 요소가 다 선택됨 */
+        * {
         
+        }
 
         /* 태그명 : 해당 태그의 요소들 다수가 선택됨 */
 
@@ -15,7 +17,18 @@
 
 
         /* .클래스명 : 해당 클래스의 요소들 다수가 선택됨 */
-
+        .group1 {
+            color: aquamarine;
+        }
+        .group2 {
+            color: brown;
+        }
+        .group3 {
+            background-color: lightgray;
+        }
+        li.group3 { /*태그선택자와 클래스선택자 조합*/
+            font-size: 30px;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +39,18 @@
           2) 선택자를 통해 요소를 선택하여 "스타일(css)"과 "기능(script)"을 적용시킬 수 있음
     -->
 
+    <h1>선택자</h1>
+    <div>태그 선택자</div>
+    <d>태그 선택자</d>
+
     
+
+    <ul>
+        <li class="group1">클래스 선택자 테스트1</li>
+        <li class="group1 group3" >클래스 선택자 테스트2</li>
+        <li class="group2 group3">클래스 선택자 테스트3</li>
+        <li class="group2">클래스 선택자 테스트4</li>
+    </ul>
     
 </body>
 </html>
