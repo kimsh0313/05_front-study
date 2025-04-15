@@ -9,22 +9,84 @@
 
     <style>
         /* 자손선택자(>) : 특정요소의 바로 하위요소(자손) 중 선택 */
+        #test1>h4{
+            background-color: red ;
+            color: brown;
 
+        }
+        #test1 >ul>li{
+            background-color: tomato;
+            
+        }
+        #test1 li{
+            color: black;
+        }
         /* 후손선택자( ) : 특정요소 모든 하위요소(후손)들을 중 선택 */
 
     </style>
-
+    <div id="test1">
+        <h4>div의 자손이면서 후소온</h4>
+        <h4>div의 자손이면서 후손이다.</h4>
+        <ul>div의 자손이면서 후손
+            <li>ul의 자손이면서 div기준 후손</li>
+            <li>ul의 자손이면서 div기준 후손</li>
+        </ul>
+    </div>
+    <!--    div>ul>li{ㅎㅇ}*5 하면 {ㅎㅇ 5개있게 나옴}     
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+-->
 
 
 
     <style>
         /* 동위관계 일반선택자(~) : 특정요소 뒤에 같은레벨로 존재하는 요소들 중 선택 */
-
+        #test2 ~ div{
+            background-color: green;
+        }
+        #test2 ~ h4{
+            background-color:  red;
+        }
         /* 동위관계 인접선택자(+) : 특정요소 바로 뒤에있는 요소 하나만을 선택 */
-
+        #test2 + div{
+            color: red;
+        }
     </style>
+    <!--
+        <div>
+            div{div$}*4
+        </div>
+    -->
+    <div>
+        <div id="test2">div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <h4>h4</h4>
+        <div>div5</div>
+    </div>
     
-
+    <!--    div>h3+table>(tr>td*2)*2    -->
+    <div>
+        <h3></h3>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
 
 
     <style>
@@ -35,31 +97,65 @@
         */
 
         /* 요소[속성] : 해당 속성을 가지고 있는 요소 선택 */
-
+        #test3 input[readonly]  {
+            color: red;
+        }
         /* 요소[속성=속성값]    : 해당 속성이 속성값과 "일치"하는 요소 선택 */
-
+        #test3 input[name=content]{
+            color: yellowgreen;
+        }
         /* 요소[속성*=속성값]   : 해당 속성에 속성값이 "포함"되어있는 요소 선택 */
-
+        #test3 input[value*="니다"]{
+            background-color: brown;
+        }
         /* 요소[속성^=속성값]   : 해당 속성이 속성값으로 "시작"되는 요소 선택 */
-
+        #test3 input[class^=in]{
+            font-size: 20px;
+        }
         /* 요소[속성$=속성값]   : 해당 속성이 속성값으로 "끝"나는 요소 선택 */
-    
+        #test3 input[class$=dr]{
+            font-style: italic;
+        }
     </style>
+    <div id="test3">
+    제목 : <input type="text" name="title" value="가입인사니다" readonly class="in-asdr"><br>
+    내용 : <input type="text" name="content" value="반갑니다" class="in-content">
 
 
-
+    </div>
+<hr>
 
     <style>
         /* * 구조 선택자 */
 
         /* 요소:first-of-type  : 선택된 요소들 중 첫번째 요소 선택 */
-
+        #test4 p:first-of-type{
+            background-color: red;
+        }
+        #test4 pre:first-of-type{
+            background-color: red;
+        }
         /* 요소:last-of-type   : 선택된 요소들 중 마지막 요소 선택 */
-
+        #test4 p:last-of-type{
+            background-color: blue;
+        }
         /* 요소:nth-of-type(n) : 선택된 요소들 중 n번째 요소 선택 */
-
+        #test4 p:nth-of-type(4){
+            color: red;
+        }
+        #test4 p:nth-of-type(3n){
+            color: goldenrod;
+        }
     </style>
-
+<div id="test4">
+    <p>test1</p>
+    <p>test2</p>
+    <p>test3</p>
+    <p>test4</p>
+    <p>test5</p>
+    <pre>test6</pre>
+    <p>test7</p>
+</div>
 
 
 
