@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <style>
@@ -12,8 +14,30 @@
 
         /* 후손선택자( ) : 특정요소 모든 하위요소(후손)들을 중 선택 */
 
-    </style>
+        #test1>h4 {
+            color: darkolivegreen;
+        }
 
+        #test1>ul>li {
+            color: aqua;
+        }
+
+        /* 후손선택자( ) : 특정요소 모든 하위요소(후손)들을 중 선택 */
+        #test1 li {
+            background-color: salmon;
+        }
+    </style>
+    <h1>자손 후손 선택자</h1>
+    <div id="test1">
+        <h4>div의 자손 및 후손</h4>
+        <h4>div의 자손 및 후손</h4>
+        <ul>div의 자손 및 후손
+            <li>ul의 자손, div의 후손</li>
+            <li>ul의 자손, div의 후손</li>
+        </ul>
+    </div>
+
+    <hr>
 
 
 
@@ -21,9 +45,53 @@
         /* 동위관계 일반선택자(~) : 특정요소 뒤에 같은레벨로 존재하는 요소들 중 선택 */
 
         /* 동위관계 인접선택자(+) : 특정요소 바로 뒤에있는 요소 하나만을 선택 */
+        #test2~div {
+            background-color: chartreuse;
+        }
 
+        #test2~h4 {
+            background-color: darkturquoise;
+        }
+
+        /* 동위관계 인접선택자(+) : 특정요소 바로 뒤에있는 요소 하나만을 선택 */
+        #test2+div {
+            color: azure;
+        }
+
+        #test4+h4 {
+            color: darkslategrey;
+        }
     </style>
-    
+    <div>
+        <div id="test2">div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <h4>h4</h4>
+        <div>div5</div>
+    </div>
+
+    <!-- 에밋문법 : div>h3+table>(tr>td*2)*3 -->
+
+    <div>
+        <h3></h3>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
 
 
 
@@ -43,7 +111,42 @@
         /* 요소[속성^=속성값]   : 해당 속성이 속성값으로 "시작"되는 요소 선택 */
 
         /* 요소[속성$=속성값]   : 해당 속성이 속성값으로 "끝"나는 요소 선택 */
-    
+        #test3 input[readonly] {
+            color: gold;
+        }
+
+        /* 요소[속성=속성값]    : 해당 속성이 속성값과 "일치"하는 요소 선택 */
+
+        #test3 input[name=content] {
+            color: coral;
+        }
+
+        /* 요소[속성*=속성값]   : 해당 속성에 속성값이 "포함"되어있는 요소 선택 */
+
+        #test3 input[value*='니다'] {
+            background-color: burlywood;
+        }
+
+        /* 요소[속성^=속성값]   : 해당 속성이 속성값으로 "시작"되는 요소 선택 */
+
+        #test3 input[class^=in] {
+            font-style: italic;
+        }
+
+        /* 요소[속성$=속성값]   : 해당 속성이 속성값으로 "끝"나는 요소 선택 */
+
+        #test3 input[class$=le] {
+            font-size: 15px;
+        }
+    </style>
+
+    <div id="test3">
+        제목 : <input type="text" name="title" value="가입인사드립니다." class="in-title" readonly><br>
+        내용 : <input type="text" name="content" value="반갑습니다." class="in-content">
+    </div>
+
+    <hr>
+
     </style>
 
 
@@ -57,12 +160,37 @@
         /* 요소:last-of-type   : 선택된 요소들 중 마지막 요소 선택 */
 
         /* 요소:nth-of-type(n) : 선택된 요소들 중 n번째 요소 선택 */
+        #test4 p:first-of-type {
+            color: red;
+        }
 
+        #test4 pre:first-of-type {
+            color: hotpink;
+        }
+
+        /* 요소:last-of-type   : 선택된 요소들 중 마지막 요소 선택 */
+        #test4 p:last-of-type {
+            color: violet;
+        }
+
+        /* 요소:nth-of-type(n) : 선택된 요소들 중 n번째 요소 선택 */
+        #test4 p:nth-of-type(2) {
+            color: chocolate;
+        }
+
+        #test4 p:nth-of-type(3n) {
+            background-color: green;
+        }
     </style>
-
-
-
-
+    <div id="test4">
+        <p>테스트1</p>
+        <p>테스트2</p>
+        <p>테스트3</p>
+        <p>테스트4</p>
+        <p>테스트5</p>
+        <pre>테스트6</pre>
+        <p>테스트7</p>
+    </div>
 
     <style>
         /*
@@ -73,11 +201,10 @@
         /* 요소:focus    : 해당 요소에 focusing이 되는 순간 스타일 적용 */
 
         /* 요소:checked  : 해당 요소가 checked 되는 순간 스타일 적용 */
-        
+
         /* 요소:enabled  : 해당 요소가 활성화 상태일 경우 스타일 적용 */
-        
+
         /* 요소:disabled : 해당 요소가 비활성화 상태일 경우 스타일 적용 */
-        
     </style>
 
 
@@ -85,18 +212,16 @@
 
 
     <style>
-        
         /*
             * 반응 선택자
               사용자의 액션에 따라 선택되는 선택자
         */
 
         /* 요소:active : 해당 요소를 마우스로 누르고 있는 동안 스타일 적용 */
-        
+
         /* 요소:hover  : 해당 요소에 마우스가 올라가있는 동안 스타일 적용 */
-        
     </style>
-    
+
 
 
     <style>
@@ -107,13 +232,13 @@
         */
 
         /* 요소::before   : 선택된 요소내의 앞 공간에 content추가가능 */
-        
+
         /* 요소::after    : 선택된 요소내의 뒤 공간에 content추가가능 */
-        
     </style>
-    
 
 
-    
+
+
 </body>
+
 </html>
