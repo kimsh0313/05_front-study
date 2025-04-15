@@ -153,7 +153,7 @@
         <pre>테스트6</pre>
         <p>테스트7</p>
     </div>
-
+    <hr>
 
 
     <style>
@@ -163,15 +163,39 @@
         */
 
         /* 요소:focus    : 해당 요소에 focusing이 되는 순간 스타일 적용 */
-
+        #test5 input:focus {
+            background-color: lightpink;
+        }
         /* 요소:checked  : 해당 요소가 checked 되는 순간 스타일 적용 */
-        
+        #test5 input:checked {
+            width: 20px;
+            height: 20px;
+        }
+        #test5 input:checked+label {
+            font-size: 20px;
+        }
         /* 요소:enabled  : 해당 요소가 활성화 상태일 경우 스타일 적용 */
-        
+        #test5 button:enabled {
+            background-color: lightblue;
+        }
         /* 요소:disabled : 해당 요소가 비활성화 상태일 경우 스타일 적용 */
-        
+        #test5 button:disabled {
+            background-color: lightgray;
+        }
     </style>
 
+    <form id="test5" action="/server/test.do">
+        이름 : <input type="text" name="userName"> <br>
+        과일 : <input type="checkbox" name="fruit" value="apple" id="apple">
+        <label for="apple">사과</label>
+        <input type="checkbox" name="fruit" value="banana" id="banana">
+        <label for="banana">바나나</label>
+        <br>
+        <button type="submit">제출</button>
+        <button type="button" disabled>클릭안됨</button>
+    </form>
+
+    <hr>
 
 
 
@@ -183,12 +207,33 @@
             사용자의 액션에 따라 선택되는 선택자
         */
 
+        #test6 div {
+            width: 50px;
+            height: 50px;
+            background-color: lightskyblue;
+            cursor: pointer;
+        }
         /* 요소:active : 해당 요소를 마우스로 누르고 있는 동안 스타일 적용 */
-        
+        #test6 div:first-of-type:active {
+            background-color: red;
+            color: aliceblue;
+        }
         /* 요소:hover  : 해당 요소에 마우스가 올라가있는 동안 스타일 적용 */
-        
+        #test6 div:last-of-type:hover {
+            background: green;
+            color: red;
+        }
     </style>
-    
+    <div id="test6">
+        <div>
+            active test
+        </div>
+        <br>
+        <div>
+            hover test
+        </div>
+    </div>
+    <hr>
 
 
     <style>
@@ -199,13 +244,46 @@
         */
 
         /* 요소::before   : 선택된 요소내의 앞 공간에 content추가가능 */
-        
+        #test7>span+span::before {
+            content: '->';
+        }
         /* 요소::after    : 선택된 요소내의 뒤 공간에 content추가가능 */
-        
+        #test7>span:last-of-type::after {
+            content: '❤';
+        }
     </style>
-    
-
-
+    <div id="test7">
+        <span>봄</span>
+        <span>여름</span>
+        <span>가을</span>
+        <span>겨울</span>
+    </div>
+    <hr>
+    <style>
+        /* 
+            * 선택자 우선순위
+            1) 기본적으로 css는 위에서부터 아래로 적용됨 (마지막에 작성된 스타일 반영)
+            2) 단, 동일 요소를 다양한 방식의 선택자로 선택시 작성 순서에 상관없이 우선순위에 따라 적용됨
+            3) 태그선택자 < 클래스선택자 < 아이디선택자 < 인라인스타일 < !important
+        */
+        #test8 {
+            width: 200px;
+            background-color: aquamarine;
+        }
+        .class8 {
+            background-color: yellow;
+        }
+        h3 {
+            background-color: red;
+        }
+        h3 {
+            background-color: beige !important;
+            color: burlywood;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+    <h3 id="test8" class="class8" style="background-color: chocolate;">선택자 우선순위</h3>
     
 </body>
 </html>
