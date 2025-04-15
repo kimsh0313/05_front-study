@@ -6,16 +6,44 @@
     <title>Document</title>
     <style>
         /* * : 모든 요소가 다 선택됨 */
-        
+        * {
+            /*color: midnightblue;*/
+            background-color: tomato;
+        }
 
         /* 태그명 : 해당 태그의 요소들 다수가 선택됨 */
-
+        h1, div {
+            color:aqua;
+            background-color:forestgreen;
+        }
 
         /* #아이디명 : 해당 아이디의 요소가 선택됨 */
-
+        #p1, #p2 {
+            background-color:cornflowerblue ;
+        }
+        #p1 {
+            color:fuchsia;
+        }
+        #p2 {
+            color:deeppink ;
+        }
 
         /* .클래스명 : 해당 클래스의 요소들 다수가 선택됨 */
-
+        .group1, .group2 {
+            background-color: blanchedalmond;
+        }
+        .group1 {
+            color: blue;
+        }
+        .group2 {
+            color: blueviolet;
+        }
+        .group3 {
+            background-color: aliceblue;
+        }
+        li.group3{
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
@@ -26,6 +54,20 @@
           2) 선택자를 통해 요소를 선택하여 "스타일(css)"과 "기능(script)"을 적용시킬 수 있음
     -->
 
+    <h1>선택자</h1>
+    <div>태그 선택자 테스트1</div>
+    <div>태그 선택자 테스트2</div>
+
+    <p id="p1">id 선택자 테스트1</p>
+    <p id="p2">id 선택자 테스트2</p>
+
+    <ul>
+        <li class="group1">클래스 선택자 테스트1</li>
+        <li class="group1 group3">클래스 선택자 테스트2</li>
+        <li class="group2 group3">클래스 선택자 테스트3</li>
+        <li class="group2">클래스 선택자 테스트4</li>
+    </ul>
+    <pre class="group3">클래스 선택자 테스트5</pre>
     
     
 </body>
