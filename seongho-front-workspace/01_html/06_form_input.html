@@ -31,7 +31,13 @@
                ...
             
    -->
+  <h1>input 태그</h1>
+  <h2>텍스트관련 input</h2>
 
+  아이디 : <input type="text"> <br>
+  비밀번호: <input type="password"><br>
+  검색어: <input type="search"> <br><br>
+  
 
 
 
@@ -44,7 +50,17 @@
            <label for="아이디">텍스트</label>
            <input id="아이디">
    -->
+            <label for="userId">아이디</label> :
+            <input type="text" name="" id="userId" placeholder="input u id">
+            <br>
+            <label for="userPw">비밀번호:</label>
+            <input type="password" id="userPw" placeholder="input u pw">
+<br>
+            <label for="keyword">검색어</label>
+            <input type="search" name="" id="keyword" size="20">
+            <br>
 
+            기관명: <input type="text" value="SSG I&Cacute" readonly>
 
 
 
@@ -72,7 +88,20 @@
         7) 유의사항
            form 내의 input 태그들마다 name 속성값을 부여해야만 값이 넘어가게되어있음 (각 값들을 식별해주는 식별자의 역할)
    -->
-
+           
+           <h1>form 관련 태그</h1>
+           <form action="/server/signup.me" method="post">
+            <fieldset>
+               <legend>회원가입</legend>
+               아이디: <input type="text" name="userId" maxlength="12" required><br>
+               비버언: <input type="password" name="userPw" maxlength="15" required><br>
+               버노오: <input type="tel" name="phone" > <br> <!--숫자키 입력창 뜸 (모바일만-->
+               이메ㅁㄴㅇㅁㄴㅇㅁㄴ일: <input type="email" name="email"><br> <!--@검사-->
+               홈페쥐: <input type="url" name="homepage"><br> <!-- http://유무검사-->
+               
+               <input type="submit" value="가입이오.">
+            </fieldset>
+           </form>
 
    
 
@@ -97,7 +126,52 @@
            ㄴ cols : 입력 가능 행 수
            ㄴ rows : 입력 가능 열 수 
    -->
+         <form action="/server/test.do">
+            <fieldset >
+               <legend>게시글 작서어어어엉~</legend>
+               제목 : <input type="text" name="title" id="" size="35"> <br>
+               내용 : <textarea name="content" id="" placeholder="내용 입력" cols="50" rows="10" style="resize: none;"></textarea>
+               <br><br>
+               <input type="submit" name="" id="" value="등록크">
 
+            </fieldset>
+         </form>
+<h1>숫자 날짜 관련 input</h1>
+         <form action="/server/test.doo" >
+            <fieldset>
+               <legend>숫자관련</legend>
+               <!--type= number : 숫자만 입력 가능, 스핀박스 (위아래화살표오)-->
+                  수량 : <input type="number" name="amount" value="0" id=""
+                           min="0" max="20" step="2"><br>
+               
+                           <!--type = range: 슬라이드바-->
+                  점수 : <input type="range" name="score" id="" 
+                           min="0" max="100" value="80" step="10">
+
+
+            </fieldset>
+            <fieldset>
+               <h1>날짜 및 시가안</h1>
+               <!--type = date : 연도 월 일-->
+               날짜 : <input type="date" name="" id="" value="2025-04-11"> <br>
+               
+               <!--type = month : 연도 월 -->
+               월월 : <input type="month" name="" id=""><br>
+               
+               <!--type = date : 연도 주-->
+               주주 : <input type="week" name="" id=""><br>
+               
+               <!--type = date : 오전/오후 시 분-->
+               시간 : <input type="time" name="" id="">
+               
+               <!--type = datetime-local : 연도 월 일 시간-->
+               전부 : <input type="datetime-local" name="" id="">
+            </fieldset>
+            <input type="submit" name="" id="">
+            <input type="reset" name="" id="">
+         </form>
+
+         
 
 
 
@@ -114,7 +188,39 @@
         2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
         3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
    -->
+         <form action="/server/test/dooo">
+            <fieldset>
+               <legend>라디오</legend>
+                  성별 : 
+                  <input type="radio" name="gender" id="no" value="X" checked>
+                  <label for="no">선택안함</label>   
+                  <input type="radio" name="gender" id="man" value="M">
+                  <label for="man">남자</label> 
+                  <input type="radio" name="gender" id="woman" value="F">
+                  <label for="woman">여자</label>
+                  <!--name 속성이 같으면 그룹-->
 
+            </fieldset>
+            <fieldset>
+               <legend>체크박스</legend>
+               취미 : 
+               <input type="checkbox" name="hobby" value="reading" id="hobby1">
+               <label for="hobby1">독서</label>
+               
+               <input type="checkbox" name="hobby" value="sports" id="hobby2">
+               <label for="hobby2">운동</label>
+            
+               <input type="checkbox" name="hobby" value="music" id="hobby3">
+               <label for="hobby3">노래듣기</label>
+             
+               <input type="checkbox" name="hobby" value="movie" id="hobby4">
+               <label for="hobby4">영화보기</label>
+            </fieldset>
+<input type="submit" name="" id="">
+
+
+
+         </form>
 
 
 
@@ -149,8 +255,28 @@
               <option></option>
            </datalist>
    -->
+   <legend>피자 사이즈</legend>
+   <select name="size" id="">
+       <option value="">asd</option>
+   </select>
 
 
+           <form action="">
+            <fieldset>
+               <legend>콤보상자</legend>
+               이메일 : <input type="text" name="email" id="" size="10">
+               @
+               <input type="text" name="domain" id="" size="15" list="domainList">
+               <datalist id="domainList">
+                  <option>naver.com</option>
+                  <option>kakao.com</option>
+                  <option>gmail.com</option>
+               </datalist>
+
+
+            </fieldset>
+
+           </form>
 
 </body>
 </html>

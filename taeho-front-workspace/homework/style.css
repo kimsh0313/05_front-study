@@ -1,0 +1,146 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+  }
+  
+  /* 페이지 전체 컨테이너 */
+  .container {
+    width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  /* 공지사항 작성하기 - 헤더 부분 */
+  .write-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* 작성 영역 (제목, 내용, 첨부파일, 작성하기 버튼 등) */
+  .write-section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .write-section .form-row {
+    margin-bottom: 10px;
+  }
+  
+  .write-section label {
+    display: inline-block;
+    width: 60px;
+    font-weight: bold;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .write-section input[type="text"] {
+    width: 70%;
+    height: 28px;
+    padding: 0 8px;
+  }
+  
+  .write-section textarea {
+    width: 70%;
+    height: 120px;
+    padding: 8px;
+    resize: none;
+  }
+  
+  /* 파일 선택 및 버튼 스타일 (통일) */
+  input[type="file"],
+  input[type="button"] {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+  }
+  
+  input[type="file"]:hover,
+  input[type="button"]:hover {
+    background-color: #e5e5e5;
+  }
+  
+  /* WebKit 브라우저에서 파일 선택 시 표시되는 기본 텍스트 숨기기 */
+  input[type="file"]::-webkit-file-upload-text {
+    display: none;
+  }
+  
+  .file-area {
+    margin-bottom: 10px;
+  }
+  
+  /* 작성하기 버튼 오른쪽 정렬 */
+  .btn-area {
+    text-align: right;
+  }
+  
+  /* 공지사항 목록 테이블 */
+  .notice-table {
+    width: 100%;
+    border: 1px solid #ccc;    /* 전체적으로 감싸는 선 */
+    border-collapse: separate;
+    border-spacing: 2px;       /* 내부 칸 사이 미세한 간격 */
+    margin-bottom: 20px;
+  }
+  
+  .notice-table thead th {
+    background-color: #FFC07F;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .notice-table tbody td {
+    background-color: #fff8d9;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .notice-table tfoot td {
+    background-color: #FFC07F;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  
+  /* 제목 셀 내부에 텍스트와 버튼 배치 (Flexbox) */
+  .title-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title-cell span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .title-cell input[type="button"] {
+    padding: 4px 12px;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+  
