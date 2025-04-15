@@ -19,9 +19,44 @@
                          ㄴ _self  : 현재 창에서 (기본값)
                          ㄴ _blank : 새 창에서 
     -->
+            <h3 id = "first">특정 파일로 이동하는 링크</h3>
+            <a href="./01_text.html">01_text.html 파일로 이동</a> <br>
+            <a href="./03_table.html" target="_self">02</a> <br>
+            <a href="./04_multimedia.html">04_multimedia</a><br>
+            <a href="../assets/image/flower1.jpg">꽃 이미지 파일로 이동</a>
+
+            <hr>
+            <h3 id = "second">특정 사이트로 이동하는 링크</h3>
+            <a href="https://www.google.com">구글 사이트로 이동</a>
+            <a href="https://www.naver.com"><br>
+            <img src="../assets/image/naver_logo.png" width = "120px">
+            </a>
+            <h3 id = "third">현재 페이지 내의 특정 위치로 이동하는 링크(북마크)</h3>
+            <h4>본문 내용1</h4>
+            <p></p>
+
+            <!--
+            
+            * id속성
+            1) 전역속성 : 모든 태그에 사용가능
+            2) 각 요소들의 식별자 역할을 수행
+            3) 같은 문서내에 동일한 id가 존재할 순 없음
 
 
+            href="#abc": 클릭시 id속성값이 abc인 요소의 위치로 이동됨
+            
+            
+            밑의 방식으로 하면 해당하는 북마크로 이동함
+            
+            -->
 
+            <ul>
+                <li><a href="#first">first</a>
+                    <li><a href="#second"></a>second</li>
+                    <li><a href="#third"></a>third</li>
+
+                </li>
+            </ul>
 
 </body>
 </html>
