@@ -10,28 +10,93 @@
             특정 날짜에 마우스를 올리게 되면 해당 날짜의 배경색이 베이지 색상이 되도록 부여하시오.
             html 요소에 추가적인 속성을 부여하셔도 됩니다.            
         */
+
+        .calendar-head {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .calendar-head * {
+            display: inline-block;
+        }
+        .calendar-head>a {
+            font-size: 40px;
+            font-weight: 900;
+            color: red;
+        }
+
+
+        .calendar {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .calendar th{
+            border: 1px solid black;
+            height: 40px;
+        }
+        .calendar td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            font-weight: 600;
+
+            text-align: left;
+            vertical-align: top;    
+            padding: 10px;
+        }
+        .calendar td:hover{
+            background-color:aqua;
+        }
+
+
+        .calendar th:first-of-type,  .calendar td:first-of-type{
+            color: red
+        }
+        .calendar th:last-child, .calendar td:last-child {
+            color: blue;
+        }
+
+
+        .calendar>tbody .other-month{
+            color: rgba(128, 128, 128, 0.466);
+        }
+        /* .calendar tbody tr:first-child td:nth-child(-n+4){
+            color: purple;
+        } */
+        .holiday {
+            color: red;
+        }
+        .holiday>span {
+            font-size: small;
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
 
+    <div class="calendar-head">
+        <h3>2024</h3>
+        <a>8</a>
+        <h3>Auguest</h3>
+    </div>
     <table class="calendar">
         <thead>
             <tr>
-                <td>SUN</td>
-                <td>MON</td>
-                <td>TUE</td>
-                <td>WED</td>
-                <td>THU</td>
-                <td>FRI</td>
-                <td>SAT</td>
+                <th>SUN</th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+                <td class="other-month">28</td>
+                <td class="other-month">29</td>
+                <td class="other-month">30</td>
+                <td class="other-month">31</td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -50,7 +115,7 @@
                 <td>12</td>
                 <td>13</td>
                 <td>14</td>
-                <td>15 <span>광복절</span></td>
+                <td class="holiday">15 <span>광복절</span></td>
                 <td>16</td>
                 <td>17</td>
             </tr>
