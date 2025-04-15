@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* css 주석 */
+        thead {
+            background-color: red;
+            color: white;
+        }
+        tfoot{
+            background-color: darkgreen;
+            color: yellow;
+        }
+        #sh{
+            background-color: aquamarine;
+            color: yellowgreen;
+        }
+        #person-count{
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,8 +50,39 @@
                 </tr>
               </table>
     -->
-   
+   <h1>기본적인 표 만들기</h1>
+    <table border="1">
+        <!--caption : 테이블의 제목 표현 (기본 위치는 테이블 위 중아아앙)-->
+        <caption><b>김성호우</b></caption>
+        <tr>
+            <th width="150" height="50">이름</th>
+            <th width="90">나이</th>
+            <th width="150">성별</th>
+        </tr>
+        <tr>
+            <td >김성호</td>
+            <td >22</td>
+            <td>1</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>김성우</td>
+            <td>23</td>
+            <td>11</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>김성후</td>
+            <td>1</td>
+            <td>123</td>
+        </tr>
+    </table>
 
+    <figure>
+        <figcaption>테이블 설며엉</figcaption>
+        <figcaption>설명 내용 여러줄</figcaption>
+        <figcaption>아아아라라라라</figcaption>
+    </figure>
 
 
 
@@ -46,7 +97,27 @@
               <td colspan="2"></td> : 좌우 2개의 셀을 병합하여 표현
               <td rowspan="2"></td> : 상하 2개의 셀을 병합하여 표현
     -->
+    <table border="1">
+        <tr>
+            <td colspan="2" rowspan="2" width="130" height="130">사진</td>
+            <td width="70">이름</td>
+            <td width="190"></td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td height="50" width="90">주소</td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td height="110">자소서</td>
+            <td colspan="3"></td>
+        </tr>
 
+
+    </table>
 
 
 
@@ -82,7 +153,40 @@
                 </tfoot>
            </table>
     -->
+    <h1>테이블내에 구조 나누기</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody id="sh">
+            <tr>
+                <td>asd</td>
+                <td>dsa</td>
+                <td>sad</td>
+            </tr>
+            <tr>
+                <td>asd</td>
+                <td>dsa</td>
+                <td>sad</td>
+            </tr>
+            <tr>
+                <td>asd</td>
+                <td>dsa</td>
+                <td>sad</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">총인원</th>
+                <td id="person-count">3</td>
+            </tr>
+        </tfoot>
     
+    </table>
 
 </body>
 </html>
