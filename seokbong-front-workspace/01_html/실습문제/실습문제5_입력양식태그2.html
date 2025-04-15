@@ -7,5 +7,26 @@
 </head>
 <body>
     <!-- 실습문제5_입력양식태그2.PNG -->
+     <fieldset>
+        <legend>납품자 정보</legend>
+        1. 납품자명 : <input type="text" name="name" placeholder="name"> <br><br>
+        2. email : <input type="text" name="email" placeholder="answs@naver.com"><br><br>
+        3. 홈페이지 : <input type="text" name="homepage" placeholder="httl://">
+     </fieldset>
+
+     <br>
+
+     <fieldset>
+        <legend>납품정보</legend>
+        <ul id="ul">
+            <li>상품명 : <input type="text" name="prodName" ></li> <br>
+            <li>납품수량 : <input type="text" name="quantity" placeholder="최소 100"></li> <br>
+            <li>납품등급 : <input type="range" name="grade" ></li> <br>
+            <li>기타사항 : <textarea name="content" ></textarea></li>
+        </ul>
+     </fieldset>
+     <br>
+     <input type="submit" value="send message">
+     
 </body>
 </html>
