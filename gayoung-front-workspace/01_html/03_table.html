@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* css영역에서의 주석 */
+        thead {
+            background-color:magenta;
+            color:white;
+        }
+        tfoot {
+            background-color:rgba(10, 83, 15, 0.669);
+            color:yellow;
+        }
+        #person-tbody {
+            background-color: lightgray;
+        }
+        #person-count {
+            text-align:center;
+            font-size:30px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,6 +50,36 @@
               </table>
     -->
    
+    <h1>기본적인 표 만들기</h1>
+    <table border="1">
+        <!-- * <caption> : 테이블의 제목을 표현(기본위치는 테이블 위 중앙에 위치) -->
+        <caption><b>웹 브라우저의 종류</b></caption>
+        <tr>
+            <th width="150px" height="50">브라우저명</th>
+            <th width="80">제조사</th>
+            <th width="250">홈페이지</th>
+        </tr>
+        <tr>
+            <td>Internet Explorer</td>
+            <td>MS</td>
+            <td>http://www.microsoft.com</td>
+        </tr>
+        <tr>
+            <td>Chrome</td>
+            <td>Google</td>
+            <td>http://www.google.com</td>
+        </tr>
+        <tr>
+            <td>Safari</td>
+            <td>애플</td>
+            <td>http://www.apple.com</td>
+        </tr>
+    </table>
+
+    <figure>
+        <figcaption>테이블의 설명 또는 이미지의 설명을 표현할때 사용</figcaption>
+        <figcaption>설명 내용을 여러줄로 표기할 수도 있다.</figcaption>
+    </figure>
 
 
 
@@ -47,7 +96,28 @@
               <td rowspan="2"></td> : 상하 2개의 셀을 병합하여 표현
     -->
 
-
+    <h1>이력서</h1>
+    <table border="1">
+        <tr>
+            <td colspan="2" rowspan="2" width="130" height="130">사진</td>
+            <td width="80">이름</td>
+            <td width="200"></td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="70" height="50">주소</td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td height="130">자기소개</td>
+            <td colspan="3"></td>
+        </tr>
+        
+        
+    </table>
 
 
 
@@ -82,7 +152,41 @@
                 </tfoot>
            </table>
     -->
-    
+    <h1>테이블내에 구조 나누기</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody id="person-tbody">
+            <tr>
+                <td>홍길동</td>
+                <td>23</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>김말똥</td>
+                <td>33</td>
+                <td>부산</td>
+            </tr>
+            <tr>
+                <td>김개순</td>
+                <td>32</td>
+                <td>광주</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2">총인원</th>
+                <td id="person-count">3명</td>
+            </tr>
+        </tfoot>
+    </table>
 
+
+    
 </body>
 </html>

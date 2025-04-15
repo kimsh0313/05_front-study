@@ -1,68 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
 
-    <!-- 
-        * <ul>
-          1) 순서가 없는 목록 (unordered list)
-          2) 블럭요소
-          3) 글머리기호(불릿기호)를 이용해 목록이 구성됨
-              ㄴ disc   : ●  (디폴트)
-              ㄴ circle : ○
-              ㄴ square : ■
-          4) 형식
-             <ul type="">
-                <li>목록1</li>
-                <li>목록2</li>
-                <li>목록3</li>
-             </ul>
-    -->
+        <!-- 
+            * <ul>
+            1) 순서가 없는 목록 (unordered list)
+            2) 블럭요소
+            3) 글머리기호(불릿기호)를 이용해 목록이 구성됨
+                ㄴ disc   : ●  (디폴트)
+                ㄴ circle : ○
+                ㄴ square : ■
+            4) 형식
+                <ul type="">
+                    <li>목록1</li>
+                    <li>목록2</li>
+                    <li>목록3</li>
+                </ul>
+        -->
+        <h1>재료 리스트</h1>
+        <ul type="square">
+            <li>좋은재료 1t</li>
+            <li>좋은재료 2개</li>
+            <li>나이스한 물건</li>
+        </ul>
 
-
-
-
-    <!-- 
-        * <ol>
-          1) 순서가 있는 목록 (ordered list)
-          2) 블럭요소
-          3) 번호를 이용해 목록이 구성됨
-              ㄴ 1 : 1,2,3,..  (디폴트)
-              ㄴ A : A,B,C,..
-              ㄴ a : a,b,c,..
-              ㄴ I : I,II,III,..
-              ㄴ i : i,ii,iii,..
-          4) 형식
-             <ol type="" start="" reversed>
-                <li>목록1</li>
-                <li>목록2</li>
-                <li>목록3</li>
-             </ol>
-    -->
+        <ul>
+            <li>된장</li>
+            <li>야채
+                <ul>
+                    <li>애호박</li>
+                    <li>양파</li>
+                    <li>감자</li>
+                </ul>
+            </li>
+        </ul>
 
 
 
+        <!-- 
+            * <ol>
+            1) 순서가 있는 목록 (ordered list)
+            2) 블럭요소
+            3) 번호를 이용해 목록이 구성됨
+                ㄴ 1 : 1,2,3,..  (디폴트)
+                ㄴ A : A,B,C,..
+                ㄴ a : a,b,c,..
+                ㄴ I : I,II,III,..
+                ㄴ i : i,ii,iii,..
+            4) 형식
+                <ol type="" start="" reversed>
+                    <li>목록1</li>
+                    <li>목록2</li>
+                    <li>목록3</li>
+                </ol>
+        -->
+        <h1>순서있는 리스트</h1>
+        <ol type="I" start="5" reversed>
+            <li>옷을 입는다</li>
+            <li>신발을 신는다</li>
+            <li>문을 연다</li>
+        </ol>
 
-    <!-- 
-        * <dl>
-          1) 개요 목록 (description list)
-          2) 블럭요소
-          3) 제목과 설명으로 하나의 목록이 구성됨
-          4) 형식
-             <dl>
-                <dt>제목1</dt>
-                <dd>설명1</dd>
-                <dt>제목2</dt>
-                <dd>설명2</dd>
-             </dl>
-    -->
+
+
+        <!-- 
+            * <dl>
+            1) 개요 목록 (description list)
+            2) 블럭요소
+            3) 제목과 설명으로 하나의 목록이 구성됨
+            4) 형식
+                <dl>
+                    <dt>제목1</dt>
+                    <dd>설명1</dd>
+                    <dt>제목2</dt>
+                    <dd>설명2</dd>
+                </dl>
+        -->
+        <h1>대단한블럭</h1>
+        <dl>
+            <dt>대단한제목</dt>
+            <dd>이 내용은 엄청난 제목에대한 내용이다</dd>
+            <dd>이것은 대단한 내용의 다음줄이다</dd>
+            <dt>2번째 대단한제목</dt>
+            <dd>엄청나다</dd>
+        </dl>
 
 
 
-
-</body>
-</html>
+    </body>
+    </html>

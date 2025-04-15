@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>강의목록</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: pink;
+      font-weight: bold;
+      color: w;
+      font-size: 20px;
+    }
+
+
+    #tbody {
+      background-color: yellow;
+    }
+
+
+    #button {
+      background-color: skyblue;
+      border: 1px solid blue;
+      color: navy;
+      font-weight: bold;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    tfoot td {
+      background-color: orangered;
+      color: blue;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-    
-    <!-- 실습문제3_표태그2.PNG -->
-    
-</body>
-</html>
+  <table>
+    <thead>
+      강의목록
+      <tr>
+        <th>관</th>
+        <th>강의장</th>
+        <th>인원수</th>
+        <th colspan="2">강의명</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="6">1관</td>
+        <td rowspan="2">9 강의장</td>
+        <td rowspan="2">30명</td>
+        <td>오전 : 강보람</td>
+        <td><button class="button">신청하기</button></td>
+      </tr>
+      <tr>
+        <td class="lecture-name">오후 : 강보람</td>
+        <td><button class="button">신청하기</button></td>
+      </tr>
+      <tr>
+        <td rowspan="2">10 강의장</td>
+        <td  rowspan="2">23명</td>
+        <td >오전 : 홍길동</td>
+        <td><button class="button">신청하기</button></td>
+      </tr>
+      <tr>
+        <td>오후 : 홍길동</td>
+        <td><button class="button">신청하기</button></td>
+      </tr>
+      <tr>
+        <td class="room" rowspan="2">11 강의장</td>
+        <td class="people" rowspan="2">27명</td>
+        <td class="lecture-name">오전 : 김말순</td>
+        <td><button class="button">신청하기</button></td>
+      </tr>
+      <tr>
+        <td class="lecture-name">오후 : 김말순</td>
+        <td><button class="button">신청하기</button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        
