@@ -1,86 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
 </head>
 <body>
    <!-- 
       * <input>
-        1) 입력란 태그
-        2) 사용자에게 값을 입력받을 수 있는 텍스트 상자 또는 체크 박스 등을 만들 수 있는 태그
-        3) 인라인 요소
-        4) 형식
-           <input type="" type별속성>
-        5) type 종류
-           ㄴ 텍스트 관련 : text(기본값), password, search, url, email, tel
-           ㄴ 숫자 관련   : number, range
-           ㄴ 날짜 관련   : date, month, week, time, datetime-local
-           ㄴ 선택 관련   : radio, checkbox
-           ㄴ 버튼 관련   : button, submit, reset
-           ㄴ 기타        : file, color, hidden
-        6) 주요 속성
-           ㄴ placeholder : 안내 메세지
-           ㄴ size        : 입력란의 크기
-           ㄴ value       : 입력란에 표현할 값 / 사용자가 입력한 값
-           ㄴ readonly    : 입력란에 입력된 내용 수정 불가
-           ㄴ maxlength   : 입력란에 입력가능한 최대 글자 수
-           ㄴ required    : 입력란에 필수로 값이 입력되어야됨을 의미
-           ㄴ disabled    : 입력란을 사용안함을 의미 
+      1) 입력란 태그
+      2) 사용자에게 값을 입력받을 수 있는 텍스트 상자 또는 체크 박스 등을 만들 수 있는 태그
+      3) 인라인 요소
+      4) 형식
+         <input type="" type별속성>
+      5) type 종류
+         ㄴ 텍스트 관련 : text(기본값), password, search, url, email, tel
+         ㄴ 숫자 관련   : number, range
+         ㄴ 날짜 관련   : date, month, week, time, datetime-local
+         ㄴ 선택 관련   : radio, checkbox
+         ㄴ 버튼 관련   : button, submit, reset
+         ㄴ 기타        : file, color, hidden
+      6) 주요 속성
+         ㄴ placeholder : 안내 메세지
+         ㄴ size        : 입력란의 크기 
+         ㄴ value       : 입력란에 표현할 값 / 사용자가 입력한 값
+         ㄴ readonly    : 입력란에 입력된 내용 수정 불가
+         ㄴ maxlength   : 입력란에 입력가능한 최대 글자 수
+         ㄴ required    : 입력란에 필수로 값이 입력되어야됨을 의미
+         ㄴ disabled    : 입력란을 사용안함을 의미 
                ...
             
    -->
 
+   <h1>input 태그</h1>
+   <h2>텍스트 관련 input</h2>
+
+   <p>아이디: <input type="text"></p>
+   <p>비밀번호: <input type="password"></p>
+   <p>검색어: <input type="search"></p> <br>
 
 
 
    <!-- 
       * <label>
-        1) 레이블 태그
-        2) 텍스트 클릭시 입력란 요소에 포커싱이 되도록 도와주는태그
-        3) 인라인 요소
-        4) 형식
-           <label for="아이디">텍스트</label>
-           <input id="아이디">
+      1) 레이블 태그
+      2) 텍스트 클릭시 입력란 요소에 포커싱이 되도록 도와주는태그
+      3) 인라인 요소
+      4) 형식
+         <label for="아이디">텍스트</label>
+         <input id="아이디">
    -->
 
+   <p>
+      <label for="userId">아이디:</label>
+      <input type="text" id="userId" placeholder="아이디 입력">
+   </p>
+   <p>
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" placeholder="비밀번호 입력">
+   </p>
+   <p>
+      <label for="search">검색어 입력:</label>
+      <input type="search" id="search" placeholder="검색어 입력" size="30">
+   </p>
+   <p>
+      기관명: <input type="text" value="SSG I&C" readonly>
+   </p>
 
 
 
    <!--
       * <form>
-        1) 입력양식 태그 (다수의 입력값을 제출할 수 있는 태그)
-        2) 하나의 요청을 처리하는 단위로
-           사용자가 입력한 값들을 서버측으로 보낼때(요청) 사용되는 태그
-        3) form 태그 내에 input 과 같은 태그들로 구성함
-        4) submit(제출) : 폼 내의 입력값들을 모두 서버측으로 전송해줌
-        5) 형식
-           <form action="" method="">
-              xx : <input> 
-              xx : <input>
-              ...
-              <submit>
-           </form>
-        6) 주요 속성
-           ㄴ action : 요청할 서버의 경로 
-           ㄴ method : 요청 전송 방식 
-                       ㄴ get 방식  : 요청시 사용자가 입력한 값들이 url에 노출됨, 전달값 크기 제한 있음 (기본값)
-                       ㄴ post 방식 : 요청시 사용자가 입력한 값들이 url에 노출되지 않음, 전달값 크기 제한 없음
+      1) 입력양식 태그 (다수의 입력값을 제출할 수 있는 태그)
+      2) 하나의 요청을 처리하는 단위로
+         사용자가 입력한 값들을 서버측으로 보낼때(요청) 사용되는 태그
+      3) form 태그 내에 input 과 같은 태그들로 구성함
+      4) submit(제출) : 폼 내의 입력값들을 모두 서버측으로 전송해줌
+      5) 형식
+         <form action="" method="">
+            xx : <input> 
+            xx : <input>
+            ...
+            <submit>
+         </form>
+      6) 주요 속성
+         ㄴ action : 요청할 서버의 경로 
+         ㄴ method : 요청 전송 방식 
+                     ㄴ get 방식  : 요청시 사용자가 입력한 값들이 url에 노출됨, 전달값 크기 제한 있음 (기본값)
+                     ㄴ post 방식 : 요청시 사용자가 입력한 값들이 url에 노출되지 않음, 전달값 크기 제한 없음
             [참고] target : action속성의 프로그램(페이지)을 어떻게 열것인지 지정
             [참고] autocomplete : 이전 입력내용 출력하는 기능. 생략하면 자동으로 출력(default : on)
-        7) 유의사항
-           form 내의 input 태그들마다 name 속성값을 부여해야만 값이 넘어가게되어있음 (각 값들을 식별해주는 식별자의 역할)
+      7) 유의사항
+         form 내의 input 태그들마다 name 속성값을 부여해야만 값이 넘어가게되어있음 (각 값들을 식별해주는 식별자의 역할)
    -->
 
+   <h1>from 태그</h1>
+   <form action="/server/signup.me" method="post">
+      <fieldset>
+         <legend>회원가입</legend>
+         <p>
+            * 아이디 : <input type="text" name="userId" maxlength="12" placeholder="최대 12자 까지 입력" required oninvalid="this.setCustomValidity('바보야')" oninput="this.setCustomValidity('천재야')"> <br>
+            * 비밀번호 : <input type="password" name="userPwd" maxlength="15" placeholder="최대 15자 까지 입력" required> <br>
+         </p>
+         <p>
+            전화번호 : <input type="tel" name="phone"> <br> <!-- tel 타입 : 모바일에서 숫자 입력창이 뜨게 됨 -->
+            이메일 : <input type="email" name="email"> <br> <!-- email 타입 : 제출 시 @가 있는지 검사 -->
+            홈페이지 : <input type="url" name="homepage"> <br> <!-- url 타입 : http:// 가 있는지 검사 -->
+         </p>
+         <input type="submit" value="회원가입"> <!-- submit 타입 기본값 = 제출 -->
+      </fieldset>
+   </form>
 
+   <br>
    
 
 
    <!--
       * <fieldset>
-        1) 그룹으로 묶어 표현하는 태그 (기본적으로 테두리로 묶어서 표현해줌)
-        2) <legend> : 해당 그룹의 제목을 표현할 수 있는 태그 
+      1) 그룹으로 묶어 표현하는 태그 (기본적으로 테두리로 묶어서 표현해줌)
+      2) <legend> : 해당 그룹의 제목을 표현할 수 있는 태그 
    -->
 
 
@@ -88,68 +126,191 @@
 
    <!--
       * <textarea>
-        1) 다중행 입력란 태그
-        2) 여러줄 텍스트 입력을 위한 상자
-        3) 인라인 요소
-        4) 형식
-           <textarea cols="" rows=""></textarea>
-        5) 주요 속성
-           ㄴ cols : 입력 가능 행 수
-           ㄴ rows : 입력 가능 열 수 
+      1) 다중행 입력란 태그
+      2) 여러줄 텍스트 입력을 위한 상자
+      3) 인라인 요소
+      4) 형식
+         <textarea cols="" rows=""></textarea>
+      5) 주요 속성
+         ㄴ cols : 입력 가능 열 수
+         ㄴ rows : 입력 가능 행 수 
    -->
 
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>레전드폼</legend>
+         <p>
+            제목 : <input type="text" name="title" size="48"><br>
+         </p>
+         <p>
+            내용 : <textarea name="content" placeholder="500자 이내 내용 입력" cols="50" rows="10" maxlength="500" style="resize: none;"></textarea>
+         </p>
+         <input type="submit" value="등록하기">
+      </fieldset>
+   </form>
 
+   <h1>숫자, 날짜 관련 input</h1>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>숫자관련</legend>
+         <p>
+            <!-- type="number" : 숫자만 입력가능, 스핀박스 사용 -->
+            수량 : <input type="number" name="amount" value="0" min="0" max="20" step="2"> <br>
+         </p>
+
+         <p>
+            <!-- type="range" : 슬라이드바가 표현됨 -->
+            점수 : <input type="range" name="score" min="0" max="100" value="80" step="10">
+         </p>
+      </fieldset>
+
+      <fieldset>
+         <legend>날짜 및 시간관련</legend>
+         <p>
+            <!-- type="date" : 연도, 월, 일 -->
+            날짜 : <input type="date" value=""> <br>
+            <!-- type="month" : 연도, 월 -->
+            월 : <input type="month" value=""> <br>
+            <!-- type="week" : 연도, 몇번째 주 -->
+            주 : <input type="week"> <br>
+            <!-- type="time" : 오전/오후, 시, 분 -->
+            시간 : <input type="time"> <br>
+            <!-- type="datetime-local" : 연도, 월, 일, 오전/오후, 시, 분 -->
+            날짜 및 시간 : <input type="datetime-local">
+         </p>
+
+
+      </fieldset>
+      <p>
+         <input type="submit">
+         <input type="reset">
+      </p>
+
+   </form>
 
 
    <!--
       * type="radio"
-        1) 라디오버튼
-        2) 제시된 여러개의 값들 중 오로지 한개만을 선택할 수 있게 할때 사용
-        3) name 속성값이 동일한 것들끼리 하나의 그룹으로 묶임
-           그룹 내에 한가지만 선택 가능 
-        4) 제출(submit)시 checked(선택된) value값이 넘어감
+      1) 라디오버튼
+      2) 제시된 여러개의 값들 중 오로지 한개만을 선택할 수 있게 할때 사용
+      3) name 속성값이 동일한 것들끼리 하나의 그룹으로 묶임
+         그룹 내에 한가지만 선택 가능 
+      4) 제출(submit)시 checked(선택된) value값이 넘어감
       
       * type="checkbox"
-        1) 체크박스
-        2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
-        3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
+      1) 체크박스
+      2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
+      3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
    -->
 
+   <h1>라디오 체크박스</h1>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>라디오</legend>
+         <p>
+            성별 : 
+            <input type="radio" name="gender" id="noGen" value="N" checked> <label for="noGen">선택안함</label>
+            <input type="radio" name="gender" id="male" value="M"> <label for="male">남자</label>
+            <input type="radio" name="gender" id="female" value="F"> <label for="female">여자</label>
+         </p>
+
+      </fieldset>
+      <br>
+      <fieldset>
+         <legend>체크박스</legend>
+         <p>
+            취미 :
+            <input type="checkbox" id="hobby1" name="hobby" value="game"> <label for="hobby1">게임</label>
+            <input type="checkbox" id="hobby2" name="hobby" value="read"> <label for="hobby2">독서</label>
+            <input type="checkbox" id="hobby3" name="hobby" value="cycle"> <label for="hobby3">자전거</label>
+            <input type="checkbox" id="hobby4" name="hobby" value="movie"> <label for="hobby4">영화</label>
+         </p>
+      </fieldset>
+      <p>
+         <input type="submit">
+      </p>
+   </form>
+
+   <h1>기타 input</h1>
+   <form action="/server/test.do">
+      <!-- 색상코드 전달 : 16진수 8자리 코드값 -->
+      색상선택 : <input type="color" name="color"> <br>
+      첨부파일 : <input type="file" name="file"> <br>
+      숨김정보 : <input type="hidden" name="hidden" value="lol"> <br>
+      <p>
+         <input type="submit"> <!-- value="제출" (기본값) -->
+         <input type="reset"> <!-- value="초기화" (기본값) -->
+         <input type="button" value="그냥버튼">
+         <button type="submit">버튼임</button>
+         <button type="button">버튼천국</button>
+         <button>생략버튼</button> <!-- button 태그의 type은 기본적으로 submit -->
+      </p>
+   </form>
 
 
 
 
    <!--
       * <select>, <option>
-        1) 목록 상자 태그
-        2) 여러 목록을 제시해서 그 중 선택 할 수 있도록 표현 가능 
-        3) 인라인 요소
-        4) 형식
-           <select>
-              <option value="">목록1</option>
-              <option value="">목록2</option>
-              <option value="">목록3</option>
-           </select>
-        5) 주요 속성
-           1) selected : option 요소에 선택 효과를 주는 속성
-           2) value
-              ㄴ option요소에 value 속성이 없을 경우 텍스트가 value값임
-              ㄴ value속성이 있을 경우 value 속성값이 value값임
+      1) 목록 상자 태그
+      2) 여러 목록을 제시해서 그 중 선택 할 수 있도록 표현 가능 
+      3) 인라인 요소
+      4) 형식
+         <select>
+            <option value="">목록1</option>
+            <option value="">목록2</option>
+            <option value="">목록3</option>
+         </select>
+      5) 주요 속성
+         1) selected : option 요소에 선택 효과를 주는 속성
+         2) value
+            ㄴ option요소에 value 속성이 없을 경우 텍스트가 value값임
+            ㄴ value속성이 있을 경우 value 속성값이 value값임
 
       * <datalist>
-        1) 콤보 상자 태그 (입력란 + 목록 상자)
-        2) 사용자가 직접 입력도 할 수 있고 목록 중 선택도 가능하게 표현 가능
-        3) 인라인 요소
-        4) HTML5부터 사용 가능
-        5) 형식
-           <input type="" list="datalist아이디">
-           <datalist id="아이디">
-              <option></option>
-              <option></option>
-              <option></option>
-           </datalist>
+      1) 콤보 상자 태그 (입력란 + 목록 상자)
+      2) 사용자가 직접 입력도 할 수 있고 목록 중 선택도 가능하게 표현 가능
+      3) 인라인 요소
+      4) HTML5부터 사용 가능
+      5) 형식
+         <input type="" list="datalist아이디">
+         <datalist id="아이디">
+            <option></option>
+            <option></option>
+            <option></option>
+         </datalist>
    -->
 
+   <h1>목록상자 태그</h1>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>일반목록상자</legend>
+         국가번호 :
+         <select name="countryNo" id="select1">
+            <option value="01">가나 +01</option>
+            <option value="02">가봉 +02</option>
+            <option value="82" selected>한국 +82</option>
+            <option value="99">일본 +99</option>
+         </select>
+      </fieldset>
+
+      <fieldset>
+         <legend>콤보상자</legend>
+         이메일 :
+         <input type="text" name="email" size="10">
+         @
+         <input type="text" name="domain" size="15" list="domainList">
+         <datalist id="domainList">
+            <option>naver.com</option>
+            <option>daum.com</option>
+            <option>yahoo.kr</option>
+         </datalist>
+      </fieldset>
+      
+      <p>
+         <button type="submit">입력완료</button>
+      </p>
+   </form>
 
 
 </body>

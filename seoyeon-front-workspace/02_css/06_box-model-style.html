@@ -7,6 +7,27 @@
 </head>
 <body>
 
+    <style>
+        .wrap1>*{
+            background: pink;
+        }
+        /* 블럭요소는 크기를 지정할 수 있음 */
+        .wrap1>div{
+            /* 너비 */ width: 100px;
+            /* 높이 */ height: 100px;
+        }
+        /* 인라인요소는 크기를 지정할 수 없음 */
+        .wrap1>span{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <div class="wrap1">
+        <div>블럭요소</div> <br>
+        <span>인라인요소</span>
+    </div>
+
     <!-- 
         * 요소 구조 
 
@@ -24,6 +45,12 @@
     -->
 
     <style>
+
+        .wrap2>div{
+            /* width, height는 기본적으로 content영역의 사이즈 */
+            width: 100px;
+            height: 100px;
+        }
         
         
         /* 
@@ -37,32 +64,87 @@
               3) 단축 스타일 속성
                  ㄴ border[-위치] : 테두리 두께, 종류, 색상을 한꺼번에 지정
         */
+        .wrap2>.box1{
+            border-style: dotted; /* solid, dotted, dashed, double, groove, ridge, inset, outset */
+            border-width: 5px;
+            border-color: red;
+            border-radius: 30px;
+        }
+        .wrap2>.box2{
+            border: 3px solid pink;
+            border-top: 5px dashed red;
 
+            border-right-style: dotted;
+            border-right-color: blue;
 
+            border-bottom: 7px double green;
+
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .wrap2>.box3{
+            border-style: double; /* 상하좌우 */
+            border-style: solid dashed; /* 상하 좌우 */
+            border-style: solid dashed dotted double; /* 상 우 하 좌 */
+            border-radius: 30px 10px 20px 40px; /* 상좌 상우 하우 하좌 */
+            border-color: red orange yellow green;
+        }
 
         /* 
             * box에 그림자효과 스타일 : box-shadow
               ㄴ 가로거리(x) 세로거리(y) 흐림정도 번짐정도 색상 지정
         */
+        .wrap2>.box4{
+            border: 1px solid black;
+            box-shadow: 5px 5px 10px 5px lightgray;
+        }
 
     </style>
 
+    <div class="wrap2">
+        <div class="box1">box1</div> <br>
+        <div class="box2">box2</div> <br>
+        <div class="box3">box3</div> <br>
+        <div class="box4">box4</div>
+    </div>
 
-
-
-
+    <hr>
 
     <style>
+        .wrap3>div{
+            width: 100px;
+            height: 100px;
+            border: 10px solid gray;
+        }
         /* 
             * 내부 여백 관련 스타일 : padding
               1) 요소 내부 여백은 기본적으로 box 크기에 영향을 미침
               2) 주요 스타일 속성
                  ㄴ padding[-위치] : 안쪽 여백으로 지정할 값
         */
+        .wrap3>.box1{
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            /*
+                가로길이: 20(left-right-border) + 20(left-padding) + 10(right-padding) + 100(width) => 150px
+            */
+        }
+        .wrap3>.box2{
+            padding: 10px 20px; /* 상하 좌우 */
+        }
+        .wrap3>.box3{
+            padding: 10px; /* 상하좌우 */
+        }
     </style>
-
-
-
+    <div class="wrap3">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <br>
 
 
     <style>
@@ -83,11 +165,19 @@
                  1) width와 height가 테두리(border)까지의 범위를 의미
                  2) box 크기 = width/height
         */
-
+        .wrap4>.box1{
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 10px solid gray;
+            padding: 10px;
+        }
     </style>
+    <div class="wrap4">
+        <div class="box1">box1</div>
+    </div>
 
-    
-
+    <hr>
 
     <style>
         /* 
@@ -97,10 +187,55 @@
               3) 주요 스타일 속성 
                  ㄴ margin[-위치] : 외부 여백으로 지정할 값
         */
-
+        .wrap5 {border:1px solid black}
+        .wrap5>div{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        .wrap5>.box1{
+            margin-top: 30px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        .wrap5>.box2{
+            margin: 10px 30px; /* 상하 좌우 */
+            margin: 50px;
+        }
+        .wrap5>.box3{
+            margin: 10px auto; /* box를 좌우(부모요소기준)로 가운데 배치할 때 auto 작성 */
+        }
     </style>
 
+    <div class="wrap5">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
 
+    <hr>
+
+    <style>
+        .overflow-test{
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            /* 범위에 벗어난 값 처리 */ overflow: scroll; /* visible, hidden, scroll */
+        }
+    </style>
+    <div class="overflow-test">
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+        안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다 안녕하세요 반갑습니다
+    </div>
 
 </body>
 </html>
