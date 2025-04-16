@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizza Order</title>
 </head>
 <body>
     <!-- 실습문제4_입력양식태그1.PNG -->
+    <form action="/server/example.do">
+        <fieldset>
+            <legend>고객정보</legend>
+            고객명 : <input type="text"> <br>
+            전화번호 : <input type="tel"> <br>
+            E-mail : <input type="email">
+        </fieldset>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <input type="radio" name="size" value="S" id="small"> <label for="small">Small</label> <br>
+            <input type="radio" name="size" value="M" id="medium"> <label for="medium">Medium</label> <br>
+            <input type="radio" name="size" value="L" id="large"> <label for="large">Large</label>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox" name="topping" value="bacon" id="top1"> <label for="top1">베이컨</label> <br>
+            <input type="checkbox" name="topping" value="cheese" id="top2"> <label for="top2">치즈</label> <br>
+            <input type="checkbox" name="topping" value="onion" id="top3"> <label for="top3">양파</label> <br>
+            <input type="checkbox" name="topping" value="mushroom" id="top4"> <label for="top4">버섯</label>
+        </fieldset>
+        <p>
+            희망 배송 시간 : <input type="time">
+        </p>
+        <button type="submit">주문하기</button>
+    </form>
 </body>
 </html>

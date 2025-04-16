@@ -1,18 +1,55 @@
 <!--
-    ## CSS ##
-    1. Cascade Style Sheet
-    2. HTML문서상의 요소들에 스타일을 지정하는 언어
-    3. 스타일 지정 방식
-       1) internal : html 문서내에 <style> 태그를 통해 스타일구문을 작성하는 방식
-       2) external : 별도의 *.css 파일에 스타일구문을 작성한 후 html문서에서 <link> 태그로 가져오는 방식
-       3) inline   : 요소내에 style속성을 통해 스타일구문을 작성하는 방식
-    4. 스타일 적용 우선 순위 
-          높음 ----------------------- 낮음
-       !important > inline > internal,external
-    5. 기본적인 스타일 작성 구조
-       선택자 {
-          style속성: 값;
-          style속성: 값;
-          ...
-       }
+   ## CSS ##
+   1. Cascade Style Sheet
+   2. HTML문서상의 요소들에 스타일을 지정하는 언어
+   3. 스타일 지정 방식
+      1) internal : html 문서내에 <style> 태그를 통해 스타일구문을 작성하는 방식
+      2) external : 별도의 *.css 파일에 스타일구문을 작성한 후 html문서에서 <link> 태그로 가져오는 방식
+      3) inline   : 요소내에 style속성을 통해 스타일구문을 작성하는 방식
+   4. 스타일 적용 우선 순위 
+         높음 ----------------------- 낮음
+      !important > inline > internal,external
+   5. 기본적인 스타일 작성 구조
+      선택자 {
+         style속성: 값;
+         style속성: 값;
+         ...
+      }
 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS start</title>
+   <!-- internal 방식 -->
+   <style>
+      /* CSS 영역 */
+      p {
+         background-color: bisque;
+         color: blueviolet;
+      }
+      div {
+         color: darkgreen;
+      }
+      
+   </style>
+
+   <!-- external 방식 -->
+   <link rel="stylesheet" href="./sample.css">
+
+</head>
+<body>
+   
+   <!-- internal 방식 적용 -->
+   <p>Hello CSS</p>
+   <div>안녕하세요</div>
+
+   <!-- external 방식 적용 -->
+   <pre>반갑습니다</pre>
+
+   <!-- inline 방식 적용 -->
+   <span style="color: blue; background-color: blanchedalmond;">안녕히가세요</span>
+
+</body>
+</html>

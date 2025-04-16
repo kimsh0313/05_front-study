@@ -7,5 +7,71 @@
 </head>
 <body>
     <!-- 실습문제6_입력양식태그3.PNG -->
+     <h1>회원가입</h1>
+     <form action="/김성호/김성호.호" name="asd" id="asda">
+        <fieldset name="asd" id="asda">
+            
+                <fieldset name="asd" id="asda">
+                    <legend>필수 입력</legend>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <td><input type="text" required placeholder="아이디 10글자 이내" maxlength="10" name="id" size="50" id=""> 
+                                <input type="button" name="" value="중복 확인" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td><input type="password" required placeholder="영문,숫자,특문 포함 8자이상" minlength="8" 
+                                pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()])[a-zA-Z\d!@#$%^&*()]{8,12}$" 
+                                size="50" name="pw" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호 확인</th>
+                            <td><input type="text" required name="????????" id="??????????????????" size="50"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><input type="text" required name="email" id="" size="50"> 
+                                <select>
+                                    <option>직접입력</option>
+                                    <option value="">@naver.com</option>
+                                    <option value="">@gmail.com</option>
+                                 </select></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset name="asd" id="asda">
+                    <legend>추가 정보</legend>
+                        프로필 사진 : <input type="file"  name="" id=""> <br><br>
+                        성별 :   
+                        <input type="radio" name="gender" id="man" value="M">
+                        <label for="man">남자</label> 
+                        <input type="radio" name="gender" id="woman" value="F">
+                        <label for="woman">여자</label>
+                        <br><br>
+                        생년월일 : <input type="date" name="" id="">
+                        <br><br>
+                        취미<br>
+                        <input type="checkbox" name="hobby" id="h1">
+                        <label for="h1">야구</label>
+                        <input type="checkbox" name="hobby" id="h2">
+                        <label for="h2">농구</label>
+                        <input type="checkbox" name="hobby" id="h3">
+                        <label for="h3">축구 </label> <br>
+                        <input type="checkbox" name="hobby" id="h4">
+                        <label for="h4">공부?</label>
+                        <input type="checkbox" name="hobby" id="h5">
+                        <label for="h5">음악감상</label><br>
+                        <input type="checkbox" name="hobby" id="h6">
+
+                        <label for="h6">기타 : </label> <input type="text" name="" id="h6">
+                        <br><br>
+
+                        자기소개<br>
+                        <textarea name="" id="" cols="70" rows="5" style="resize: none;"></textarea>
+                </fieldset><br>
+                <input type="submit" value="회원가입" name="" id=""> <input type="reset"  value="다시입력" name="" id=""> <input type="button" value="이전으로" name="asd" id="asda" onclick= "history.go(-1)"><br><br>
+                </fieldset>
+     </form>
 </body>
 </html>
