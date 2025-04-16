@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
 </head>
 <body>
 
    <!--
       * <img>
-        1) 이미지 표현 태그
-        2) 인라인 요소 
-        3) 종료태그가 별도로 없음
-        4) 형식
-           <img src="" alt="" width="px|%" height="px|%">
-        5) 주요 속성
-           ㄴ src    : 이미지 파일 경로
-           ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 
-           ㄴ width  : 이미지 표현 너비 (높이도 같이 조정됨)
-           ㄴ height : 이미지 표현 높이 (너비도 같이 조정됨)
+      1) 이미지 표현 태그
+      2) 인라인 요소 
+      3) 종료태그가 별도로 없음
+      4) 형식
+         <img src="" alt="" width="px|%" height="px|%">
+      5) 주요 속성
+         ㄴ src    : 이미지 파일 경로
+         ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 
+         ㄴ width  : 이미지 표현 너비 (높이도 같이 조정됨)
+         ㄴ height : 이미지 표현 높이 (너비도 같이 조정됨)
    -->
+         <h1>이미지 태그</h1>
+         <img src="..\assets\image\architecture1.jpg" alt="안보여요" width="680">
 
+         <h3>고정크기(px) vs 가변크기 (%)</h3>
+         <h4>1. 고정크기 (px) : 화면 사이즈가 조정되어도 이미지의 크기는 고정값</h4>
+         <img src="../assets/image/flower1.jpg" alt="" width="200px" height="300px">
+         <img src="../assets/image/flower2.jpg" alt="" width="200px" height="300px">
+         <img src="../assets/image/flower3.jpg" alt="" width="200px" height="300px">
+         <img src="../assets/image/flower4.jpg" alt="" width="200px" height="300px">
+         <img src="../assets/image/flower5.jpg" alt="" width="200px" height="300px">
+
+         <h4>2. 가변크기 (%) : 화면 사이즈가 조정되면 이미지의 크기도 같이 조정</h4>
+         <img src="../assets/image/flower1.jpg" alt="" width="18%" height="">
+         <img src="../assets/image/flower2.jpg" alt="" width="18%" height="">
+         <img src="../assets/image/flower3.jpg" alt="" width="18%" height="">
+         <img src="../assets/image/flower4.jpg" alt="" width="18%" height="">
+         <img src="../assets/image/flower5.jpg" alt="" width="18%" height="">
 
 
 
    <!--
       * <audio>
-        1) 오디오 태그
-        2) 인라인 요소
-        3) 형식
-           <audio [controls] [autoplay] [loop] [muted]>
-              <source type="" src="">
-              브라우저가 audio 태그를 지원하지 않을 경우 대체 텍스트 문구
-           </audio>
-        4) 주요 속성
-           ㄴ src      : 오디오 파일 경로
-           ㄴ autoplay : 자동 재생 여부     
-           ㄴ loop     : 반복 재생 여부
-           ㄴ muted    : 음소거 여부
-           ㄴ controls : 오디오 컨트롤 패널(재생, 중지, 소리조절 등) 노출 여부
-        5) 오디오의 content-type (MIME type)
-           ㄴ audio/wav
-           ㄴ audio/mp3
-           ㄴ audio/ogg
+      1) 오디오 태그
+      2) 인라인 요소
+      3) 형식
+         <audio [controls] [autoplay] [loop] [muted]>
+            <source type="" src="">
+            브라우저가 audio 태그를 지원하지 않을 경우 대체 텍스트 문구
+         </audio>
+      4) 주요 속성
+         ㄴ src      : 오디오 파일 경로
+         ㄴ autoplay : 자동 재생 여부     
+         ㄴ loop     : 반복 재생 여부
+         ㄴ muted    : 음소거 여부
+         ㄴ controls : 오디오 컨트롤 패널(재생, 중지, 소리조절 등) 노출 여부
+      5) 오디오의 content-type (MIME type)
+         ㄴ audio/wav
+         ㄴ audio/mp3
+         ㄴ audio/ogg
    -->
+   <hr>
+   <h1>오디오</h1>
+   <audio controls loop muted>
+      <source type="audio/mp3" src="../assets/audio/major.mp3">
+   </audio>
 
+   <hr>
 
 
 
    <!--
       * <video>
-        1) 비디오 태그
-        2) 인라인 요소
-        3) 형식
-           <video [controls] [autoplay] [loop] [muted] width="" height="" poster="">
-              <source type="" src="">
-           </video>
-        4) 주요 속성
-           ㄴ src      : 비디오 파일 경로
-           ㄴ autoplay : 자동 재생 여부     
-           ㄴ loop     : 반복 재생 여부
-           ㄴ muted    : 음소거 여부
-           ㄴ controls : 비디오 컨트롤 패널(재생, 중지, 소리조절 등) 노출 여부
-           ㄴ width    : 비디오 너비
-           ㄴ height   : 비디오 높이
-           ㄴ poster   : 썸네일 이미지 파일 경로
-        5) 비디오의 content-type (MIME type)
-           ㄴ video/mp4
-           ㄴ video/webm
-           ㄴ video/ogg
-    -->
-
+      1) 비디오 태그
+      2) 인라인 요소
+      3) 형식
+         <video [controls] [autoplay] [loop] [muted] width="" height="" poster="">
+            <source type="" src="">
+         </video>
+      4) 주요 속성
+         ㄴ src      : 비디오 파일 경로
+         ㄴ autoplay : 자동 재생 여부     
+         ㄴ loop     : 반복 재생 여부
+         ㄴ muted    : 음소거 여부
+         ㄴ controls : 비디오 컨트롤 패널(재생, 중지, 소리조절 등) 노출 여부
+         ㄴ width    : 비디오 너비
+         ㄴ height   : 비디오 높이
+         ㄴ poster   : 썸네일 이미지 파일 경로
+      5) 비디오의 content-type (MIME type)`
+         ㄴ video/mp4
+         ㄴ video/webm
+         ㄴ video/ogg
+   -->
+   <h1>비디오</h1>
+   <video src="../assets/video/video1.mp4" controls width="80%" poster="../assets/image/city1.jpg"></video>
+   <br>
+   <iframe width="640" height="360" src="https://www.youtube.com/embed/KDorKy-13ak" title="Kendrick Lamar&#39;s Apple Music Super Bowl Halftime Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </body>
 </html>

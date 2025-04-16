@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form{
+        width: 320px;
+    }
+    .group{
+        margin-bottom: 25px;
+    }
+    .input-group>label{
+        margin-right: 15px;
+    }
+    .input-group {
+        display: flex;
+        margin-left: 16px;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .button-group {
+        display: flex;
+            justify-content: center;
+    }
+
+
+    thead, tbody, tfoot {
+        font-size: 14px;
+    }
+    thead, tfoot {
+        background-color:lightsalmon;
+        color: white;
+    }
+    tbody {
+        background-color:beige;
+    }
+    tbody button {
+        width: 100%;
+        font-size: small;
+    }
+    #button-cell{
+        width: 62px;
+    }
+</style>
+<body>
+    
+    <fieldset>
+        <legend>공지사항 작성하기</legend>
+        <form action="/server" method="post">
+            <div class="group">
+                <div class="input-group">
+                    <label for="title"><b>제목</b></label>
+                    <input type="text" id="title" name="title" size="30" placeholder="제목을 입력하시요.">
+                </div>
+                <div class="input-group">
+                    <label for="content"><b>내용</b></label>
+                    <textarea name="content" placeholder="내용을 압력하시오." cols="25" rows="9" style="resize: none;"></textarea>
+                </div>
+                <label for="file"><b>첨부파일</b></label>
+                <input type="file">
+            </div>
+            <div class="button-group">
+                <button type="submit">작성하기</button>
+            </div>
+        </form>
+    </fieldset>
+
+    <br>
+    <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th colspan="2" rowspan="1" width="350" height="24">제목</th>
+                <th width="90">작성자</th>
+                <th width="90">작성일</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9</td>
+                <td>공지사항 제목 9</td>
+                <td id="button-cell"><button type="button">바로가기</button></td>
+                <td>user01</td>
+                <td>2021-03-29</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>공지사항 제목 6</td>
+                <td id="button-cell"><button type="button">바로가기</button></td>
+                <td>answ445</td>
+                <td>2021-03-12</td>
+                <td>67</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>공지사항 제목 3</td>
+                <td id="button-cell"><button type="button">바로가기</button></td>
+                <td>sotogito</td>
+                <td>2022-06-04</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>공지사항 제목 1</td>
+                <td id="button-cell"><button type="button">바로가기</button></td>
+                <td>palwe3</td>
+                <td>2021-01-02</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>에에아라라랄ㅈ댜ㅐ더</td>
+                <td id="button-cell"><button type="button">바로가기</button></td>
+                <td>sukipi</td>
+                <td>2025-04-14</td>
+                <td>1000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4" rowspan="1" >전제공지사항 갯수</td>
+                <th colspan="2" rowspan="1" >5개</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>

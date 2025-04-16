@@ -22,15 +22,100 @@
             ㄴ 블럭 요소   : 한 줄 전체에 적용됨. 다음 요소 작성시 자동으로 줄 바꿈 처리됨
             ㄴ 인라인 요소 : 해당 요소에만 적용됨. 줄바꿈을 강제로 해줘야됨  
 
-    5. 문서 기본 구조
-       <!DOCTYPE html>      -- 문서형식 지정 : html5 형식임을 알리는 선언부
-       <html lang="">       -- html 문서의 시작 (문서의 모든 내용을 포함하는 최상위 태그) / lang속성:제작언어(검색엔진에서 활용)
-        <head></head>       -- 해당 문서의 각종 정보, 제목, 설명, 스타일시트 등을 표현
-        <body></body>       -- 화면에 표현하고자 하는 정보 및 내용을 표현
-       </html>              -- html 문서의 끝
-
     ## 참조 문서 ##
     https://developer.mozilla.org/ko/
     https://www.w3schools.com/
 
 -->
+    <!DOCTYPE html>
+    <html lang="ko">
+        <head>
+            <!--meta는 html 문서가 가지고 있는 유용한 정보 담아둔다-->
+            <meta charset="UTF-8">
+            <meta name="generator" content="vs code"><!--문서 작성한 프로그램-->
+            <meta name="author" content="roh"><!--문서 쓴 사람-->
+            <meta name="keywords" content="html 기본내용, 기본태그"><!--무운서 키워드-->
+            <meta name="description" content="html 기본구조를 익히기위한 파일"><!--문서 -->
+            <title>씨짞이따</title><!--제목-->
+        </head>
+        <body>
+            ㅎㅇ<br>
+            별도 태그 없이도 작성 ㄱㄴ
+            <hr>
+            <!--
+            <br>
+            줄바꿔주는 태그
+            <hr>
+            가로 수평선 넣기
+            -->
+            <!--
+            *엔티티 코드
+            )특수문자 의미 &시작 ;끝
+            &lt; , &gt;
+            
+            -->
+            작다 (less than) : &lt;
+            <br>
+            크다 (greater than) : &gt;
+            <br>
+            공백() : 공&nbsp; &nbsp; &nbsp; 백
+            <br>
+            and : &amp;
+            <hr>
+            <!--
+                <p>
+                )문단 태그
+                )문단 내 공백은 하나만 적용 줄바꿈도 하나만
+                블럭요소(앞뒤 자동 줄바꿈 처리 , 한줄전체를 영역으로 차지)
+            -->
+                앞
+                <p>
+                    p태그는 줄바꿈 
+                    <br>할려면 별도 태그 필요
+                    <br>
+                    김 성 호 김  성     호
+                    <br> 공백은 하나만 표시해준다
+                    그래서 김&nbsp; &nbsp; &nbsp;성호
+                    <br>문구 사용해서 공백 nbsp
+
+                </p>
+                뒤
+            <!--
+                <pre>
+                )형식을 갖춘 문단 태그
+                문단 내 작성한 그대로 
+
+            -->
+                <pre>
+                    pre 태그는 시작태그에서부터 종료 태그까지 입력된
+                    내용 그대로 표현해줌
+                    발바꿈도 표현
+                    김               성              호오오오
+                    공백도 표현
+                    따로 엔티티 필요없
+                    잘안씀
+                </pre><hr>
+            <!--
+            div
+            영역을 표현
+            블럭요소    
+            -->
+            div 시작
+            <div>
+                hello html 
+            </div>
+            div 끄읏.
+            <br><br>
+            <!--
+                span
+                영역을 표현하는 태그
+                인라인 요소 (앞뒤 줄바꿈 x)            
+            -->
+                span 시작
+                <span>
+                    hello html~
+                </span>
+                span> 끝
+
+        </body>
+    </html>

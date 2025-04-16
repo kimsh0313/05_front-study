@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
 </head>
+
 <body>
    <!-- 
       * <input>
@@ -74,7 +76,7 @@
    -->
 
 
-   
+
 
 
    <!--
@@ -150,7 +152,171 @@
            </datalist>
    -->
 
+   <h1>input 태그</h1>
+   <h2>텍스트 관련 input</h2>
+
+   <p>아이디: <input type="text"></p>
+   <p>비밀번호: <input type="password"></p>
+   <p>검색어: <input type="search"></p> <br>
+   <p>
+      <label for="userId">아이디:</label>
+      <input type="text" id="userId" placeholder="아이디 입력">
+   </p>
+   <p>
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" placeholder="비밀번호 입력">
+   </p>
+   <p>
+      <label for="search">검색어 입력:</label>
+      <input type="search" id="search" placeholder="검색어 입력" size="30">
+   </p>
+   <p>
+      기관명: <input type="text" value="SSG I&C" readonly>
+   </p>
+   <h1>from 태그</h1>
+   <form action="/server/signup.me" method="post">
+      <fieldset>
+         <legend>회원가입</legend>
+         <p>
+            * 아이디 : <input type="text" name="userId" maxlength="12" placeholder="최대 12자 까지 입력" required
+               oninvalid="this.setCustomValidity('바보야')" oninput="this.setCustomValidity('천재야')"> <br>
+            * 비밀번호 : <input type="password" name="userPwd" maxlength="15" placeholder="최대 15자 까지 입력" required> <br>
+         </p>
+         <p>
+            전화번호 : <input type="tel" name="phone"> <br> <!-- tel 타입 : 모바일에서 숫자 입력창이 뜨게 됨 -->
+            이메일 : <input type="email" name="email"> <br> <!-- email 타입 : 제출 시 @가 있는지 검사 -->
+            홈페이지 : <input type="url" name="homepage"> <br> <!-- url 타입 : http:// 가 있는지 검사 -->
+         </p>
+         <input type="submit" value="회원가입"> <!-- submit 타입 기본값 = 제출 -->
+      </fieldset>
+   </form>
+
+   <br>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>레전드폼</legend>
+         <p>
+            제목 : <input type="text" name="title" size="48"><br>
+         </p>
+         <p>
+            내용 : <textarea name="content" placeholder="500자 이내 내용 입력" cols="50" rows="10" maxlength="500"
+               style="resize: none;"></textarea>
+         </p>
+         <input type="submit" value="등록하기">
+      </fieldset>
+   </form>
+
+   <h1>숫자, 날짜 관련 input</h1>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>숫자관련</legend>
+         <p>
+            <!-- type="number" : 숫자만 입력가능, 스핀박스 사용 -->
+            수량 : <input type="number" name="amount" value="0" min="0" max="20" step="2"> <br>
+         </p>
+
+         <p>
+            <!-- type="range" : 슬라이드바가 표현됨 -->
+            점수 : <input type="range" name="score" min="0" max="100" value="80" step="10">
+         </p>
+      </fieldset>
+
+      <fieldset>
+         <legend>날짜 및 시간관련</legend>
+         <p>
+            <!-- type="date" : 연도, 월, 일 -->
+            날짜 : <input type="date" value=""> <br>
+            <!-- type="month" : 연도, 월 -->
+            월 : <input type="month" value=""> <br>
+            <!-- type="week" : 연도, 몇번째 주 -->
+            주 : <input type="week"> <br>
+            <!-- type="time" : 오전/오후, 시, 분 -->
+            시간 : <input type="time"> <br>
+            <!-- type="datetime-local" : 연도, 월, 일, 오전/오후, 시, 분 -->
+            날짜 및 시간 : <input type="datetime-local">
+         </p>
 
 
+      </fieldset>
+      <p>
+         <input type="submit">
+         <input type="reset">
+      </p>
+
+   </form>
+   <h1>라디오 체크박스</h1>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>라디오</legend>
+         <p>
+            성별 :
+            <input type="radio" name="gender" id="noGen" value="N" checked> <label for="noGen">선택안함</label>
+            <input type="radio" name="gender" id="male" value="M"> <label for="male">남자</label>
+            <input type="radio" name="gender" id="female" value="F"> <label for="female">여자</label>
+         </p>
+
+      </fieldset>
+      <br>
+      <fieldset>
+         <legend>체크박스</legend>
+         <p>
+            취미 :
+            <input type="checkbox" id="hobby1" name="hobby" value="game"> <label for="hobby1">게임</label>
+            <input type="checkbox" id="hobby2" name="hobby" value="read"> <label for="hobby2">독서</label>
+            <input type="checkbox" id="hobby3" name="hobby" value="cycle"> <label for="hobby3">자전거</label>
+            <input type="checkbox" id="hobby4" name="hobby" value="movie"> <label for="hobby4">영화</label>
+         </p>
+      </fieldset>
+      <p>
+         <input type="submit">
+      </p>
+   </form>
+
+   <h1>기타 input</h1>
+   <form action="/server/test.do">
+      <!-- 색상코드 전달 : 16진수 8자리 코드값 -->
+      색상선택 : <input type="color" name="color"> <br>
+      첨부파일 : <input type="file" name="file"> <br>
+      숨김정보 : <input type="hidden" name="hidden" value="lol"> <br>
+      <p>
+         <input type="submit"> <!-- value="제출" (기본값) -->
+         <input type="reset"> <!-- value="초기화" (기본값) -->
+         <input type="button" value="그냥버튼">
+         <button type="submit">버튼임</button>
+         <button type="button">버튼천국</button>
+         <button>생략버튼</button> <!-- button 태그의 type은 기본적으로 submit -->
+      </p>
+   </form>
+   <h1>목록상자 태그</h1>
+   <form action="/server/test.do">
+      <fieldset>
+         <legend>일반목록상자</legend>
+         국가번호 :
+         <select name="countryNo" id="select1">
+            <option value="01">가나 +01</option>
+            <option value="02">가봉 +02</option>
+            <option value="82" selected>한국 +82</option>
+            <option value="99">일본 +99</option>
+         </select>
+      </fieldset>
+
+      <fieldset>
+         <legend>콤보상자</legend>
+         이메일 :
+         <input type="text" name="email" size="10">
+         @
+         <input type="text" name="domain" size="15" list="domainList">
+         <datalist id="domainList">
+            <option>naver.com</option>
+            <option>daum.com</option>
+            <option>yahoo.kr</option>
+         </datalist>
+      </fieldset>
+
+      <p>
+         <button type="submit">입력완료</button>
+      </p>
+   </form>
 </body>
+
 </html>

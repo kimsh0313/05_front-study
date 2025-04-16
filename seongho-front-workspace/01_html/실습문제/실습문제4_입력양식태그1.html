@@ -7,5 +7,38 @@
 </head>
 <body>
     <!-- 실습문제4_입력양식태그1.PNG -->
+     <form action="abc">
+       <fieldset>
+        <legend>고객정보</legend>
+        고객명 : <input type="text" name="name" id=""><br>
+        전화번호 : <input type="tel" name="phone" id=""><br>
+        E-mail : <input type="email" name="email" id="">
+
+    </fieldset>
+    <fieldset>
+        <legend>피자 사이즈</legend>
+            <input type="radio" name="size" id="Ssize" value="S">
+            <label for="Ssize">Small</label><br>
+            <input type="radio" name="size" id="Msize" value="M">
+            <label for="Msize">Medium</label><br>
+            <input type="radio" name="size" id="Lsize" value="L">
+            <label for="Lsize">Large</label>
+    </fieldset>
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <input type="checkbox" name="topping" id="pig" value="bacon">
+        <label for="pig">베이컨</label><br>
+        <input type="checkbox" name="topping" id="v" value="cheese" >
+        <label for="v">치즈</label><br>
+        <input type="checkbox" name="topping" id="oni" value="onion">
+        <label for="oni">양파</label><br>
+        <input type="checkbox" name="topping" id="mush "    value="mushroom">
+        <label for="mush">버섯</label>
+
+    </fieldset>
+    
+    <p>희망 배송 시가안: <input type="time" name="" id=""></p>
+     </form>
+     <input type="submit" name="" value="주문해라.">
 </body>
 </html>
