@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        
+      #ul1 {
+        /* 불릿기호 */
+        list-style-type: none; /* disc, circle, square, none */
+        /* 이미지   */
+        list-style-image: url("../assets/image/icon.png");
+      }
+      #ol1 {
+        /* 번호종류 */
+        list-style-type: lower-roman;
+        /* 들여쓰기 */
+        list-style-position: inside; /*outside,inside*/
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>목록 관련 스타일 속성</h2>
 
     <ul id="ul1">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
     </ul>
 
     <ol id="ol1">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
     </ol>
-
-    
-</body>
+  </body>
 </html>

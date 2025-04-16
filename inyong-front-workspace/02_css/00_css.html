@@ -16,3 +16,36 @@
           ...
        }
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 1) internal 방식 -->
+    <style>
+      /* css 영역 */
+      p {
+        color: red;
+      }
+      div {
+        color: yellow;
+      }
+    </style>
+
+    <!-- 2) external 방식 -->
+    <link href="./sample.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- 1) internal 방식으로 적용 -->
+    <p>Hello CSS</p>
+    <div>안녕하세요</div>
+
+    <!-- 2) external 방식으로 적용 -->
+    <pre>반갑습니다</pre>
+
+    <!-- 3) inline 방식으로 적용 -->
+    <span style="color: limegreen; background-color: yellow">안녕히가세요</span>
+  </body>
+</html>
