@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+        header, nav, section, article, aside, footer, div{display:block; border: 1px solid red;}
+        * {box-sizing: border-box;}
+
         /* 
             하단의 html 요소들을 가지고 
             
@@ -20,6 +24,143 @@
                section 내에 로그인폼 레이아웃 잡고 세세한 style 부여하기
             6) nav 메뉴바 style 부여하기
         */
+        .wrap{
+            
+            width: 100%;
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+        }
+        .header_logo_mini{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header_logo_mini img{width: 100px;}
+        .header_logo_big{
+            width:60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header_logo_etc{width: 20%;}
+        .nav{
+            height: 20%;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            background-color: green;
+            
+        }
+        .nav a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        .nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            
+            line-height: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .content{
+            min-height: 500px;
+            display: flex;
+            margin-top: 10px;
+        }
+        .content_side{
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content_img{
+            width: 60%;
+            margin-top: 10px;
+            
+        }
+        .content_img_top{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-evenly;
+        }
+        .content_img_bottom{
+
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: space-evenly;
+
+        }
+
+
+        .content_etc{
+            width: 25%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            
+        }        
+        .content_login{
+            height: 30%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .login_form{
+            height: 70%;
+            display: flex;
+
+        }
+        .login_input_wrap{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .login_input_wrap>input{
+            height: 50%;
+        }
+        .login_btn>button{
+            width: 60%; height: 50%;
+            
+        }
+
+        .login_btn{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login_etc{
+            height: 30%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .login_etc a{
+            text-decoration: none;
+            color: purple;
+            font-size: 16px;
+        }
+        .content_poster img{width: 100%;}
+        .content_poster{
+            height: 30;
+        }
+
+    
     </style>
 </head>
 <body>
@@ -29,10 +170,10 @@
         <!-- header -->
         <header class="header">
             <div class="header_logo_mini">
-                <a href="#"><!--img 사용--></a>
+                <a href="#"><img src="../실습문제/practice_image/logo.jpg" alt=""></a>
             </div>
             <div class="header_logo_big">
-                <a href="#"><!--img 사용--></a>
+                <a href="#"><img src="../실습문제/practice_image/mainlogo.jpg" alt=""></a>
             </div>
             <div class="header_etc"></div>
         </header>
@@ -50,26 +191,26 @@
         <!-- content -->
         <section class="content">
             <div class="content_side">
-                <!--img 사용-->
+                <img src="../실습문제/practice_image/left_img.jpg" alt="">
             </div>
             <div class="content_img">
                 <div class="content_img_top">
                     <div>
-                        <!--img 사용-->
+                        <img src="/02_css/실습문제/practice_image/main_img1.jpg" alt="">
                         <p>나무를 심는 사람들</p>
                     </div>
                     <div>
-                        <!--img 사용-->
+                        <img src="/02_css/실습문제/practice_image/main_img2.jpg" alt="">
                         <p>아이들에게 녹색 미래를..</p>
                     </div>
                 </div>
                 <div class="content_img_bottom">
                     <div>
-                        <!--img 사용-->
+                        <img src="/02_css/실습문제/practice_image/main_img3.jpg" alt="">
                         <p>설악산 살리는 길</p>
                     </div>
                     <div>
-                        <!--img 사용-->
+                        <img src="/02_css/실습문제/practice_image/main_img4.jpg" alt="">
                         <p>사라지는 북극곰들</p>
                     </div>
                 </div>
@@ -91,10 +232,10 @@
                     </div>
                 </div>
                 <div class="content_poster">
-                    <!--img 사용-->
+                    <img src="" alt="">
                 </div>
                 <div class="content_message">
-                    <!--img 사용-->
+                    <img src="" alt="">
                 </div>
             </div>
         </section>

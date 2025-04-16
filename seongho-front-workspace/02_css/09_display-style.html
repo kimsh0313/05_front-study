@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .wrap1 *{
+            background-color: red;
+            margin:  10px;
+
+
+            /*블럭요소에만 크기 지정 ㄱㄴㄴ*/
+            width: 100px;
+            height: 100px;
+
+        }
+        /*블럭 요소를 인라인 요소로 취급하게*/
+        .wrap1>div{
+            display: inline;
+        }
+        .wrap1>span{
+            display: block;
+        }
+    </style>
 </head>
 <body>
+    <div class="wrap1">
+        <div>블럭요소</div>
+        <span>인라인ㅇ소</span>
+    </div>
+    <hr>
 
+    <style>
+        .wrap2>div{
+            background-color: green;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            /*인라인(가로배치)이면서 블럭요소 (크기지정)의 특징도 가지도로옥*/
+            display: inline-block;
+        }
+    </style>
+    <div class="wrap2">
+        <div>블럭요소1</div>
+        <div>블럭요소2</div>
+        <div>블럭요소3</div>
+    </div>
     
+    <hr>
+
+    <style>
+        .nav>li{
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+        }
+        .nav a{
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            color: gray;
+        }
+        .nav a:hover{
+            background-color: lightblue;
+            color: red;
+        }
+    </style>
+    <ul class="nav">
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+    </ul>
 </body>
 </html>
