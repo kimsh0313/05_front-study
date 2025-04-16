@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +6,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+        header, nav, section, article, aside, footer, div{display:block; border: 1px solid red;}
+        * {box-sizing: border-box;}
+
+        .wrap{
+            width: 100%;
+            max-width: 1300px;
+            margin: auto;
+
+          
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header{
+            height: 200px;
+          
+            display: flex;
+            flex-direction: column;
+        }
+        .header-nav{
+            height: 20%;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+        .header-nav a{
+            text-decoration: none;
+            color: rgb(39, 37, 37);
+            font-weight: 900;
+        }
+        .header-nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .main-menu{
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .main-menu>li{
+            width: 100px;
+            text-align: center;
+        }
+        .sub-menu{
+            display: none;
+            background-color: white;
+
+            position:  relative;
+            z-index: 1000;
+            top: -3px;
+        }
+        .main-menu>li:hover>ul{display: block;}
+
+
+        .header-top{
+            height: 80%;
+ 
+            display: flex;
+            flex-direction: row;
+        }
+        /*헤더 로고 스타이이이일*/
+        .header-logo{
+            width:20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-logo img{width: 100px;}
+        .header-search{
+            width:60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-form{
+            border: 1px solid blue;
+            height: 30px;
+            width: 350px;
+            display: flex;
+        }
+        .search-form>input{flex-basis: 400px;}
+        .search-form>button{flex-basis: 50px;}
+        .header-alarm{width:20%;}
+
+
+        .content{
+            min-height: 500px;
+            display: flex;
+        }
+        .content-news{width: 75%}
+        .content-side{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-myinfo{
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+    }
+        .login-form{
+            height: 70%;
+            display: flex;
+            margin-top: 20px;
+        }
+        .login-input{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        .login-input>input{
+            height: 50%;
+        }
+        .login-btn>input{
+            width: 100%; height: 100%;
+        }
+
+        .login-btn{width: 30%;}
+        .login-etc{
+            height: 30%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+        }
+        .login-etc a{
+            text-decoration: none;
+            color: rgb(44, 43, 43);
+            font-size: 16px;
+        }
+        .content-ad{height:350px;}
+
+
+
+        .footer{
+            height: 200px;
+          
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            border-: 1px solid lightgray;
+        }
+        .footer-link {
+            height: 20%;
+            margin: 0;
+            padding-left: 20px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            /*justify-content: space-evenly;*/
+        }
+         .footer-link a{
+            text-decoration: none;
+            color: rgb(31, 28, 28);
+            font-weight: 900;
+            margin: 15px;
+        }
+        .footer-link li+li::before{content: '|';}
+        .footer-info {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+        .company-info{
+            height: 80%;
+            margin: 0;
+            padding: 10px 30px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .company-info>li{
+            font-size: 12px;
+            color: rgb(34, 32, 32);
+        }
+        .copyright-info{
+            height: 20%;
+            text-align: center;
+        }
 
     </style>
 </head>
+
 <body>
 
 
+    <div class="wrap">
 
+        <header class="header">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href=""><img src="../assets/image/naver_logo.png"></a>
+                </div>
+                <div class="header-search">
+                    <form action="/server/search.do" class="search-form">
+                        <input type="text" name="keyword1">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div class="header-alarm">
 
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul class="main-menu">
+                    <li><a href="">메인메뉴1</a></li>
+                    <li><a href="">메인메뉴2</a></li>
+                    <li><a href="">메인메뉴3</a>
+                        <ul class="sub-menu">
+                            <li><a href="">서브메뉴1</a></li>
+                            <li><a href="">서브메뉴2</a></li>
+                            <li><a href="">서브메뉴3</a></li>
+                            <li><a href="">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">메인메뉴4</a>
+                        <ul class="sub-menu">
+                            <li><a href="">서브메뉴1</a></li>
+                            <li><a href="">서브메뉴2</a></li>
+                            <li><a href="">서브메뉴3</a></li>
+                            <li><a href="">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">메인메뉴5</a>
+                        <ul class="sub-menu">
+                            <li><a href="">서브메뉴1</a></li>
+                            <li><a href="">서브메뉴2</a></li>
+                            <li><a href="">서브메뉴3</a></li>
+                            <li><a href="">서브메뉴4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="content">
+            <div class="content-news"></div>
+            <div class="content-side">
+                <div class="content-myinfo">
+                    <form action="/server/login.me" class="login-form">
+                        <div class="login-input">
+                            <input type="text" name="userId" placeholder="Enter u Id" id="">
+                            <input type="password" name="userPw" placeholder="Enter u PW" id="">
+                        </div>
+                        <div class="login-btn">
+                            <input type="submit" value="로그인" name="" id="">
+                        </div>
+                    </form>
+                    <ul class="login-etc">
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">ID/PW찾기</a></li>
+                    </ul>
+                </div>
+                <div class="content-ad"></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <ul class="footer-link">
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보취급방침</a></li>
+                <li><a href="">인재채용</a></li>
+                <li><a href="">고객센터</a></li>
+            </ul>
+            <div class="footer-info">
+                <ul class="company-info">
+                    <li>상호명 : 김성호와 아이들</li>
+                    <li>대표자 : 김성호</li>
+                    <li>연락처 : 000000000000000</li>
+                    <li>책임자 : 김성호</li>
+                    <li>이메일 : 김성호@김성호.com</li>
+                </ul>
+                <div class="copyright-info">
+                   Copyright ⓒ KSH Corp.
+                </div>
+            </div>
+        </footer>
+        
+    </div>
 
 </body>
 </html>
