@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>글꼴 텍스트 속성</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Orbit&display=swap" rel="stylesheet"> -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" rel="stylesheet">
     <style>
-        
+        @import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Orbit&display=swap');
+        #p1 {
+            /* 글꼴 */ font-family: '고딕체', '궁서체';
+            /* 크기 */ font-size: 32px; /* 기본값 16px, px|em|% */
+            /* 굵기 */ font-weight: 700;
+            /* 색상 */ 
+            color: red;
+            color: #12F340; /* RGB색상코드, 각2자리 (00~ff)값을 가짐 */
+            color: rgb(110, 130, 37); /* RGB색상함수, 각 자리(0~255)값을 가짐 */
+            color: rgba(30, 120, 76, 0.331); /* alpha : 투명도 지정 (0:투명, 1:블루) */
+        }
+        #p2 {
+            /* 
+                * 구글 폰트 사용
+                    1) https://fonts.google.com 접속
+                    2) 원하는 폰트 검색
+                    3) 원하는 폰트 사용 연동 (CDN)
+                        ㄴ<link>    -> <head> 태그 안에 배치
+                        ㄴ@import   -> <style> 태그 안 최상단에 배치
+                    4) 스타일 반영
+            */
+            font-size: 32px;
+            font-family: "Orbit", sans-serif;
+            font-family: "42dot Sans", sans-serif;
+            /* 속성 */ font-style: italic; /* normal(기본값), italic, oblique */
+        }
+        #p3 {
+            font-family: 'NanumSquareNeo';
+            font-size: 32px;
+            /* 자간거리 */ letter-spacing: 3px;
+            /* 단어간거리 */ word-spacing: 5px;
+            /* 행높이 */ line-height: 32px;
+            /* 줄긋기 */ text-decoration: line-through; /* none(없음), line-through, overline, underline */
+            /* 들여쓰기 */ text-indent: 20px;
+            /* 대소문자 */ text-transform: uppercase; /* lowercase, uppercase, capitalize */
+        }
+        #p4 {
+            font-family: 'NanumSquareNeo';
+            font-size: 32px;
+            /* 정렬 */ text-align: center; /* left(기본), justify(양쪽), right, center */
+            /* 그림자 (가로거리 세로거리 [번짐정도] [색상]) */ 
+            text-shadow: 3px 2px 3px grey;
+            color: white;
+            text-shadow: 0px -5px 8px yellow, 0px -10px 8px orange, 0px -15px 14px orangered, 0px -20px 20px red;
+        }
     </style>
 </head>
 <body>
 
+    <h2>글꼴 및 텍스트 관련 스타일 속성</h2>
+
+    <p id="p1">글꼴 및 텍스트 Style Test1</p>
+    <p id="p2">글꼴 및 텍스트 Style Test2</p>
+    <p id="p3">글꼴 및 텍스트 Style Test3</p>
+    <p id="p4">글꼴 및 텍스트 Style Test4</p>
     
 </body>
 </html>

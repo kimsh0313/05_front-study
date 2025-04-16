@@ -20,6 +20,109 @@
                section 내에 로그인폼 레이아웃 잡고 세세한 style 부여하기
             6) nav 메뉴바 style 부여하기
         */
+        .wrap * {
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .wrap {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        /* header */
+        .header {
+            display: flex;
+            height: 80px;
+        }
+        .header_logo_mini {
+            display: flex;
+            width: 20%;
+            justify-content: center;
+        }
+        .header_logo_mini img {
+            height: 100%;
+        }
+        .header_logo_big {
+            width: 80%;
+            display: flex;
+            justify-content: left;
+        }
+        .header_logo_big img {
+            height: 100%;
+        }
+
+        /* navigator */
+        .nav {
+            background-color: green;
+        }
+        .nav ul {
+            height: 30%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+            align-items: center;
+        }
+        .nav>ul a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        /* content */
+        .content {
+            display: flex;
+        }
+        .content_side{
+            width: 20%;
+        }
+        .content_side img {
+            width: 100%;
+        }
+        .content_img{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content_img p {margin: 0;}
+        .content_img img {
+            width: 100%;
+        }
+        .content_img_top {
+            width: 100%;
+            display: flex;
+        }
+        .content_img_top>div {
+            width: 50%;
+        }
+        .content_img_bottom {
+            display: flex;
+        }
+        .content_img_bottom>div {
+            width: 50%;
+        }
+        .content_etc {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content_login {
+            height: 20%;
+        }
+        .content_poster {
+            height: 40%;
+        }
+        .content_message{
+            height: 40%;
+        }
+        .footer {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+        }
+
     </style>
 </head>
 <body>
@@ -29,10 +132,10 @@
         <!-- header -->
         <header class="header">
             <div class="header_logo_mini">
-                <a href="#"><!--img 사용--></a>
+                <a href="#"><img src="./practice_image/logo.jpg"></a>
             </div>
             <div class="header_logo_big">
-                <a href="#"><!--img 사용--></a>
+                <a href="#"><img src="./practice_image/mainlogo.jpg" alt=""></a>
             </div>
             <div class="header_etc"></div>
         </header>
@@ -50,26 +153,26 @@
         <!-- content -->
         <section class="content">
             <div class="content_side">
-                <!--img 사용-->
+                    <img src="./practice_image/left_img.jpg">
             </div>
             <div class="content_img">
                 <div class="content_img_top">
                     <div>
-                        <!--img 사용-->
+                        <img src="./practice_image/main_img1.jpg" alt="">
                         <p>나무를 심는 사람들</p>
                     </div>
                     <div>
-                        <!--img 사용-->
+                        <img src="./practice_image/main_img2.jpg" alt="">
                         <p>아이들에게 녹색 미래를..</p>
                     </div>
                 </div>
                 <div class="content_img_bottom">
                     <div>
-                        <!--img 사용-->
+                        <img src="./practice_image/main_img3.jpg" alt="">
                         <p>설악산 살리는 길</p>
                     </div>
                     <div>
-                        <!--img 사용-->
+                        <img src="./practice_image/main_img4.jpg" alt="">
                         <p>사라지는 북극곰들</p>
                     </div>
                 </div>
@@ -79,7 +182,7 @@
                     <form action="" class="login_form">
                         <div class="login_input_wrap">
                             <input type="text" name="userId" placeholder="ID를 입력하세요">
-                            <input type="password" name="userPwd" placeholder="PWD를 입력하세요">
+                            <input type="password" name="userPwd" placeholder="PW를 입력하세요">
                         </div>
                         <div class="login_btn">
                             <button type="submit">로그인</button>
@@ -101,7 +204,7 @@
 
         <!-- footer -->
         <footer class="footer">
-            <!--img 사용-->
+            <img src="./practice_image/footer.JPG">
         </footer>
 
     </div>
