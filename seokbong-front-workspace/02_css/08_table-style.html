@@ -5,12 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
+    .table1{
+      border: 1px solid gray;
+      /* 셀 간격 */ 
+      border-spacing: 5px;
+      border-spacing: 10px 5px; /* 좌우 상하 */
+      /* 셀 간격 분리 여부 */
+      border-collapse: collapse; /* separate(기본값), collapse */
+    }
+    .table1 td{
+      border: 1px solid gray;
+      text-align: center;
+    }
+    .table1 td:first-of-type{
+      width: 80px;
+    }
+    .table1 td:nth-of-type(2){
+      width: 200px;
+    }
+    .table1 td:last-of-type{
+      width: 100px;
+    }
+    .table1>thead td, .table1>tfoot td{
+      padding: 10px;
+      font-weight: 900;
+    }
+    .table1>tbody td{
+      height: 50px;
+      /* 수직 정렬 */ vertical-align: middle;
+    }
+    .table1>tbody tr:hover{
+      background-color: lightgray;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
     
-    <table class="table1">
+    <table class="table1" >
         <thead>
           <tr>
             <td>회원번호</td>
