@@ -19,11 +19,28 @@
                  ㄴ 메인 축(X축) : 수평 방향, main axis
                  ㄴ 교차 축(Y축) : 수직 방향, cross axis
         */
+        .wrap1 {
+          width: 600px;
+          height: 200px;
+          border: 1px solid salmon;
+
+          display: flex;
+        }
+        .wrap1 > .box {
+          width: 50px;
+          height: 50px;
+          border: 1px dotted blue;
+        }
         
     </style>
-    
+    <div class="wrap1">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
     
 
+    <hr>
     <style>
         /*
             * flex-direction
@@ -37,12 +54,56 @@
               수평방향일 경우 메인축(X축), 교차축(Y축) 으로 지정
               수직방향일 경우 메인축(Y축), 교차축(X축) 으로 지정
         */
+        .wrap2 {
+          width: 600px;
+          height: 200px;
+          border: 1px solid salmon;
         
+          display: flex;
+        }
+        .wrap2 > .box {
+          width: 50px;
+          height: 50px;
+          border: 1px dotted blue;
+        }
+        #row{
+          flex-direction: row;
+        }
+        #row-reverse {
+          flex-direction: row-reverse;
+        }
+        #column {
+          flex-direction: column;
+        }
+        #column-reverse {
+          flex-direction: column-reverse;
+        }
     </style>
 
+    <div class="wrap2" id="row">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap2" id="row-reverse">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap2" id="column">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap2" id="column-reverse">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
 
 
-
+    <hr>
+    <br><br>
     <style>
         /* 
             * flex-wrap
@@ -51,26 +112,77 @@
               1) flex-wrap: nowrap; (기본값)
                  ㄴ flex item들을 single-line으로 배치함 
                  ㄴ flex container 밖으로 나갈 수 있음 
-                 ㄴ flex item의 크기가 변경될 수 있음
+                 ㄴ flex item의 크기가 변경될 수 있음 : 어차피 다 채워지지도 않는데 크기가 바귐
               2) flex-wrap: wrap;
                  ㄴ flex item들을 multi-line으로 배치함 
                  ㄴ flex container 밖으로 나갈 수 없음
                  ㄴ flex item의 크기가 유지됨
         */
+        .wrap3 {
+          width: 200px;
+          height: 300px;
+          border: 1px solid aqua;
+
+          display: flex;
+        }
+        .wrap3 > .box {
+          width: 60px;
+          height: 60px;
+          border: 5px dotted tomato;
+        }
+
+        #nowrap {
+          flex-wrap: nowrap;
+        }
+        #wrap {
+          flex-wrap: wrap;
+        }
         
     </style>
     
+    <div class="wrap3" id="nowrap">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+    </div>
+    <div class="wrap3" id="wrap">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+    </div>
 
 
-
+    <hr><br><br>
     <style>
         /* 
             * flex-flow
               ㄴ flex-direction 과 flex-wrap 속성을 함께 표기할 수 있는 속성
         */
+        .wrap4 {
+          width: 200px;
+          height: 300px;
+          border: 1px solid rgb(4, 0, 255);
 
+          display: flex;
+          flex-flow: column wrap; /*수직 방향으로 배치하되, 부모 외각 내에서만 정렬하겠다(줄바꿈하겠다)*/
+        }
+        .wrap4 > .box {
+          width: 60px;
+          height: 60px;
+          border: 8px solid rgb(51, 255, 0);
+        }
     </style>
-    
+    <div class="wrap4">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+    </div>
 
     
 
@@ -86,9 +198,58 @@
               5) justify-content: space-around;  : item들 마다 앞 뒤에 공백 추가
               6) justify-content: space-evenly;  : item들 사이에 균일한 공백 추가
         */
-        
+        .wrap5 {
+          margin: 20px;
+          width: 300px;
+          height: 100px;
+          border: 1px solid salmon;
+
+          display: flex;
+          flex-direction: row;
+        }
+        .wrap5 > .box {
+          width: 50px;
+          height: 50px;
+          border: 1px solid seagreen;
+        }
+        .wrap5 #flex-start {justify-content: flex-start;}
+        .wrap5 #flex-end {justify-content: flex-end;}
+        .wrap5 #center {justify-content: center;}
+        #space-between {justify-content: space-between;}
+        #space-around {justify-content: space-around;}
+        #space-evenly {justify-content: space-evenly;}
     </style>
     
+    <div class="wrap5" id="flex-start">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap5" id="flex-end">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap5" id="center">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap5" id="space-between">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap5" id="space-around">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap5" id="space-evenly">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
 
 
 
@@ -103,11 +264,54 @@
               4) align-items: stretch;      : 교차축 방향으로 item 크기가 늘어남
               5) align-items: baseline;     : 베이스라인 기준으로 정렬
         */
-        
+        .wrap6{
+          margin: 20px;
+          width: 300px;
+          height: 100px;
+          border: 1px solid gray;
+
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+        .wrap6>.box{
+          width: 70px;
+          border: 1px solid red;
+        }
+
+        .wrap6#flex-start{align-items: flex-start;}
+        .wrap6#flex-end{align-items: flex-end;}
+        .wrap6#center{align-items: center;}
+        #stretch{align-items: stretch;}
+        #baseline{align-items: baseline;}
     </style>
-    
 
-
+    <div class="wrap6" id="flex-start">
+      <div class="box">box1</div>
+      <div class="box" style="font-size:30px">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap6" id="flex-end">
+      <div class="box">box1</div>
+      <div class="box" style="font-size:30px">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap6" id="center">
+      <div class="box">box1</div>
+      <div class="box" style="font-size:30px">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap6" id="stretch">
+      <div class="box">box1</div>
+      <div class="box" style="font-size:30px">box2</div>
+      <div class="box">box3</div>
+    </div>
+    <div class="wrap6" id="baseline">
+      <div class="box">box1</div>
+      <div class="box" style="font-size:30px">box2</div>
+      <div class="box">box3</div>
+    </div>
+   
 
     <style>
         /* 
@@ -129,11 +333,27 @@
               ㄴ flex: grow shrink basis;
 
         */
-        
+        .wrap7 {
+          border: 1px solid palegreen;
+          /* width미설정 시 브라우저 화면 가로 길이 전체 - 유동적*/
+          height: 100px;
+
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .wrap7 > .box {
+          border: 1px solid tomato;
+          flex-basis: 200px;  /* 브라우저 크기에 따라 아이템이 작아짐 */
+          flex-grow: 1;       /*브라우저가 커지면 같이 커짐*/
+          flex-shrink: 0;     /*브라우저 크기가 작아지면 아이템이 작아지지 않고 바깥으로 돌출됨*/
+        }
     </style>
 
-
-
+    <div class="wrap7">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
 
 
 

@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        div {border: 1px solid red; box-sizing: border-box;}
+        .wrap {
+            width: 100%; /*상위요소 100%다 사용*/
+            max-width: 1300px; /*최대 크기는 1300px로 지정*/
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column; /*header, navigator, content, footer를 세로로 정렬함*/
+        }
+        .header, .footer {height: 150px;}
+        .navigator {height: 50px;}
+        .content {min-height: 500px;} /*content는 정보의 양에 따라 높이가 달라진다.*/
+
+        
+        .header {
+            display: flex;
+            /* 하위 모든 요의 높이가 부모 요소의 100%로 설정*/
+            justify-content: center;
+        }
+        .header1, .header3{
+            width: 20%;
+        }
+        .header2 {
+            width: 60%; /*헤더 자식의 가로 총 합이 100프로가 된다.*/
+        }
+
+
+        .content {
+            display: flex;
+        }
+        .content1 {
+            width: 15%;
+        }
+        .content2 {
+            width: 60%;
+        }
+        .content3 {
+            width: 25%;
+        }
+
+
 
     </style>
 </head>
@@ -24,5 +65,22 @@
     
     -->
 
+    <div class="wrap">
+        <div class="header">
+            <div class="header1">2</div>
+            <div class="header2">3</div>
+            <div class="header3">3</div>
+        </div>
+
+        <div class="navigator"></div>
+
+        <div class="content">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+
+        <div class="footer"></div>
+    </div>
 </body>
 </html>
