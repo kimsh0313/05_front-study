@@ -6,8 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        .box1{
+            width: 100px;
+            height: 50px;
+            background-color: orange;
+        }
+    </style>
+    
+    <div class="box1"></div>
+    <hr>
 
     <style>
+        .box2,.box3{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 10px;
+        }
         /* 
             * 배경 이미지 
               1) background-image   : 배경이미지
@@ -15,8 +31,32 @@
               3) background-repeat  : 배경이미지 반복 여부
               4) background-position: 배경이미지 위치
         */
-        
+        /*box 보다 작은 배경 이미지 처뤼*/
+        .box2{
+            background-image: url('../assets/image/attach.png');
+            background-repeat: no-repeat;
+            background-size: 50px; /* 너비 지저엉 */
+            background-size: 50px 100px; /* 두개 지정하면 너비와 높이 */
+            background-position: center;
+
+        }
+        .box3{
+            background-image: url('../assets/image/bgsample.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-size: cover;
+            opacity: 0.5;/*0~1 투명도옹*/
+        }
+        .box4{
+            width: 150px;
+            height: 100px;
+            border: 1px solid red;
+            background-image: url('../assets/image/logo.png');
+            background-position: -560px -400px;
+        }
     </style>
-    
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
 </body>
 </html>

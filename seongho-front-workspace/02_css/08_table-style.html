@@ -5,7 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
+    .table1{
+      border: 1px solid gray;
+      /*셀 간격*/
+
+      /*셀 간격 분리 여부*/
+      border-collapse: collapse;/*separate 기본값 , collapse*/
+      
+    }
+    .table1 td{
+      border:  1px solid gray;
+      text-align: center;
+    }
+    .table1 td:first-of-type{
+      color: red;
+      width: 80px;
+    }
+    .table1 td:nth-of-type(2){
+      width: 200px;
+      color: blue;
+    }
+    .table1 td:last-of-type{
+      width: 100px;
+    }
+    .table1>thead td,.table1>tfoot td{
+      height: 50px;
+      font-weight: 900;
+    }
+    .table1>tbody td{
+      height: 45px;
+      vertical-align: top;
+    }
+    .table1>tbody tr:hover{
+      background-color: ligtgra;
+    }
   </style>
 </head>
 <body>

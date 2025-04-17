@@ -4,10 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #head-color {
+            background-color: pink;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     
     <!-- 실습문제3_표태그2.PNG -->
+    <table border="1">
+        <caption id="caption-color"><b>강의 목록</b></caption>
+        <thead>
+            <tr id="head-color">
+                <th width="30">관</th>
+                <th width="80">강의장</th>
+                <th width="60">인원수</th>
+                <th width="180">강의명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="6"> 1관</td>
+                <td rowspan="2">9 강의장</td>
+                <td rowspan="2">30명</td> 
+                <td>
+                    오전 : 강보람
+                    <button id="button" type="submit">신청하기</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    오후 : 강보람
+                    <button id="button" type="submit">신청하기</button>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">10 강의장</td>
+                <td rowspan="2">23명</td> 
+                <td>
+                    오전 : 홍길동
+                    <button id="button" type="submit">신청하기</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    오후 : 홍길동
+                    <button id="button" type="submit">신청하기</button>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">11 강의장</td>
+                <td rowspan="2">27명</td> 
+                <td>
+                    오전 : 김말순
+                    <button id="button" type="submit">신청하기</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    오후 : 김말순
+                    <button id="button" type="submit">신청하기</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            
+        </tfoot>
+    </table>
     
 </body>
 </html>

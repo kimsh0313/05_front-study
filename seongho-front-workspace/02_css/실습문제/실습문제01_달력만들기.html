@@ -10,10 +10,70 @@
             특정 날짜에 마우스를 올리게 되면 해당 날짜의 배경색이 베이지 색상이 되도록 부여하시오.
             html 요소에 추가적인 속성을 부여하셔도 됩니다.            
         */
+        .calendar {
+            margin: auto;
+            border-collapse: collapse;
+            border: 0.1px solid black;
+            
+
+        }
+        .calendar td{
+            font-weight: 900;
+            font-size: 10px;
+            border: 0.1px solid black;
+            display: inline-block;
+            width: 60px;
+            height: 70px;
+            vertical-align:top;
+
+            text-indent: 7px;
+            line-height: 20px;
+
+        }
+        .date{
+            text-align: center;
+            font-weight: 900;
+        }
+        .month{
+            color: red;
+            font-weight: 900;
+            font-size: 33px;
+        }
+        .calendar td:first-of-type{
+            color: red;
+        }
+        .calendar td:last-of-type{
+            color: blue;
+        }
+        #lastmonth{
+            color: gray;
+        }
+        .calendar thead td{
+            width: 60px;
+            height: 20px;
+            text-align: center;
+            font-size: 10px;
+            line-height: 20px;
+            text-indent: 1px;
+
+        }
+        .calendar>tbody td:hover{
+            background-color: bisque;
+        }
+        #redDay {
+            color: red;
+            
+        }
+        #liberation{
+            font-size: 7px;
+            color: red;
+
+        }
+
     </style>
 </head>
 <body>
-
+    <div class="date">2024 <span class="month">8</span> August</div>
     <table class="calendar">
         <thead>
             <tr>
@@ -28,10 +88,10 @@
         </thead>
         <tbody>
             <tr>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+                <td id="lastmonth">28</td>
+                <td id="lastmonth">29</td>
+                <td id="lastmonth">30</td>
+                <td id="lastmonth">31</td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -50,7 +110,7 @@
                 <td>12</td>
                 <td>13</td>
                 <td>14</td>
-                <td>15 <span>광복절</span></td>
+                <td id="redDay">15 <span id="liberation">광복절</span></td>
                 <td>16</td>
                 <td>17</td>
             </tr>

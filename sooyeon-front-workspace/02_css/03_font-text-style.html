@@ -4,11 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Moirai+One&display=swap" rel="stylesheet"> -->
+
     <style>
-        
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Moirai+One&display=swap');
+        #p1 {
+            /* 글꼴 */ font-family:'궁서체','잡체';
+            /*크기*/ font-size: 32px; /*기본값은 16px*/
+            /*굵기*/ font-weight: 900; /*기본값 400 / 100~900*/
+            /*색상*/
+            color: rgba(0, 100, 231, 0.068);
+        }
+        #p2 {
+            /*
+                구글 폰트사용
+                1)https://fonts.google.com/
+            */
+            font-family: "Moirai One", system-ui;
+            color: lightseagreen;
+            font-size: 50px;
+            font-style: italic;
+        }
+        #p3 {
+            font-family: "Bagel Fat One", system-ui;
+            color: aqua;
+            font-size: 30px;
+            letter-spacing: -8px;
+            word-spacing: 50px;
+            line-height: 320px;
+            text-decoration:underline;
+            text-decoration-color: fuchsia;
+            text-transform: uppercase;
+        }
+        #p4 {
+            line-height: 100px;
+            background-color:rgb(92, 106, 238);
+            color:deeppink;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 5px 5px 10px aqua, 0px -10px 8px orange;
+        }
     </style>
 </head>
 <body>
+    <h2>글꼴 및 텍스트 관련 스타일 속성</h2>
+
+    <!-- p#p${글꼴 밑 텍스트 style tset$}*4 -->
+    <p id="p1">글꼴 밑 텍스트 style test1</p>
+    <p id="p2">글꼴 밑 텍스트 style test2</p>
+    <p id="p3">글꼴 밑 텍스트 style test3</p>
+    <p id="p4">글꼴 밑 텍스트 style test4</p>
+
 
     
 </body>

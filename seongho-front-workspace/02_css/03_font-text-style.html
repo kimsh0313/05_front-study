@@ -5,11 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        #p1{
+            /* 글꼴 바꾸고싶노 */ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-family: '보람체', '궁서체';
+            /*크기*/ font-size: 32px;/* 기본값 16px, px:em:%*/
+            /*굵기 (100~900 기본값400*/ font-weight: 900;
+            /*색상 */ color: red;
+            color: #13f340;
+            color: rgb(111, 111, 111)   /*0~255*/;
+            color: rgba(111, 111, 111,0.3)   /*alpha : 투명도*/;
+        }
+        #p2{
+            /* 구글 폰트 사용  fonts.google.com*/
+            font-family: "East Sea Dokdo", sans-serif;
+        }
+        #p3{
+            font-size: 28px;
+            /*자간  */ letter-spacing: -2px;
+            
+            /*단어간  */ word-spacing: 10px;
+            /*행높이  */ line-height: 50px;/*세로정렬*/
+            /*줄긋기 none기본,나머지 중앙 위 아래 순*/ text-decoration: line-through;
+            text-decoration: overline;
+            text-decoration: underline;
+            /*들여쓰기*/ text-indent: 20px;
+            /*대소문자*/ text-transform: uppercase;
+        }
+        #p4{
+            font-size: 30px;
+            font-weight: 900;
+            /*정렬*/ text-align: right;
+            /*그림자( 가로거리 세로거리 번짐정도 색상)*/ text-shadow: 5px 5px 10px yellow;
+            color: white;
+            text-shadow: 0px -5px 8px yellow, 0px -10px 8px orange, 0px -15px 14px orangered,0px -20px 20px red;
+        }
     </style>
 </head>
 <body>
-
-    
+<h2>글꼴 및 텍스트 관련 스타아일 속성</h2>
+    <p id="p1">글꼴 및 텍스느 Style Test1</p>    
+    <p id="p2">글꼴 및 텍스느 Style Test2</p>    
+    <p id="p3">글꼴 및 텍스느 Style Test3</p>    
+    <p id="p4">글꼴 및 텍스느 Style Test4</p>    
 </body>
 </html>

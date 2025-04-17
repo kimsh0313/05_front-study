@@ -1,31 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+        header, nav, section, article, aside, footer, div{display: block; border: 1px solid red;}
+        * {box-sizing: border-box;}
+        .wrap{
+            width: 100%;
+            max-width: 1300px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        .header{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-top {
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+        }
+        .header-logo{width: 20%;}
+        .header-search{width: 60%;}
+        .header-alarm{width: 20%;}
+        .header-nav {
+            height: 20%;
+        }
+        .content{
+            min-height: 500px;
+            display: flex;
+        }
+        .content-news{width: 70%;}
+        .content-side{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-myinfo{height: 40%;}
+        .content-ad{height: 60%;}
+        .footer{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-link {
+            height: 20%;
+        }
+        .footer-info {
+            height: 80%;
+        }
     </style>
 </head>
 <body>
     <!-- 
         * 시맨틱태그 
-          1) HTML5부터 제공하는 태그 
-          2) div 태그 같이 블럭요소로 생각하면됨 
-             단, 해당 영역내에 어떤 정보가 담겨있는지를 보다 쉽게 파악하기 위해 
-             각 영역별로 의미있는 태그명을 제공함 
-             ㄴ 명확한 구분 가능
-             ㄴ 타인이 해석할 때도 동일하게 해석 가능 
-          3) 종류
-             ㄴ header  : 가장 위에 나타는 머리말
-             ㄴ nav     : 목차 형태의 메뉴바
-             ㄴ section : 본문 내용(컨텐츠)를 의미하는 태그 
-             ㄴ article : 따로 분할해서 다른 곳에 쓸수 있는 컨텐츠들을 묶는 태그 
-             ㄴ aside   : 본문 외의 내용 / 광고 배너같은 것들 링크 모음집 등 (필수적이지 않는 내용)
-             ㄴ footer  : 웹 문서의 바닥글 (제작정보, 회사정보, 저작권 등등)
-          4) 유의사항
-             ㄴ IE8 이하에서는 인라인 요소로 인식됨 => 블럭요소로 취급되도록 display:block처리 해야됨
+            1) HTML5부터 제공하는 태그 
+            2) div 태그 같이 블럭요소로 생각하면됨 
+                단, 해당 영역내에 어떤 정보가 담겨있는지를 보다 쉽게 파악하기 위해 
+                각 영역별로 의미있는 태그명을 제공함 
+                ㄴ 명확한 구분 가능
+                ㄴ 타인이 해석할 때도 동일하게 해석 가능 
+            3) 종류
+                ㄴ header  : 가장 위에 나타는 머리말
+                ㄴ nav     : 목차 형태의 메뉴바
+                ㄴ section : 본문 내용(컨텐츠)를 의미하는 태그 
+                ㄴ article : 따로 분할해서 다른 곳에 쓸수 있는 컨텐츠들을 묶는 태그 
+                ㄴ aside   : 본문 외의 내용 / 광고 배너같은 것들 링크 모음집 등 (필수적이지 않는 내용)
+                ㄴ footer  : 웹 문서의 바닥글 (제작정보, 회사정보, 저작권 등등)
+            4) 유의사항
+                ㄴ IE8 이하에서는 인라인 요소로 인식됨 => 블럭요소로 취급되도록 display:block처리 해야됨
     -->
 
     <!--
@@ -40,6 +87,28 @@
             |                         |     
             └-------------------------┘
     -->
+    
+    <div class="wrap">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-logo"></div>
+                <div class="header-search"></div>
+                <div class="header-alarm"></div>
+            </div>
+            <nav class="header-nav"></nav>
+        </header>
+        <section class="content">
+            <div class="content-news"></div>
+            <div class="content-side">
+                <div class="content-myinfo"></div>
+                <div class="content-ad"></div>
+            </div>
+        </section>
+        <footer class="footer">
+            <aside class="footer-link"></aside>
+            <div class="footer-info"></div>
+        </footer>
+    </div>
 
 </body>
 </html>

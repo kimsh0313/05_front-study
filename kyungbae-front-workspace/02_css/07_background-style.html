@@ -1,22 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Background style</title>
 </head>
-<body>
 
+<body>
     <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            /* 배경색 */
+            background-color: orange;
+            /* 색상코드, 색상함수 가능 */
+        }
+    </style>
+    <div class="box1"></div>
+    <hr>
+    <style>
+        .box2,
+        .box3 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 20px 10px;
+        }
+
         /* 
             * 배경 이미지 
-              1) background-image   : 배경이미지
-              2) background-size    : 배경이미지 크기
-              3) background-repeat  : 배경이미지 반복 여부
-              4) background-position: 배경이미지 위치
+                1) background-image   : 배경이미지
+                2) background-size    : 배경이미지 크기
+                3) background-repeat  : 배경이미지 반복 여부
+                4) background-position: 배경이미지 위치
         */
-        
+        /* box보다 작은 배경 이미지 처리하기 */
+        .box2 {
+            background-image: url(../assets/image/attach.png);
+            background-repeat: no-repeat;
+            /* repeat(기본값), repeat-x, repeat-y, no-repeat */
+            background-size: 100px; /* 너비 지정 */
+            background-size: 100px 100px; /* 너비 높이 지정 */
+            background-position: center; /* 좌우 상하, 기본값(left top) */
+        }
+        /* box보다 큰 배경 이미지 처리하기 */
+        .box3 {
+            background-image: url(../assets/image/bgsample.jpg);
+            background-repeat: no-repeat;
+            background-size: contain; /* 사진사이즈에 맞게 채우기 */
+            background-size: cover; /* box에 사진이 채워지게 변경 (원본비 유지) */
+            /* 투명도 */opacity: 50%;
+        }
+        /* 이미지 일부만 보여주기 */
+        .box4 {
+            width: 150px;
+            height: 100px;
+            border: 1px solid red;
+            background-image: url(../assets/image/logo.png);
+            background-position: -565px -400px;
+            background-position: -565px -200px;
+            background-position: 0px -200px;
+        }
     </style>
-    
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+
 </body>
+
 </html>

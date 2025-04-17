@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #thead1 {
+            background-color: aqua;
+            text-align: center;
+        }
+
+        #thead2 {
+            background-color: red;
+        }
+        #body{
+            background-color: orange;
+        }
+        #tfoot{
+            background-color: yellow;
+        }
+
+    </style>
 </head>
+
 <body>
-    
+
     <!-- 실습문제2_표태그1.PNG -->
-    
+     <table border="1">
+
+            <th id="thead1" colspan="5">하수정 보석 컬렉션</th>
+            <tr>
+                <th id="thead2" rowspan="5" width="90" height="150">제품리스트</th>
+                <th id="thead2">코드</th>
+                <th id="thead2">분류</th>
+                <th id="thead2">가격</th>
+                <th id="thead2">구매가능 개수</th>
+            </tr>
+            
+            <tr>
+                <td id="body">01-468</td>
+                <td id="body">가을</td>
+                <td id="body">200000원</td>
+                <td id="body">1068</td>
+            </tr>
+            <tr>
+                <td id="body">01-469</td>
+                <td id="body">가을</td>
+                <td id="body">150000원</td>
+                <td id="body">1700</td>
+            </tr>
+            <tr>
+                <td id="body">01-470</td>
+                <td id="body">여름</td>
+                <td id="body">950000원</td>
+                <td id="body">2500</td>
+            </tr>
+            <tr>
+                <td id="body">01-471</td>
+                <td id="body">봄</td>
+                <td id="body">120000원</td>
+                <td id="body">3200</td>
+            </tr>
+            <tr>
+                <th colspan="3" id="thead2">종합</th>
+                <td id="tfoot">1,420,000원</td>
+                <td id="tfoot">8468</td>
+            </tr>
+    </table>
+
 </body>
+
 </html>

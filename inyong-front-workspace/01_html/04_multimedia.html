@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
-   <!--
+  </head>
+  <body>
+    <!--
       * <img>
         1) 이미지 표현 태그
         2) 인라인 요소 
@@ -16,15 +15,39 @@
            <img src="" alt="" width="px|%" height="px|%">
         5) 주요 속성
            ㄴ src    : 이미지 파일 경로
-           ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 
+           ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 + 스크린리더 
            ㄴ width  : 이미지 표현 너비 (높이도 같이 조정됨)
            ㄴ height : 이미지 표현 높이 (너비도 같이 조정됨)
+
+      * 경로
+      xx-front-workspace   : 상위 디렉토리 (..)
+         ㄴ 01_html        : 현재 디렉토리 (.)
+         ㄴ assets         : 정적 자원 디렉토리 (../assets)
+               ㄴ image    : 이미지 디렉토리 (../assets/image)
    -->
 
+    <h1>이미지 관련 태그</h1>
+    <img src="../assets/image/river1.png" alt="해당 사진은 강 사진입니다." />
+    <img src="../assets/image/river2.jpg" alt="해당 사진은 강 사진입니다." />
 
+    <h3>* 고정크기(px) vs 가변크기(%)</h3>
+    <h4>
+      1) 고정크기 (px) : 화면 사이즈가 조정되도 이미지의 크기는 고정, 기본값
+    </h4>
+    <img src="../assets/image/flower1.jpg" width="200px" height="300" />
+    <img src="../assets/image/flower2.jpg" width="200px" height="300" />
+    <img src="../assets/image/flower3.jpg" width="200px" height="300" />
+    <img src="../assets/image/flower4.jpg" width="200px" height="300" />
+    <img src="../assets/image/flower5.jpg" width="200px" height="300" />
 
+    <h4>2) 가변크기 (%) : 화면 사이즈가 조정되면 이미지의 크기도 같이 조정</h4>
+    <img src="../assets/image/flower1.jpg" width="15%" height="300" />
+    <img src="../assets/image/flower2.jpg" width="15%" height="300" />
+    <img src="../assets/image/flower3.jpg" width="15%" height="300" />
+    <img src="../assets/image/flower4.jpg" width="15%" height="300" />
+    <img src="../assets/image/flower5.jpg" width="15%" height="300" />
 
-   <!--
+    <!--
       * <audio>
         1) 오디오 태그
         2) 인라인 요소
@@ -44,11 +67,13 @@
            ㄴ audio/mp3
            ㄴ audio/ogg
    -->
+    <br />
 
+    <audio controls autoplay loop muted>
+      <source type="audio/mp3" src="../assets/audio/major.mp3" />
+    </audio>
 
-
-
-   <!--
+    <!--
       * <video>
         1) 비디오 태그
         2) 인라인 요소
@@ -70,7 +95,43 @@
            ㄴ video/webm
            ㄴ video/ogg
     -->
+    <br />
 
+    <video
+      controls
+      loop
+      muted
+      width="400"
+      height="300"
+      poster="../assets/image/city1.jpg"
+    >
+      <source type="video/mp4" src="../assets/video/video1.mp4" />
+    </video>
 
-</body>
+    <br />
+
+    <!-- 
+      * iframe
+        웹문서 안에 다른 웹페이지를 추가하는 태그 (인라인요소)
+   -->
+    <iframe
+      width="657"
+      height="370"
+      src="https://www.youtube.com/embed/EhwwkeE7mlA"
+      title="MINI1 WMS OLIVE"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <br />
+
+    <iframe
+      src="03_table.html"
+      width="600px"
+      height="800px"
+      frameborder="0"
+    ></iframe>
+  </body>
 </html>

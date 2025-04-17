@@ -16,10 +16,34 @@
            <img src="" alt="" width="px|%" height="px|%">
         5) 주요 속성
            ㄴ src    : 이미지 파일 경로
-           ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 
+           ㄴ alt    : 이미지를 찾을 수 없을 경우 대체 텍스트 문구 + 스크린리더 
            ㄴ width  : 이미지 표현 너비 (높이도 같이 조정됨)
            ㄴ height : 이미지 표현 높이 (너비도 같이 조정됨)
+
+
+         경로
+         .  : 현재 디렉토리
+         .. : 상위 디렉토리
    -->
+
+   <h1>이미지 관련 태그</h1>
+   <img src="../assets/image/river1.png" alt="해당사진은강사진입니다.">
+   <img src="../assets/image/river2.jpg" alt="해당사진은강사진입니다.">
+
+   <h3>* 고정크기(px) vs 가변크기(%)</h3>
+   <h4>1) 고정그키(px) : 화면 사이즈ㅏ 조정되어도 이미지의 크기는 고정</h4>
+   <img src="../assets/image/flower1.jpg" width="200px" height="300px">
+   <img src="../assets/image/flower2.jpg" width="200px" height="300px">
+   <img src="../assets/image/flower3.jpg" width="200px" height="300px">
+   <img src="../assets/image/flower4.jpg" width="200px" height="300px">
+   <img src="../assets/image/flower5.jpg" width="200px" height="300px">
+
+   <h4>2) 가변 크기(%) : 화면 사이즈가 조정되면 이미지의 크기도 같이 조정</h4>
+   <img src="../assets/image/flower1.jpg" width="15%" height="300px">
+   <img src="../assets/image/flower2.jpg" width="15%" height="300px">
+   <img src="../assets/image/flower3.jpg" width="15%" height="300px">
+   <img src="../assets/image/flower4.jpg" width="15%" height="300px">
+   <img src="../assets/image/flower5.jpg" width="15%" height="300px">
 
 
 
@@ -44,6 +68,17 @@
            ㄴ audio/mp3
            ㄴ audio/ogg
    -->
+         
+   <br>
+   <video controls autoplay loop>
+      <source type="video/mp4" src="../assets/audio/major.mp4">
+   </video>
+
+   <iframe width="657" height="370" 
+      src="https://youtu.be/DLKxp6R0Tpw?si=Y8SZQHtssXp0r3VR"
+      title="유준이"
+      framborder ="0">
+   </iframe>
 
 
 
