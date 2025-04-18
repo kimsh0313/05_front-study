@@ -1,12 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Display style</title>
 </head>
 <body>
+    <style>
+        .wrap1 * {
+            background-color: yellow;
+            margin: 10px;
 
+            width: 100px;
+            height: 100px;
+        }
+        /* 블럭요소를 인라인요소로 */
+        .wrap1>div{
+            display: inline;
+        }
+        /* 인라인요소를 블럭요소로 */
+        .wrap1>span {
+            display: block;
+        }
+    </style>
+
+    <div class="wrap1">
+        <div>블럭요소</div>
+        <span>인라인요소</span>
+    </div>
+
+    <hr>
+
+    <style>
+        .wrap2>div {
+            background-color: green;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            /* 인라인요소 이면서 블럭요소의 특징도 가지도록 변경 */
+            display: inline-block;
+        }
+    </style>
+
+    <div class="wrap2">
+        <div>블럭요소1</div>
+        <div>블럭요소2</div>
+        <div>블럭요소3</div>
+    </div>
+
+    <hr>
+
+    <style>
+        .nav>li {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            /* border: 1px solid black; */
+        }
+        .nav a {
+            text-decoration: none;
+            /* border: 1px solid red; */
+            text-align: center;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            color: crimson;
+        }
+        .nav a:hover{
+            background: purple;
+            color: aliceblue;
+        }
+    </style>
+    <ul class="nav">
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+    </ul>
     
 </body>
 </html>

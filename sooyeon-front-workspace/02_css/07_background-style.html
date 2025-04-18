@@ -15,8 +15,37 @@
               3) background-repeat  : 배경이미지 반복 여부
               4) background-position: 배경이미지 위치
         */
-        
+        .box2, .box3 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid orange;
+            margin: 10px;
+        }
+        .box2 {
+            background-image: url('../assets/image/attach.png');
+            background-repeat: no-repeat;
+            background-size: 50px;
+            background-size: 50px 100px;
+            background-position: center;
+        }
+        .box3 {
+            background-image: url('../assets/image/bgsample.jpg');
+            background-repeat: no-repeat;
+            background-size: contain; /*박스 내에 이미지가 온전히 보여지도록 이미지 줄어듦*/
+            background-size: cover; /*박스 내에 이미지로 덮히도록 이미지 줄어듦*/
+            opacity: 0.5;
+        }
+        .box4 {
+            width: 150px;
+            height: 100px;
+            border: 1px dotted red;
+            background-image: url('../assets/image/logo.png');
+            background-position: -576px -611px;
+        }
     </style>
     
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
 </body>
 </html>

@@ -7,6 +7,7 @@
 </head>
 <body>
 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <style>
         /* 
             * position: static;
@@ -14,20 +15,55 @@
               2) 내 마음대로 위치 조정이 불가함 (top, bottom, left, right)
         */
 
+        .wrap1 {
+            width: 500px;
+            height: 200px;
+            border: 1px solid grey;
+        }
+        .wrap1>div {
+            width: 100px;
+            height: 100px;
+            border: 1px dotted red;
+
+            position: static;
+            top: 100px;
+        }
     </style>
 
+    <div class="wrap1">
+        <div>box</div>
+    </div>
 
 
+
+    <hr>
 
     <style>
         /* 
             * position: relative;
+    
               1) HTML 요소 기본 배치를 따름
               2) 자기 자신을 기준으로 위치 조정을 할 수 있음
         */
-        
+        .wrap2 {
+            width: 500px;
+            height: 200px;
+            border: 1px solid greenyellow;
+        }
+        .wrap2>div {
+            width: 100px;
+            height: 100px;
+            border: 1px double;
+
+            position: relative;
+            bottom: 50px;
+            left: 50px;
+        }
     </style>
     
+    <div class="wrap2">
+        <div>box</div>
+    </div>
 
 
 
@@ -37,11 +73,40 @@
               1) HTML 요소의 배치 흐름을 따르지 않음
               2) 가까운 조상(position: static;이 아닌 조상) 기준으로 위치 조정 가능
               3) position: static; 인 조상이 없다면 초기 컨테이너 블록을 기준으로 위치 조정 가능
+
+
+                .wrap3	    relative	자식 absolute 박스들의 기준점
+                .wrap3 > div	absolute	원하는 위치에 개별 배치 가능
         */
-        
+        .wrap3 {
+            width: 500px;
+            height: 200px;
+            border: 1px solid;
+
+            position: relative; /*자식들의 absolute 위치 기준이 되기 위해서*/
+        }
+        .wrap3>div {
+            width: 100px;
+            height: 100px;
+            border: 1px double;
+
+            position: absolute; /*각각의 박스를 자유롭게 위치시키기 위해서*/
+        }
+        .wrap3>.box1 {
+            bottom: 20px;
+            right: 20px;
+        }
+        .wrap3>.box2 {
+            bottom: 0px;
+            left: 150px;
+        }
     </style>
 
-
+    <div class="wrap3">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
 
 
     <style>
@@ -50,9 +115,25 @@
               1) HTML 요소의 배치 흐름을 따르지 않음
               2) 뷰포트의 초기 컨테이너 블럭을 기준으로 위치 조정 가능 
         */
-        
+        .fixed-box {
+            width: 50px;
+            height: 50px;
+
+            background-color: aqua;
+            border-radius: 30px;
+
+            position: fixed;
+            bottom: 30px;
+            right: 250px;
+
+            z-index: 1000; /*타 요소보다 위에*/
+        }
     </style>
 
+    <div class="fixed-box"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
 
     
 </body>

@@ -7,6 +7,78 @@
 </head>
 <body>
 
-    
+    <style>
+        .wrap1 * {
+            background-color: aqua;
+            margin: 10px;
+
+            width: 100px;
+            height: 100px;
+        }
+        .wrap1>div{
+            display: inline; /*나란히*/
+        }
+        .wrap1>span {
+            display: block;
+        }
+    </style>
+    <div class="wrap1">
+        <div>블럭요소</div>
+        <span>인라인요소</span>
+    </div>
+
+    <hr>
+
+    <style>
+        .wrap2>div {
+            background-color: blueviolet;
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            display: inline-block; /*블럭의 요소를 가져가면서 인라인으로 나랑히 배치*/
+        }
+    </style>
+    <div class="wrap2">
+        <div>블럭요소1</div>
+        <div>블럭요소2</div>
+        <div>블럭요소3</div>
+    </div>
+
+
+    <hr>
+
+    <style>
+        .nav>li {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            border: 1px solid springgreen;
+        }
+        .nav a {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            height: 50px;  /*만약 부모 요소의 크기가 정해져있다면 % 사용해도 됨*/
+            width: 100%;
+            
+            text-decoration: none;
+            border: 1px dotted red;
+            /* text-align: center; */
+            /* display: block;
+            height: 50px;
+            line-height: 50px;        */
+        }
+    </style>
+
+    <ul class="nav">
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+    </ul>
+
+
+
 </body>
 </html>

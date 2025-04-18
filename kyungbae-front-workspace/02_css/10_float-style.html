@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,34 @@
               1) HTML 요소의 기본 배치를 무시하고 배치 가능 
               2) 요소를 띄워서 왼쪽 또는 오른쪽에 배치 가능 
         */
-
+        .wrap1 {
+            border: 1px solid gray;
+        }
+        .wrap1>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            float: right;
+        }
+        .wrap1>.box1 {
+            background-color: bisque;
+            /* float: left; */
+        }
+        .wrap1>.box2 {
+            background-color: darkcyan;
+            /* float: right; */
+        }
     </style>
 
+    <div class="wrap1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        국방상 또는 국민경제상 긴절한 필요로 인하여 법률이 정하는 경우를 제외하고는, 사영기업을 국유 또는 공유로 이전하거나 그 경영을 통제 또는 관리할 수 없다.
+        모든 국민은 인간다운 생활을 할 권리를 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다.
+        감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다.
 
+
+    </div>
 
 
     <style>

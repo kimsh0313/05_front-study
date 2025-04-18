@@ -1,18 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calender</title>
     <style>
         /* 
             하단의 html 요소로 style을 적용시켜 "실습문제01_달력만들기.PNG" 같은 달력모양으로 보여지도록 하시오. 
             특정 날짜에 마우스를 올리게 되면 해당 날짜의 배경색이 베이지 색상이 되도록 부여하시오.
             html 요소에 추가적인 속성을 부여하셔도 됩니다.            
         */
+        body {
+            font-weight: 700;
+        }
+        .date {
+            text-align: center;
+        }
+        .month {
+            font-size: 60px;
+            color: red;
+        }
+        .calendar {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        .calendar td {
+            border: 1px solid black;
+        }
+
+        .calendar>tbody td {
+            width: 100px;
+            height: 100px;
+            vertical-align: top;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .calendar>tbody td:hover {
+            background-color: beige;
+            cursor: pointer;
+        }
+
+        .calendar>thead td {
+            height: 40px;
+            text-align: center;
+        }
+
+        .calendar td:first-of-type, .holiday {
+            color: red;
+        }
+
+        .calendar td:last-of-type {
+            color: blue;
+        }
+
+        tbody span {
+            font-size: small;
+        }
+        
+        .lastmonth {
+            color: lightgray !important;
+        }
+
     </style>
 </head>
+
 <body>
+
+    <div class="date">
+        2024 <span class="month">8</span> August
+    </div>
 
     <table class="calendar">
         <thead>
@@ -28,10 +87,10 @@
         </thead>
         <tbody>
             <tr>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+                <td class="lastmonth">28</td>
+                <td class="lastmonth">29</td>
+                <td class="lastmonth">30</td>
+                <td class="lastmonth">31</td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
@@ -50,7 +109,7 @@
                 <td>12</td>
                 <td>13</td>
                 <td>14</td>
-                <td>15 <span>광복절</span></td>
+                <td class="holiday">15 <span>광복절</span></td>
                 <td>16</td>
                 <td>17</td>
             </tr>
@@ -75,4 +134,5 @@
         </tbody>
     </table>
 </body>
+
 </html>

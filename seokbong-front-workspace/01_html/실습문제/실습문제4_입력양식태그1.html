@@ -4,8 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            font-size: 25px;
+            font-weight: 900;
+            color: red;
+            text-indent: 125px;
+        }
+        .table {
+            border: 1px solid gray;
+            text-align: center;
+        }
+        .table td, th{
+            border: 1px solid gray; 
+        }
+        .table tbody{
+            background: yellow;
+        }
+        .table thead{
+            background: pink;
+        }
+        tfoot{
+            background: red;
+            color: blue;
+        }
+        input{
+            background-color: skyblue;
+            color: white;
+        }
+            
+        
+    </style>
 </head>
 <body>
     <!-- 실습문제4_입력양식태그1.PNG -->
+
+    <div>강의목록</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>관</th>
+                <th>강의장</th>
+                <th>인원수</th>
+                <th>강의명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="6">1관</td>
+                <td rowspan="2">9 강의장</td>
+                <td rowspan="2">30명</td>
+                <td>오전 : 강보람 <input type="submit" value="신청하기"></td>
+            </tr>
+            <tr>
+                <td>오후 : 강보람 <input type="submit" value="신청하기"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">10 강의장</td>
+                <td rowspan="2">23명</td>
+                <td>오전 : 홍길동 <input type="submit" value="신청하기"></td>
+            </tr>
+            <tr>
+                <td>오후 : 홍길동 <input type="submit" value="신청하기"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">11 강의장</td>
+                <td rowspan="2">27명</td>
+                <td>오전 : 김말순 <input type="submit" value="신청하기"></td>
+            </tr>
+            <tr>
+                <td>오후 : 김말순 <input type="submit" value="신청하기"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th colspan="4">많이 신청해주세요!</th>
+        </tfoot>
+    </table>
 </body>
 </html>

@@ -10,9 +10,64 @@
             특정 날짜에 마우스를 올리게 되면 해당 날짜의 배경색이 베이지 색상이 되도록 부여하시오.
             html 요소에 추가적인 속성을 부여하셔도 됩니다.            
         */
+        
+        .date{
+            text-align: center;
+            font-weight: bold;
+        }
+        .date span{
+            font-size: 40px;
+            color: red;
+        }
+        .calendar{
+            margin: 0 auto;
+            border: 1px solid black;
+            border-collapse: collapse; 
+            width: 600px;
+            height: 500px;
+            font-weight: 600;
+        }
+        
+        .calendar td{
+            padding: 10px;
+            border: 1px solid gray;
+            text-align: left;
+            vertical-align: top;
+        }
+        .calendar>thead td {
+            text-align: center;
+            width: 100px;
+            height: 30px;
+        }
+        .calendar span{
+            color: red;
+            font-size: 12px;
+            
+        }
+        .calendar td.july{
+            color: gray;
+        }
+        td:nth-child(1){
+            color: red;
+        }
+        td:nth-child(7){
+            color: blue;
+        }
+        .calendar>tbody td:hover{
+            background-color: beige;
+        }
+
+        
+            
+
+
     </style>
 </head>
 <body>
+
+    <div class="date">
+        2024 <span class="month">8</span> August
+    </div>
 
     <table class="calendar">
         <thead>
@@ -28,10 +83,10 @@
         </thead>
         <tbody>
             <tr>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+                <td class="july">28</td>
+                <td class="july">29</td>
+                <td class="july">30</td>
+                <td class="july">31</td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>

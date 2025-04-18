@@ -5,7 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
+    .table1 {
+      border: 1px solid tomato;
+      /* border-spacing: 50px 10px; */
+      border-collapse: collapse;
+    }
+    .table1 td {
+      border: 1px dotted gray;
+    }
+    .table1 td:first-of-type {
+      color:blue;
+      width: 100px;
+    }
+    .table1 td:nth-of-type(2) {
+      color: green;
+      width: 70px;
+    }
+    .table1 td:last-of-type{
+      color: purple;
+      width: 120px;
+    }
+    .table1>thead td, .table1>tfoot td {
+      padding: 10px;
+      font-weight: 900;
+    }
+    .table1>tbody td {
+      height: 50px;
+      vertical-align: middle;
+    }
+    .table1 thead tr:hover, .table1 tfoot tr:active {
+      background-color: greenyellow;
+    }
+    .table1>tbody td:hover {
+      background-color: aqua;
+    }
   </style>
 </head>
 <body>
