@@ -16,6 +16,31 @@
   ## 변수 선언시 별도의 자료형 지정이 없기 때문에 어떤자료형이든 다 담을 수 있음 
         크기에 제약도 없기 때문에 자바에서의 ArrayList 컬렉션과 유사함
 */
+const arr1 = ['banana','asd','adsffff'];
+console.log(arr1);
+
+//2배열 생섲아 함수를 통한 배열 생성
+const arr2 = new Array();
+console.log(arr2);
+
+//2배열 생섲아 함수를 통한 배열 생성
+const arr3 = new Array(10);
+console.log(arr3);
+
+const arr4 = new Array(1,2,3);//인자가 여러개고 숫자가 아닌 다른 타입의 인자를 전달할 경우
+console.log(arr4);            //인자들이 요소로 담겨있는 배열
+
+
+//3.Array.of메소드를 통한 배열 생성
+const arr5 = Array.of(10,20,30,'hello','js');
+console.log(arr5);
+
+
+console.log(arr5[0]);
+console.log(arr5[1]);
+console.log(arr5[2]);
+
+console.log(arr5.length);
 
 
 
@@ -37,8 +62,20 @@
         }
 */
 
+const fruits = ['asd','addd','dsddd'];
+for(let i=0; i<fruits.length; i++){
+   console.log(`인덱스${i}, 요소 : ${fruits[i]}`)
+};
+console.log('---------------');
 
+for(let i in fruits ){
+   console.log(`${i},${fruits[i]}`)
+}
 
+const cities = ['dddd','sddfasf','addda','ccccc'];
+for(let city of cities){
+   console(`${city}`);
+}
 
 /*
   ## Array 탐색 관련 메소드 ##
@@ -59,7 +96,17 @@
   
 */
 
+const foodList = ['ㅁㄴㅇ','ㅁㄴㅇㄹ','ㅋㅋㅊ','ㅁㄴㅇ','ㅍㅍ'];
 
+console.log(foodList.indexOf('ㅁㄴㅇ'));
+console.log(foodList.indexOf('ㅁㄴㅇ',1));
+
+
+console.log(foodList.lastIndexOfindexOf('ㅁㄴㅇ'));
+console.log(foodList.lastIndexOfindexOf('ccc'));
+
+console.log(foodList.includes('ㅁㄴㅇ'));
+console.log(foodList.includes('ccc'));
 
 
 
@@ -92,10 +139,19 @@
 
 */
 
+const months = ['a','b','c','d','e','f'];
+console.log(months.pop());
+console.log(months);
+
+console.log(months.push('f'));
+console.log(months);
 
 
+months.shift();
+months.unshift('')
 
-
+months.splice(4,1,'gg');
+console.log(months);
 /*
 
   ## Array 기타 메소드 ##
@@ -120,11 +176,22 @@
      → 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새 배열 반복자(Iterator) 객체를 반환
 
 */
+const idol1 = ['아이브','오마이걸'];
+const idol2 = ['에스파','트와이스'];
+const idol3 = ['블랙핑크','레드벨벳'];
+
+const mix1 = idol1.concat(idol20);
 
 
+const mix2 = idol3.concat(idol1,idol2);
 
+const extraction = mix2.slice(1,3);
+console.log(extraction);
 
-
+const seasons= ['spring','summer','autumn','winter'];
+console.log(seasons.toString());
+console.log(seasons.join());
+console.log(seasons.join(' → '));
 
 /*
 
