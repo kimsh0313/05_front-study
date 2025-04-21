@@ -16,32 +16,30 @@
   ## 변수 선언시 별도의 자료형 지정이 없기 때문에 어떤자료형이든 다 담을 수 있음 
         크기에 제약도 없기 때문에 자바에서의 ArrayList 컬렉션과 유사함
 */
-const arr1 = ['banana','asd','adsffff'];
+
+// 1. 배열 리터럴을 통한 배열 생성
+const arr1 = ['banana', 'kiwi', 'pineapple'];
 console.log(arr1);
 
-//2배열 생섲아 함수를 통한 배열 생성
-const arr2 = new Array();
-console.log(arr2);
+// 2. 배열 생성자 함수를 통한 배열 생성
+const arr2 = new Array(); // 인자를 전달하지 않을 경우
+console.log(arr2);        // 텅빈 배열 []
 
-//2배열 생섲아 함수를 통한 배열 생성
-const arr3 = new Array(10);
-console.log(arr3);
+const arr3 = new Array(10); // 인자가 1개고 숫자일 경우 length(크기) 프로퍼티로 설정
+console.log(arr3);          // 크기 10짜리 배열 [empty*10]
 
-const arr4 = new Array(1,2,3);//인자가 여러개고 숫자가 아닌 다른 타입의 인자를 전달할 경우
-console.log(arr4);            //인자들이 요소로 담겨있는 배열
+const arr4 = new Array(1, 2, 3); // 인자가 여러개고 숫자가 아닌 다른 타입의 인자를 전달할 경우
+console.log(arr4);               // 인자들이 요소로 담겨있는 배열
 
-
-//3.Array.of메소드를 통한 배열 생성
-const arr5 = Array.of(10,20,30,'hello','js');
+// 3. Array.of메소드를 통한 배열 생성
+const arr5 = Array.of(10, 20, 30, 'hello', 'js');
 console.log(arr5);
-
 
 console.log(arr5[0]);
 console.log(arr5[1]);
 console.log(arr5[2]);
 
 console.log(arr5.length);
-
 
 
 
@@ -54,28 +52,28 @@ console.log(arr5.length);
           본문
         }
 
-  2. array에서의 for of 문
+  2. for of 문
      1) 배열의 요소를 자동으로 가져옴
      2) 형식
         for(요소 of 배열) {
           본문
         }
 */
-
-const fruits = ['asd','addd','dsddd'];
+const fruits = ['banana', 'apple', 'kiwi'];
 for(let i=0; i<fruits.length; i++){
-   console.log(`인덱스${i}, 요소 : ${fruits[i]}`)
-};
-console.log('---------------');
-
-for(let i in fruits ){
-   console.log(`${i},${fruits[i]}`)
+   console.log(`인덱스: ${i}, 요소: ${fruits[i]}`);
+}
+console.log('---------------------');
+for(let i in fruits){
+   console.log(`인덱스: ${i}, 요소: ${fruits[i]}`);
 }
 
-const cities = ['dddd','sddfasf','addda','ccccc'];
+const cities = ['seoul', 'roma', 'newyork', 'sidney'];
 for(let city of cities){
-   console(`${city}`);
+   console.log(`요소: ${city}`);
 }
+
+
 
 /*
   ## Array 탐색 관련 메소드 ##
@@ -96,19 +94,17 @@ for(let city of cities){
   
 */
 
-const foodList = ['ㅁㄴㅇ','ㅁㄴㅇㄹ','ㅋㅋㅊ','ㅁㄴㅇ','ㅍㅍ'];
+const foodList = ['물회', '삼계탕', '냉면', '물회', '수박'];
 
-console.log(foodList.indexOf('ㅁㄴㅇ'));
-console.log(foodList.indexOf('ㅁㄴㅇ',1));
+console.log( foodList.indexOf('물회') );        // 0
+console.log( foodList.indexOf('물회', 1) );     // 3
+console.log( foodList.indexOf('삼겹살') );      // -1
 
+console.log( foodList.lastIndexOf('물회') );    // 3
+console.log( foodList.lastIndexOf('삼겹살') );  // -1
 
-console.log(foodList.lastIndexOfindexOf('ㅁㄴㅇ'));
-console.log(foodList.lastIndexOfindexOf('ccc'));
-
-console.log(foodList.includes('ㅁㄴㅇ'));
-console.log(foodList.includes('ccc'));
-
-
+console.log( foodList.includes('냉면') );       // true
+console.log( foodList.includes('삼겹살') );     // false
 
 
 /*
@@ -139,19 +135,22 @@ console.log(foodList.includes('ccc'));
 
 */
 
-const months = ['a','b','c','d','e','f'];
+const months = ['Jan', 'Mar', 'Apr', 'Apr', 'Jun', 'Jun'];
+
 console.log(months.pop());
 console.log(months);
 
-console.log(months.push('f'));
+console.log(months.push('Jul'));
 console.log(months);
 
-
-months.shift();
-months.unshift('')
-
-months.splice(4,1,'gg');
+months.shift(); // 'Jan'
+months.unshift('Feb'); // 6
+months.unshift('Jan'); // 7
 console.log(months);
+
+months.splice(4, 1, 'May');
+console.log(months);
+
 /*
 
   ## Array 기타 메소드 ##
@@ -176,22 +175,33 @@ console.log(months);
      → 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새 배열 반복자(Iterator) 객체를 반환
 
 */
-const idol1 = ['아이브','오마이걸'];
-const idol2 = ['에스파','트와이스'];
-const idol3 = ['블랙핑크','레드벨벳'];
 
-const mix1 = idol1.concat(idol20);
+const idol1 = ['아이브', '오마이걸'];
+const idol2 = ['에스파', '트와이스'];
+const idol3 = ['블랙핑크', '레드벨벳'];
 
+const mix1 = idol1.concat(idol2);
+console.log(mix1);
 
-const mix2 = idol3.concat(idol1,idol2);
+const mix2 = idol3.concat(idol1, idol2);
+console.log(mix2);
 
-const extraction = mix2.slice(1,3);
+const extraction = mix2.slice(1, 3);
 console.log(extraction);
 
-const seasons= ['spring','summer','autumn','winter'];
+
+const seasons = ['spring', 'summer', 'autumn', 'winter'];
 console.log(seasons.toString());
 console.log(seasons.join());
 console.log(seasons.join(' → '));
+
+const itr = seasons.entries();
+for( let obj of itr ){
+   //console.log(obj); // [ 인덱스수, 요소 ]
+   console.log(`인덱스: ${obj[0]}, 요소: ${obj[1]}`);
+}
+
+
 
 /*
 
@@ -240,4 +250,3 @@ console.log(seasons.join(' → '));
      → thisArg(Optional) : callbackFn을 실행할 때 this로 사용되는 값
   
 */
-
