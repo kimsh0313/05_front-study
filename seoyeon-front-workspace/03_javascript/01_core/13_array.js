@@ -236,4 +236,3 @@ for( let obj of itr ){
      → thisArg(Optional) : callbackFn을 실행할 때 this로 사용되는 값
   
 */
-
