@@ -86,3 +86,11 @@ login(idCheck, pwdCheck);
 login(emailCheck, pwdCheck);
 
 login(idCheck, tokenCheck);
+
+// 경우에 따라 실행시킬 구문을 내가 원하는횟수만큼 반복시켜서 실행되도록
+function repeat(action, count){ //action은 메서드이다.
+  for(let i = 0; i<count; i++){
+    action();
+  }
+}
+repeat(() => console.log("do"), 5);
