@@ -250,3 +250,47 @@ for( let obj of itr ){
      → thisArg(Optional) : callbackFn을 실행할 때 this로 사용되는 값
   
 */
+const numbers= [30,22,11,111,23];
+console.log(`${numbers}`);
+numbers.sort();
+console.log(numbers);//숫자가 내부적으로 문자열로 변환 = 유니코드 순서로 정렬
+numbers.sort((left,right)=>left-right );//왼쪽수가 더 크면 순서 변경 오름차순
+console.log(numbers);
+numbers.sort((left,right)=>right-left );//내림차순
+console.log(numbers);
+
+const names= ['ㅁㅁㄱ','ㅂㅈㄱ','ㅍㅇㅁ','ㄱㅁㅈ'];
+console.log(names);
+names.sort();
+console.log(names);
+names.sort((left,right) => right > left ? 1 : -1); //내림
+console.log(names);
+
+
+const lectures = ['java','MySpl','ByBatis','CSS','Uva'];
+lectures.forEach((element, idx, arr) => {
+   console.log(`element: ${element}`);
+   console.log(`dx: ${idx}`);
+   console.log(`arr: ${arr}`);
+});
+
+//lectures.forEach((element) => console.log(`과목 : ${element}`));
+
+const newLectures = lectures.map( element => '고ㅏ목 : ' + element);
+console.log(newLectures);
+
+const datas = [true , 1 ,'text', {} ,[]]; //배열 요소들의 타입을 모아둔 새로운 배열 만들기
+datas.map(item => typeof item)//[boolean,number,string,obj,obj]
+   .forEach(item => console.log(item));
+
+//배열의 요소들 중 type이 object인 요소들만 모아둔 새로운 배열
+const objDatas = datas.filter( item => typeof(item) == 'object');
+console.log(objDatas);
+
+//종합
+const nums = [12,2,61,77,44,22,16];
+//짝수인 데이터들만 *2한 결과 내림차순 출력
+nums.filter(num => num%2 == 0 )
+   .map( num => num * 2)
+   .sort((num1,num2) => num2 - num1)
+   .forEach(num => console.log(num));

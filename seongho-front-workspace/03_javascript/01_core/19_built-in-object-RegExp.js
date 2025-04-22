@@ -20,6 +20,18 @@
      3) String.prototype.replace(regExp, changeStr) : 검색대상 문자열에서 정규식과 일치하는 부분을 바꿀 값으로 치환해서 반환  
 
 */
+const targetStr = 'JavaScript';
+
+//패턴 검사를 위한 정규식
+//1) 정규표현식 리터럴로 생성
+let regExp = /j/i //패턴 : j , 플래그 : i
+
+//2) RegExp 생성자 함수로 생성
+regExp = new RegExp('j','i');
+
+console.log(regExp.test(targetStr));
+console.log(targetStr.search(regExp));
+console.log(targetStr.replace(regExp, '*'));
 
 
 
@@ -69,9 +81,26 @@
     13) {m,n} : m개 이상 n개 이하의 문자를 의미
               ex) a{2,3} → (O) aa, aaa
 */
+//연습 1 J로 시작하는 문자열인지 비교
+//str.charAt(0)=='j';
+regExp = /^j/;
+console.log(regExp.test('javascript'));//true
+console.log(regExp.test('Javascript'));//false
+
+//연습2 j로시작하고t로끝
+regExp = /^jt$/;
+console.log(regExp.test('javascript'));//false
+console.log(regExp.test('jt'));//true
+
+regExp = /^j.+t$/;
+console.log(regExp.test('javascript'));//true
 
 
-
+//연습3 g로시작하고 d로끝인데 그사이에 o가2개 이상인지
+regExp = /^go{2,}d$/;
+console.log(regExp.test('god'));
+console.log(regExp.test("good"));
+console.log(regExp.test("goooood"));
 
 /*
   ## 대괄호 표현식 ##
@@ -84,8 +113,42 @@
      5) [0-9]   : 숫자 한개를 의미
      6) [가-힣] : 한글 한 글자를 의미 
 */
+//연습4 시작부터 끝까지 숫자인지
+regExp = /(^[0-9]+$)/
+
+//연습5 시작부터 끝까지 영어인지
+regExp = /^[a-zA-z]+$/ //공백은 X
 
 
+//연습6 시작부터 끝까지 한글인지
+regExp = /^[ㄱ-ㅎㅏ-ㅣ가-힣]+$/ //공백은 X
+
+
+const verifyName = (name) =>{
+       let regExp = /^[가-힣]{2,5}$/;
+       if(regExp.test(name)){
+              console.log('이름 형식 o')
+       }else{
+              
+              console.log('이름 형식 x')
+       }
+};
+
+const nameArr =[ '김성호','김성후','ads','강호동','강','강강강강강강'];
+nameArr.forEach(name => verifyName(name));
+
+
+const verifyZipcode = (code) => {
+       let regExp = /^[0-9]{5}$/;
+       if(regExp.test(code)){
+              console.log('우편 형식 o')
+       }else{
+              
+              console.log('우편 형식 x')
+       }
+}
+const zipcodeArr =['08240','65466','222222','asd'];
+zipcodeArr.forEach(zipcode => verifyZipcode(zipcode));
 
 
 /*

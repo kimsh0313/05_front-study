@@ -67,3 +67,22 @@
   JSON.parse(text)                 text
     {x: 10, y: 20}          '{"x": 10, "y": 20}'
 */
+
+
+//JavaScript 객체 => JSON문자열로 변환
+const product ={
+  name: '마우스',
+  brand: 'logitech',
+  price: 50000,
+  model: ['G304', 'MX Master',],
+};
+
+console.log(product);
+console.log(JSON.stringify(product));
+
+//JSON 문자열 => JavaScript객체로 변환
+const jsonStr = '{"name":"홍길동","age":13,"hobbies":["등산","낚시"]}';
+console.log(jsonStr);
+
+const obj = JSON.parse(jsonStr);
+console.log(obj);
