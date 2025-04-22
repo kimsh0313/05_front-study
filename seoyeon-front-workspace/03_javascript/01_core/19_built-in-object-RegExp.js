@@ -134,6 +134,57 @@ console.log(regExp.test('정재현'));
 console.log(regExp.test('ㅋㅋㅋㅋㅏㅏㅏㅏ'));
 
 /*
+  실습. verifyName() 함수 구현하기
+
+  1. 기능
+     전달된 인자값이 이름 형식이 맞는지를 검사하여
+     맞을 경우 '이름 형식이 맞습니다.' 그게 아닐 경우 '이름 형식에 맞지 않습니다' 출력
+     * 이름 형식 : 한글(자음모음결합)로 2글자이상 5글자이하
+  2. 인자
+     검사할 이름 문자열
+  3. 반환
+     없음
+*/
+
+function verifyName(name) {
+       let regExp = /^[가-힣]{2,5}$/;
+       if (regExp.test(name)){
+              console.log("이름 형식이 맞습니다.");
+       } else {
+       console.log("이름 형식에 맞지 않습니다.");
+       }
+};
+
+const nameArr = ['이태용', '정재현', '이마크', '김도영', 'Jhonny', '김정우', '이해찬', '나카모토유타'];
+nameArr.forEach( name => verifyName(name) );
+
+/*
+  실습. verifyZipcode() 함수 구현하기
+
+  1. 기능
+     전달된 인자값이 우편번호 형식이 맞는지를 검사하여
+     맞을 경우 '우편번호 형식이 맞습니다.' 그게 아닐 경우 '우편번호 형식에 맞지 않습니다' 출력
+     * 우편번호 형식 : 숫자 5자리 
+  2. 인자
+     검사할 우편번호 문자열
+  3. 반환
+     없음
+*/
+
+const verifyZipcode = (address) => {
+       let isNumber = /^[0-9]{5}$/;
+
+       if(isNumber.test(address)){
+              console.log("우편번호 형식이 맞습니다.");
+       }
+       else{
+              console.log("우편번호 형식에 맞지 않습니다.");
+       }
+}
+
+const zipcodeArr = ['09240', '21414', 'abcde', '123456'];
+zipcodeArr.forEach( zipcode => verifyZipcode(zipcode) );
+/*
   ## 이스케이프 문자 ## 
   1. \d : 숫자를 의미 (즉, [0-9] 와 동일)
   2. \D : 숫자가 아님을 의미 (즉, [^0-9] 와 동일)
