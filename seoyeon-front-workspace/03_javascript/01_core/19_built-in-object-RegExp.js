@@ -18,11 +18,23 @@
      1) RegExp.prototype.test(targetStr) : 검색대상 문자열 중 정규식 패턴과 일치하는 부분이 있으면 true / 아니면 false 반환
      2) String.prototype.search(regExp)  : 검색대상 문자열 중 정규식 패턴과 일치하는 부분의 시작 인덱스 반환 / 없으면 -1 반환
      3) String.prototype.replace(regExp, changeStr) : 검색대상 문자열에서 정규식과 일치하는 부분을 바꿀 값으로 치환해서 반환  
-
 */
 
+// 검색대상의 문자열
+const targetStr = 'JavaScript';
 
+// 패턴 검사를 위한 정규식
+// 1) 정규표현식 리터럴로 생성
+let regExp = /j/i;    // 패턴 : j , 플래그 : i
 
+// 2) RegExp 생성자 함수로 생성
+regExp = new RegExp('j', 'i');
+regExp = new RegExp(/j/, 'i');
+regExp = new RegExp(/j/i);
+
+console.log(regExp.test(targetStr));
+console.log(targetStr.search(regExp));
+console.log(targetStr.replace(regExp, '*'));
 
 
 /*
@@ -70,8 +82,29 @@
               ex) a{2,3} → (O) aa, aaa
 */
 
+// 연습1. j로 시작하는 문자열인지 비교
+regExp = /^j/;
+console.log(regExp.test('javascript'));
+console.log(regExp.test('jQuery'));
+console.log(regExp.test('html'));
+console.log(regExp.test('Javascript')); // false
 
+// 연습2. j로 시작하고 t로 끝나는 문자열인지 비교
+/*
+regExp = /^jt$/;
+console.log(regExp.test('javascript'));
+console.log(regExp.test('jt'));
+*/
 
+regExp = /^j.+t$/;
+console.log(regExp.test('javascript'));
+console.log(regExp.test('jQuery'));
+
+// 연습3. g로 시작하고 d로 끝나는데 그 사이에 o문자가 2글자 이상인지 비교
+regExp = /^go{2,}d$/;
+console.log(regExp.test('god'));
+console.log(regExp.test('good'));
+console.log(regExp.test('goood'));
 
 /*
   ## 대괄호 표현식 ##
@@ -85,8 +118,20 @@
      6) [가-힣] : 한글 한 글자를 의미 
 */
 
+// 연습4. 시작부터 끝까지 숫자로만 이루어진 문자열인지 비교
+regExp = /^[0-9]+$/;
+console.log(regExp.test('70139410792437197039'));
+console.log(regExp.test('70139410792이437197039'));
 
+// 연습5. 시작부터 끝까지 영문자로만 이루어진 문자열인지 비교
+regExp = /^[a-zA-Z]+$/;
+console.log(regExp.test('HelloEveryOne'));
+console.log(regExp.test('Hello EveryOne'));
 
+// 연습6. 시작부터 끝까지 한글로만 이루어진 문자열인지 비교
+regExp = /^[ㄱ-ㅎ ㅏ-ㅣ 가-힣]+$/;
+console.log(regExp.test('정재현'));
+console.log(regExp.test('ㅋㅋㅋㅋㅏㅏㅏㅏ'));
 
 /*
   ## 이스케이프 문자 ## 
