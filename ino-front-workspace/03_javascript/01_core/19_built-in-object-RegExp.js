@@ -108,7 +108,54 @@
   3. m : 여러줄 탐색            (multiple-line)
 */
 
+function verifyName(nameArr){
+       regex = /^[가-힣]{2,6}$/;
+       for( idx in nameArr) {
+              if (regex.test(nameArr[idx])) {
+                     console.log('이름 형식이 맞습니다');
+                     } else {
+                     console.log('땡');       
+              }
+       }
+}
 
 
+const koreanNames = [
+       "김민준",
+       "이서윤",
+       "박지훈",
+       "ENGLISHNAME",
+       "정하은",
+       "강민재",
+       "윤서진",
+       "조예준",
+       "임채원",
+       "잘못된이름목록"
+     ];
+verifyName(koreanNames);
 
 
+function verifyZipCode(zipArr) {
+       regex = /^\d{5}$/;
+       for( idx in zipArr) {
+              if (regex.test(zipArr[idx])) {
+                     console.log('우편번호 형식이 맞습니다.');
+                     } else {
+                     console.log('우편번호 형식에 맞지 않습니다');       
+              }
+       }
+}
+const fiveDigitNumbers = [
+  12345,
+  67891230,
+  23456,
+  7891231201,
+  34567,
+  89012,
+  45671231238,
+  90123,
+  56789,
+  91234
+];
+
+verifyZipCode(fiveDigitNumbers);

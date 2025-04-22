@@ -56,9 +56,10 @@ console.log(ev9.brand);
 function Animal(name) {
   this.name = name;
 }
+EV.prototype.run = () => console.log("부르릉");
 // Animal.prototype == {constructor : Animal}
 console.log(Animal.prototype.constructor == Animal);
-
+ev9.run();
 // 보통 해당 생성자 함수로 생성되는 객체들이 
 // 사용할 메소드(인스턴스 메소드)를 prototype으로 정의
 Animal.prototype.speak = function(){

@@ -21,7 +21,9 @@
   4. 외부함수는 내부함수 변수를 사용할 없음
      단, 내부함수는 외부함수의 변수를 사용할 수 있음 
 */
-
+(function helloWorld(command){
+  console.log(`${command} hello world`);
+})('ino');
 function outer(a){
   console.log('외부함수', a);
 
