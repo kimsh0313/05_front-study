@@ -94,3 +94,13 @@ const login = (check1, check2) => {
   check2();
 }
 login(idCheck, pwCheck);
+
+// case 3. 경우에 따라 실행시킬 구문을 내가 원하는 횟수만큼 반복실행
+
+function repeat(action, count){
+  for(i=0;i<count;i++){
+    action();
+  }
+};
+
+repeat(() => {console.log('hello world')}, 3);
