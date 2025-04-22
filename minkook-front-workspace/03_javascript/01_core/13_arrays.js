@@ -50,5 +50,21 @@ const idol1 = ['아이브','오마이걸'];
 const idol2 = ['에스파','트와이스'];
 const idol3 = ['블랙핑크','레드벨벳'];
 
-idol1.concat(idol2,idol3); //concat은 원본을 변경하지 않음
+idol1.concat(idol2,idol3); //concat은 원본 배열을 변경하지 않음
 console.log(idol1); 
+
+
+
+const datas = [true,1,'text',{},{}];
+
+datas.map(item =>  typeof item)
+.forEach((item) => console.log(item));
+
+//종합
+const nums = [12,5,90,45,1,18,2,19];
+
+nums.filter(num => num % 2 == 0)
+    .map(num => num * 2)
+    .sort((a,b) => a - b)
+    .forEach(num => console.log(num));
+
