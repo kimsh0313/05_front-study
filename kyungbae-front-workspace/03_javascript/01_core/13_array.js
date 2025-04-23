@@ -250,4 +250,55 @@ for (const number of itr) {
       → thisArg(Optional) : callbackFn을 실행할 때 this로 사용되는 값
   
 */
+console.log(`-------------------------------------------------------------`);
+// sort -------------------------
+const numbers = [19, 3, 501, 232, 139, 10090, 9, -13, -2, -105, - 35, -99];
+console.log(`정렬 전: ${numbers}`);
+numbers.sort();
+console.log(`정렬 후: ${numbers}`); // 숫자가 내부적으로 문자열로 변환되어 유니코드 순서로 정렬
+numbers.sort( (left, right) => left - right ); // 오름차순 == 좌항 숫자가 더 크면 순서 변경해야됨
+console.log(`오름차순 적용 후: ${numbers}`);
+numbers.sort( (left, right) => right - left ); // 내림차순
+console.log(`내림차순 적용 후: ${numbers}`);
 
+const korean = ['문자', '한글', '가나다', '컴퓨터', '엑셀'];
+korean.sort();
+console.log(`오름차순 정렬: ${korean}`);
+korean.sort( (left, right) => right > left ? 1 : -1 );
+console.log(`내림차순 정렬: ${korean}`);
+
+console.log(`-------------------------------------------------------------`);
+// forEach --------------------------
+const alpha = ['abc', 'bcd', 'cde', 'def', 'fgp'];
+alpha.forEach((element, idx, arr) => {
+  console.log(`element: ${element}`);
+  console.log(`index: ${idx}`);
+  console.log(`array: ${arr}`);
+});
+
+// alpha.forEach(element => console.log(`alpha: ${element}`));
+
+console.log(`-------------------------------------------------------------`);
+// map -------------------------------
+const newAlpha = alpha.map(element => 'alpha: ' + element);
+console.log(newAlpha);
+
+const datas = [true, 1, 'text', {}, []];
+// 배열의 요소들의 타입을 모아둔 새로운 배열
+datas.map(item => typeof item)
+    .forEach(item => console.log(item));
+
+console.log(`-------------------------------------------------------------`);
+// filter -----------------------------
+// 배열의 요소들 중 type이 object인 요소들만 모아둔 새로운 배열
+const objectDatas = datas.filter( item => typeof(item) == 'object');
+console.log(objectDatas);
+
+console.log(`-------------------------------------------------------------`);
+// 종합
+const nums = [33, 12, 39, 102, 89, 72, 64];
+// 짝수인 데이터들만 *2한 결과를 내림차순 정렬해서 출력
+nums.filter( item => item % 2 == 0 )
+    .map( item => item * 2 )
+    .sort((left, right) => right - left)
+    .forEach( num => console.log(num));

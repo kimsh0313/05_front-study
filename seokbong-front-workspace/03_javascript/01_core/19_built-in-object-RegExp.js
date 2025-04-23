@@ -18,10 +18,23 @@
      1) RegExp.prototype.test(targetStr) : 검색대상 문자열 중 정규식 패턴과 일치하는 부분이 있으면 true / 아니면 false 반환
      2) String.prototype.search(regExp)  : 검색대상 문자열 중 정규식 패턴과 일치하는 부분의 시작 인덱스 반환 / 없으면 -1 반환
      3) String.prototype.replace(regExp, changeStr) : 검색대상 문자열에서 정규식과 일치하는 부분을 바꿀 값으로 치환해서 반환  
-
 */
 
+// 검색대상의 문자열
+const targetStr = 'JavaScript';
 
+// 패턴 검사를 위한 정규식
+// 1) 정규표현식 리터럴로 생성
+let regExp = /j/i;   // 패턴 : j , 플래그 : i
+
+// 2) RegExp 생성자 함수로 생성
+regExp = new RegExp('j', 'i');
+regExp = new RegExp(/j/, 'i');
+regExp = new RegExp(/j/i);
+
+console.log(regExp.test(targetStr));
+console.log(targetStr.search(regExp));
+console.log(targetStr.replace(regExp, '*'));
 
 
 
@@ -70,7 +83,27 @@
               ex) a{2,3} → (O) aa, aaa
 */
 
+// 연습 1. j로 시작하는 문자열인지 비교
+regExp = /^j/;
+console.log(regExp.test('javascript'));
+console.log(regExp.test('jQuery'));
+console.log(regExp.test('html'));
+console.log(regExp.test('JavaScript'));
 
+// 연습 2. j로 시작하고 j로 끝나는 문자열인지 비교
+regExp = /^jt$/;       // 부정확함
+console.log(regExp.test('javascript') );
+console.log(regExp.test('t'));
+
+regExp =/^j.+t$/;
+console.log(regExp.test('javascript'));
+console.log(regExp.test('jQuary'));
+
+// 연습 3. g로 시작하고 d로 끝나는데 그 사이에 o문자가 2글자 이상인지 비교
+regExp = /^go{2,}d$/;
+console.log(regExp.test('god'));
+console.log(regExp.test('good'));
+console.log(regExp.test('goood'));
 
 
 /*
@@ -84,6 +117,72 @@
      5) [0-9]   : 숫자 한개를 의미
      6) [가-힣] : 한글 한 글자를 의미 
 */
+
+// 연습 4. 시작부터 끝까지 숫자로만 이루어진 문자열인지 비교
+regExp = /^[0-9]+$/;
+console.log(regExp.test('1239012591218'));
+console.log(regExp.test('123901강2591218'));
+
+// 연습 5. 시작부터 끝까지 영문자로만 이루어진 문자열인지 비교
+regExp = /^[a-zA-Z]+$/;
+console.log(regExp.test('HelloEveryOne'));
+console.log(regExp.test('Hello EveryOne'));
+
+// 연습 5. 시작부터 끝까지 한글로만 이루어진 문자열인지 비교
+regExp =/^[ㄱ-ㅎㅏ-ㅣ가-힣]+$/;
+console.log(regExp.test('안녕하세요'));
+console.log(regExp.test('ㅋㅋㅋㅋㅋㅏㅏㅏㅏ'));
+
+
+/*
+  실습. verifyName() 함수 구현하기
+
+  1. 기능
+     전달된 인자값이 이름 형식이 맞는지를 검사하여
+     맞을 경우 '이름 형식이 맞습니다.' 그게 아닐 경우 '이름 형식에 맞지 않습니다' 출력
+     * 이름 형식 : 한글(자음모음결합)로 2글자이상 5글자이하
+  2. 인자
+     검사할 이름 문자열
+  3. 반환
+     없음
+*/
+const verifyName = (name) => {
+       let regExp = /^[가-힣]{2,5}$/;
+       if(regExp.test(name)){
+              console.log('이름 형식이 맞습니다.');
+       }else{
+              console.log('이름 형식에 맞지 않습니다.')
+       }
+};
+
+const testArr1 = ['가', '가나','가나다', '가나다라마', '가나다라마바', 'kim'] ;
+testArr1.forEach( name => verifyName(name) );
+
+
+/*
+  실습. verifyZipcode() 함수 구현하기
+
+  1. 기능
+     전달된 인자값이 우편번호 형식이 맞는지를 검사하여
+     맞을 경우 '우편번호 형식이 맞습니다.' 그게 아닐 경우 '우편번호 형식에 맞지 않습니다' 출력
+     * 우편번호 형식 : 숫자 5자리 
+  2. 인자
+     검사할 우편번호 문자열
+  3. 반환
+     없음
+*/
+const verifyZipcode =(code) => {
+       let regExp = /^[0-9]{5}$/;
+       if(regExp.test(code)){
+              return console.log('우편번호 형식이 맞습니다,')
+       }else{
+              return console.log('우편번호 형식에 맞지 않습니다.')
+       }
+};
+
+const testArr2 = ['1245', '12345', '111', '1', '54321', 'abcde'];
+testArr2.forEach( zipcode => verifyZipcode(zipcode) );
+
 
 
 

@@ -202,3 +202,34 @@ for( let obj of itr){
   
 */
 
+
+const numvers = [30, 21, 101, 10, 1 , 201, 60 ,6];
+console.log(`numbers before sort: ${numvers}`); // 숫자의 내부 정렬 로직은 문자열 변환 후 유니코드 순서로 결정
+numvers.sort( (a, b) => b - a ); // 오름차순 -> 좌항 숫자가 더 클 경우 순서 변경 필요 -> 양수 반환
+console.log(`numbers after sort: ${numvers}`);
+numvers.forEach( (a) => console.log(a) );
+
+const lectures = ['Java', 'MySQL', 'MyBatis', 'HTML', 'CSS', 'JavaScript'];
+
+lectures.forEach( (ele, idx, arr) => {
+   console.log(`element : ${ele}`);
+   console.log(`index : ${idx}`);
+   console.log(`arr : ${arr}`);
+});
+
+
+const newLectures = lectures.map(ele => '과목: ' + ele);
+console.log(newLectures);
+
+const datas = [true, 1, 'test', {}, []];
+// 배열의 요소들의 타입을 모아둔 새로운 배열
+datas.map( item => typeof item).forEach( item => console.log(item));
+
+console.log(lectures.filter((ele) => ele.length > 5));
+
+console.log(datas.filter( item => typeof(item) == 'object'));
+
+const nums = [12, 5, 90, 45, 1, 18, 2, 19];
+// 짝수 데이터만 *2 내림차순 정렬 출력
+console.log('짝수 데이터만 *2 내림차순 정렬 출력');
+nums.filter( item => item % 2 == 0).map(item => item * 2).sort( (a, b) => b-a).forEach( n => console.log(n));

@@ -236,3 +236,48 @@ for( let obj of itr ){
      → thisArg(Optional) : callbackFn을 실행할 때 this로 사용되는 값
   
 */
+
+const numbers = [30, 21, 101, 18, 1, 201, 70, 7];
+console.log(`정렬 전 numbers: ${numbers}`);
+numbers.sort();
+console.log(`정렬 후 numbers: ${numbers}`); // 숫자가 내부적으로 문자열로 변환돼서 유니코드 순서로 정렬됨
+
+numbers.sort ( (left, right) => left - right ); // 오름차순 == 좌항 숫자가 더 크면 순서 변경해야됨 == 양수 반환
+console.log(`오름차순 정렬 후 numbers: ${numbers}`);
+numbers.sort( (left, right) => right - left); // 내림차순
+console.log(`내림차순 정렬 후 numbers: ${numbers}`);
+
+const names = ['하서연', '나서연', '강서연', '가서연', '박서연'];
+names.sort();
+console.log(`오름차순 정렬 후 names: ${names}`);
+names.sort( (left, right) => right > left ? 1 : -1);
+console.log(`내림차순 정렬 후 names: ${names}`);
+
+const lectures = ['Java', 'MySQL', 'MyBatis', 'HTML', 'CSS', 'JavaScript'];
+lectures.forEach( (element, idx, arr) => {
+   console.log(`element: ${element}`);
+   console.log(`index: ${idx}`);
+   console.log(`array: ${arr}`);
+} );
+
+// lectures.forEach( element => console.log(`과목: ${element}`) );
+
+const newLectures = lectures.map( element => '과목: ' + element );
+console.log(newLectures);
+
+const datas = [true, 1, 'text', {}, []];
+// 배열의 요소들의 타입을 모아둔 새로운 배열
+datas.map( item => typeof item )    // [boolean, number, string, object, object]
+     .forEach( item => console.log(item) );
+
+// 배열의 요소들 중 type이 object인 요소들만 모아둔 새로운 배열
+const objectDatas = datas.filter( item => typeof(item) == 'object' );
+console.log(objectDatas);
+
+// 종합
+const nums = [12, 5, 90, 45, 1, 18, 2, 19];
+// 짝수인 데이터들만 *2한 결과를 내림차순 정렬해서 출력
+nums.filter(num => num % 2 == 0)
+    .map(num => num * 2)
+    .sort( (num2, num1) => num2 - num1 )
+    .forEach( num => console.log(num) );
