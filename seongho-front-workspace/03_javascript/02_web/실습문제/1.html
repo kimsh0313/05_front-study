@@ -88,6 +88,12 @@
   <script>
     // 버튼 클릭시 실행되는 함수 
     function printValue() {
+      const byInput = document.getElementById('user');
+      const byName = document.getElementById('productName');
+      const price = document.getElementById('productPrice');
+
+      let result = `${byInput.value} 당신은 ${byName.value}를  ${price.value}원에 사고싶다.`;
+      document.getElementById('result3').innerHTML = result;
       // 사용자 입력값을 가져와 #result3 영역에 출력
       // 형식은 자유롭게
 
@@ -98,6 +104,12 @@
 
   <h3>문제4. 하단의 버튼 클릭시 목록 요소를 만들어 #result4 영역에 출력하시오.</h3>
 
+  <ul>
+    <li>spring</li>
+    <li>summer</li>
+    <li>autumn</li>
+    <li>winter</li>
+  </ul>
   <button id="btn4" onclick="generateList();">클릭</button>
 
   <div id="result4"></div>
@@ -106,6 +118,12 @@
     // 버튼 클릭시 실행되는 함수 
     function generateList(){
       const seasons = ['spring', 'summer', 'autumn', 'winter'];
+      const makeUl = document.getElementById('result4');
+      seasons.forEach((season) => {
+
+      });
+
+      makeUl.innerHTML = seasons;
       /*
         위의 배열을 가지고 아래와 같은 요소를 만들어 #result4 영역에 출력하시오.
         <ul>
@@ -131,6 +149,7 @@
     // 버튼 클릭시 실행되는 함수 
     function generateImage(){
       const images = ['flower1.jpg', 'city1.jpg', 'river1.jpg'];
+
       /*
         위의 배열을 가지고 assets내의 image 경로를 제시하여 이미지 요소를 만들어
         #result5 영역에 출력하시오.
